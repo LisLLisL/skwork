@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>首页</title>
+	<meta charset="utf-8">
+	<meta name="view" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="mainstyle/css/base.css">
+	<script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+	<script src="js/swiper-3.3.1.jquery.min.js" type="text/javascript"></script>
+	<link href="mainstyle/css/swiper-3.3.1.min.css" rel="stylesheet">
+	<script>
+		window.onload = function() {
+		  var mySwiper1 = new Swiper ('.banner .swiper-container', {
+		    direction: 'horizontal',
+		    pagination: '.banner .swiper-container .swiper-pagination',
+		    loop : true,
+		    paginationClickable :true,
+		    autoplay : 5000,
+		  });
+
+		  var mySwiper2 = new Swiper ('.new .swiper-container', {
+		    direction: 'horizontal',
+		    loop : true,
+		    autoplay : 3000,
+		  });
+
+		  var mySwiper3 = new Swiper ('.investment-straregy-bottom .swiper-container', {
+		    direction: 'horizontal',
+		    nextButton: ' .swiper-button-next',
+		    prevButton: ' .swiper-button-prev',
+		    loop : true,
+		    paginationClickable :true,
+		    autoplay : 4000,
+		  });
+
+		  var mySwiper4 = new Swiper ('.partner-bottom .swiper-container', {
+		    direction: 'horizontal',
+		    loop : true,
+		    autoplay : 6000,
+		  });
+
+		  
+	      $('.banner .swiper-container').mouseover(function(){
+		  mySwiper1.stopAutoplay();
+		  });
+		  $('.banner .swiper-container').mouseout(function(){
+		  mySwiper1.startAutoplay();
+	      });
+
+	      $('.new .swiper-container').mouseover(function(){
+		  mySwiper2.stopAutoplay();
+		  });
+		  $('.new .swiper-container').mouseout(function(){
+		  mySwiper2.startAutoplay();
+	      }); 
+
+	      $('.investment-straregy-bottom .swiper-container').mouseover(function(){
+		  mySwiper3.stopAutoplay();
+		  });
+		  $('.investment-straregy-bottom .swiper-container').mouseout(function(){
+		  mySwiper3.startAutoplay();
+	      });
+
+	      $('.partner-bottom .swiper-container').mouseover(function(){
+		  mySwiper4.stopAutoplay();
+		  });
+		  $('.partner-bottom .swiper-container').mouseout(function(){
+		  mySwiper4.startAutoplay();
+	      });  
+		};
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".product-top div").click(function(){
+				var index=$(".product-top div").index(this);
+				$(".product-bottom").css("display","none").eq(index).css("display","block");
+			})
+
+		})
+	</script>
+	<style type="text/css">
+		.banner .swiper-container .swiper-pagination{ bottom:150px;}
+		.swiper-button-prev{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23c7d3db'%2F%3E%3C%2Fsvg%3E");}
+        .swiper-button-next{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23c7d3db'%2F%3E%3C%2Fsvg%3E")}
+	</style>
+</head>
+<body>
+<div class="top">
+	<div class="width-1200">
+		<span>
+			<img src="mainstyle/images/email.png">service@shoukecapital.cn
+			<img src="mainstyle/images/phone.png">service@shoukecapital.cn
+		</span>
+	</div>
+</div>
+<div class="headbox">
+	<div class="width-1200">
+		<div class="logo"></div>
+		<div class="nav">
+			<ul>
+				<li class="nav-active"><a>首页</a></li>
+				<li><a>关于我们</a></li>
+				<li><a>首科动态</a></li>
+				<li><a>投资业务</a></li>
+				<li><a>财富汇</a></li>
+				<li><a>合作伙伴</a></li>
+				<li><a>加入我们</a></li>
+				<li><a>联系我们</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div style="clear:both;"></div>
+<div class="banner">
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide"><a class="banner-img" style=" background-image:url(mainstyle/images/banner.jpg)"></a></div>
+	        <div class="swiper-slide"><a class="banner-img" style=" background-image:url(mainstyle/images/banner.jpg)"></a></div>
+	        <div class="swiper-slide"><a class="banner-img" style=" background-image:url(mainstyle/images/banner.jpg)"></a></div>
+	    </div>	
+	    <div class="swiper-pagination"></div>
+	</div>
+
+
+	<div class="gsjj-box width-1200">
+		<div class="gsjj-left">
+			<p>公司简介</p>
+			<p>About us</p>
+		</div>
+		<div class="gsjj-right">首科资本是北京首都科技集团有限责任公司牵头,联合北大校办股权投资基金——燕园资本等公司发起成立的资本运作平台，是首科集团整合北京科技界资源、社会资本、市场资源，服务高新技术创业企业发展、开展京外投资和对外投资的窗口。首科资本背靠知名企业与大院名校，积极开拓生物医药、新材料、新能源、新一代信息技术等智能制造产业领域，为高成长性的高新技术企业提供天使投资、风险投资、上市运作、资产重组、财富管理等投融资服务。总部：北京。已建立上海和浙江办公室；筹建江苏办公室。</div>
+	</div>
+</div>
+
+<div class="content width-1200">
+	<div class="new-img"><a class="title-more" href="#">更多</a></div>
+	<div class="column-new">
+		<div class="new">
+			<!-- <div class="new-img"></div> -->
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide">
+						<div class="new-information">
+							<img src="mainstyle/images/new-img.png">
+							<p class="title">索尼上海发布会的另一条大新闻，毫无意外就是 PS VR 的上市信息了</p>
+							<p class="new-content">安德森在1968时就断言：任何形式激进运动最后都会被社会体制同化。三十年后，伊顿公学（电影抨击的英国公学代表）上演了一部改编自《如果》的年度大戏，电影被改编成一部轻松的校园讽刺剧，由一群金光闪闪的少年精英出演（他们大部分将会成为英国的国家首脑）...</p>
+							<p class="detail">查看详情></p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="new-information">
+							<img src="mainstyle/images/new-img.png">
+							<p class="title">索尼上海发布会的另一条大新闻，毫无意外就是 PS VR 的上市信息了</p>
+							<p class="new-content">安德森在1968时就断言：任何形式激进运动最后都会被社会体制同化。三十年后，伊顿公学（电影抨击的英国公学代表）上演了一部改编自《如果》的年度大戏，电影被改编成一部轻松的校园讽刺剧，由一群金光闪闪的少年精英出演（他们大部分将会成为英国的国家首脑）...</p>
+							<p class="detail">查看详情></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wechat"></div>
+	</div>
+	<!-- <div><img src="mainstyle/images/img1.png"></div>
+	<div class="column-product">
+		<div class="product-top">
+			<div class="product-top-active">宁波智投首科创业投资基金壹期</div>
+			<div>宁波智投首科创业投资基金贰期</div>
+			<div>宁波智投首科创业投资基金叁期</div>
+			<p class="detail">更多财富产品></p>
+		</div>
+		<div class="product-bottom">
+			<div class="product-img"><img src="mainstyle/images/product-img.png"></div>
+			<div class="product-content">
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">产品名称：</div>
+					<div class="product-text">宁波智投首科创业投资基金壹期</div>
+				</div>
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">基金管理人：</div>
+					<div class="product-text">宁波首科燕园投资管理有限公司</div>
+				</div>
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">基金托管人：</div>
+					<div class="product-text">中信银行</div>
+				</div>
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">基金存续期限：</div>
+					<div class="product-text">基金成立日至其投资退出清算完毕止,预计为5年。其中投资期 3 年,回收期2年。回收期结束时,如合伙企业的被投资项目仍 没有完全变现,合伙企业的回收期可自动延长一年。在延长的 合伙期限内,不得投资新的项目</div>
+				</div>
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">募集规模：</div>
+					<div class="product-text">计划募集金额约6000万元</div>
+				</div>
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">募集形式与认购方式：</div>
+					<div class="product-text">投资人认购基金份额成为基金份额持有人,认购起点100万。第 一、二、三年分别到位认缴金额的40%、30%和30%,可根据 项目情况和投资人意愿灵活调整</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-bottom" style="display:none;">
+			<div class="product-img"><img src="mainstyle/images/product-img.png"></div>
+			<div class="product-content">
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">产品名称：</div>
+					<div class="product-text">宁波智投首科创业投资基金贰期</div>
+				</div>
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">基金管理人：</div>
+					<div class="product-text">宁波首科燕园投资管理有限公司</div>
+				</div>
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">基金托管人：</div>
+					<div class="product-text">中信银行</div>
+				</div>
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">基金存续期限：</div>
+					<div class="product-text">基金成立日至其投资退出清算完毕止,预计为5年。其中投资期 3 年,回收期2年。回收期结束时,如合伙企业的被投资项目仍 没有完全变现,合伙企业的回收期可自动延长一年。在延长的 合伙期限内,不得投资新的项目</div>
+				</div>
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">募集规模：</div>
+					<div class="product-text">计划募集金额约6000万元</div>
+				</div>
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">募集形式与认购方式：</div>
+					<div class="product-text">投资人认购基金份额成为基金份额持有人,认购起点100万。第 一、二、三年分别到位认缴金额的40%、30%和30%,可根据 项目情况和投资人意愿灵活调整</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-bottom" style="display:none;">
+			<div class="product-img"><img src="mainstyle/images/product-img.png"></div>
+			<div class="product-content">
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">产品名称：</div>
+					<div class="product-text">宁波智投首科创业投资基金叁期</div>
+				</div>
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">基金管理人：</div>
+					<div class="product-text">宁波首科燕园投资管理有限公司</div>
+				</div>
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">基金托管人：</div>
+					<div class="product-text">中信银行</div>
+				</div>
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">基金存续期限：</div>
+					<div class="product-text">基金成立日至其投资退出清算完毕止,预计为5年。其中投资期 3 年,回收期2年。回收期结束时,如合伙企业的被投资项目仍 没有完全变现,合伙企业的回收期可自动延长一年。在延长的 合伙期限内,不得投资新的项目</div>
+				</div>
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">募集规模：</div>
+					<div class="product-text">计划募集金额约6000万元</div>
+				</div>
+				<div class="product-box">
+					<div class="star"></div>
+					<div class="product-title">募集形式与认购方式：</div>
+					<div class="product-text">投资人认购基金份额成为基金份额持有人,认购起点100万。第 一、二、三年分别到位认缴金额的40%、30%和30%,可根据 项目情况和投资人意愿灵活调整</div>
+				</div>
+			</div>
+		</div>
+
+	</div> -->
+
+	<div class="investment-straregy">
+		<div class="investment-straregy-top"></div>
+		<div class="investment-straregy-bottom">
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide">
+			        	<div class="investment-straregy-wrapper">
+				        	<div class="investment-straregy-box">
+								<img src="mainstyle/images/investment-straregy1.png">
+								充分利用首科集团、北京大学、清华大学等各股东单位及战略合作伙伴、江浙沪各地方政府的协同效应。
+							</div>
+							<div class="investment-straregy-box">
+								<img src="mainstyle/images/investment-straregy2.png">
+								采取专注行业的投资方式，集中优势资源投资于智能制造、战略新兴行业、挖掘优质投资标的，并形成产业链的上下游整合和互动
+							</div>
+							<div class="investment-straregy-box">
+								<img src="mainstyle/images/investment-straregy3.png">
+								充分重视投后管理，全面、深入服务被投企业，在募资、资本运作、销售渠道拓展、技术提升等各方面帮助企业成长和发展。
+							</div>
+						</div>
+			        </div>
+			        <div class="swiper-slide">
+			        	<div class="investment-straregy-wrapper">
+				        	<div class="investment-straregy-box">
+								<img src="mainstyle/images/investment-straregy4.png">
+								充分发挥券商等战略合作伙伴的作用。与众多知名券商机构合作，为项目的挂牌、上市、转板等提供服务。
+							</div>
+							<div class="investment-straregy-box">
+								<img src="mainstyle/images/investment-straregy5.png">
+								深入参与上市公司的并购重组业务，保障项目退出和投资人高额收益。
+							</div>
+						</div>
+			        </div>
+			    </div>
+			    <div class="swiper-button-prev"></div>
+			    <div class="swiper-button-next"></div>
+		    </div>
+		</div>
+	</div>
+
+	<div class="service-content">
+		<div class="service-content-top"><img src="mainstyle/images/title3.png"></div>
+		<div class="service-content-bottom">
+			<div class="service-content-box">
+				<div class="cir tstz"><img src="mainstyle/images/icon.png"></div>
+				<div class="name">天使投资</div>
+			</div>
+			<div class="service-content-box">
+				<div class="cir fxtz"><img src="mainstyle/images/icon.png"></div>
+				<div class="name">风险投资</div>
+			</div>
+			<div class="service-content-box">
+				<div class="cir ssyz"><img src="mainstyle/images/icon.png"></div>
+				<div class="name">上市运作</div>
+			</div>
+			<div class="service-content-box">
+				<div class="cir zccz"><img src="mainstyle/images/icon.png"></div>
+				<div class="name">资产重组</div>
+			</div>
+			<div class="service-content-box">
+				<div class="cir cfgl"><img src="mainstyle/images/icon.png"></div>
+				<div class="name">财富管理</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="partner">
+		<div class="partner-top"><img src="mainstyle/images/title4.png"><a class="title-more" href="#">更多</a></div>
+		<div class="partner-bottom">
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide">
+			        	<div class="logobox">
+				        	<img src="mainstyle/images/logo1.jpg">
+				        	<img src="mainstyle/images/logo2.jpg">
+				        	<img src="mainstyle/images/logo3.jpg">
+				        	<img src="mainstyle/images/logo4.jpg">
+				        	<img src="mainstyle/images/logo5.jpg">
+			        	</div>
+			        </div>
+			        <div class="swiper-slide">
+			        	<div class="logobox">
+				        	<img src="mainstyle/images/logo1.jpg">
+				        	<img src="mainstyle/images/logo2.jpg">
+				        	<img src="mainstyle/images/logo3.jpg">
+				        	<img src="mainstyle/images/logo4.jpg">
+				        	<img src="mainstyle/images/logo5.jpg">
+			        	</div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="foot">
+	<div class="foot-line1">
+		<div class="width-1200">
+			<div class="contactbox">
+				<p class="contact-title">上海</p>
+				<p><img src="mainstyle/images/address.png">上海浦东新区长柳路58号证大立方大厦2006室</p>
+				<p><img src="mainstyle/images/phone1.png">021-60756350</p>
+			</div>
+			<div class="contactbox">
+				<p class="contact-title">北京</p>
+				<p><img src="mainstyle/images/address.png">北京海淀区海淀大街3号鼎好大厦A座1526室</p>
+				<p><img src="mainstyle/images/phone1.png">010-89940281 </p>
+			</div>
+			<div class="contactbox">
+				<p class="contact-title">宁波</p>
+				<p><img src="mainstyle/images/address.png">宁波市高新区聚贤路587弄研发园A2-10楼</p>
+				<p><img src="mainstyle/images/phone1.png">0574-55663988</p>
+			</div>
+		</div>
+	</div>
+	<div class="foot-line2">沪ICP备14023913号  &copy;版权所有：首科资本</div>
+</div>
+</body>
+</html>

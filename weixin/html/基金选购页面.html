@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../mainstyle/css/amazeui.css">
+    <link rel="stylesheet" href="../mainstyle/css/app.css">
+    <link rel="stylesheet" href="../mainstyle/css/animate.min.css" />
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/amazeui.js"></script>
+    <script src="../js/app.js"></script>
+    <title>选择购买数量</title>
+</head>
+
+<body style="background-color:#E6E6E6">
+    <header data-am-widget="header"class="am-header header-grey" style="background-color:#DAF3F8">
+  <div class="am-header-left am-header-nav">
+      <a href="index.html" >
+            <i class="am-icon-chevron-left back-bef" style="color:#065CA7"></i>
+      </a>
+  </div>
+
+  <h1 class="am-header-title" style="color:#595756;font-weight:none;font-size:1.5rem;">
+      投资修改
+  </h1>
+
+</header>
+<div style="margin-bottom:0.5rem;background-color:#3BB9EC;color:white;height:4.5rem;padding-left:0.5rem;padding-right:0.5rem;">
+                    <span style="padding-left:1rem;padding-right:0.5rem;"><img src="../mainstyle/images/tipsIcon.png" style="width:1.3rem;height:1.3rem;"></span><span style="font-size:1.3rem">您好，下面是您选择要投资的项目，每份金额为5万元，请确定投资份数，最高不可超过20份</span>
+                </div>
+    <div style="padding-bottom:70px;">
+    <!-- <div style="margin:0px auto;padding-top:0.8rem;padding-left:1rem;">
+        <span class="cir_blue am-round"></span>
+        <span style="font-size:15px;">请选择投资项目并填写购买份数</span>
+    </div> -->
+    <div id="wrapper1" name="row">
+    <ul id="show" class="thelist" style="max-width:640px; margin:0 auto">
+        <li class="proj-box ">
+            <a href="#">
+                <img src="http://img.shoukechou.com/ssheUploadFile/userPhoto/20151104/949a1ee6-232c-4e32-b26e-9f9a1bc1475c.jpg" alt="" />
+                <!-- <div class="proj-adress"><span class="iconfont">&#xe605;</span>北京</div> -->
+                <div class="proj-tit" style="height:4rem; padding:0;opacity:0.8;">
+                </div>
+                <div class="proj-tit-inner" style="height:4rem;">
+                    <p style="margin: 0;padding-top:0.3rem;"> 行苏打出行行苏打出行苏打出行苏打出行行苏打出行苏打出行苏打</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div style="height:3rem;margin-top:0.8rem;">
+        <!-- <div style="float:left;margin-left:0.6rem;margin-right:0.6rem;margin-top:0.6rem;">
+            <div name="selectInputs" class="noneselectProject">√</div>
+        </div> -->
+        <div style="float:left;padding-top:0.5rem;padding-left:1rem;font-size:2rem;">每份:<span style="color:black;font-weight:bold;">￥<span name="unitPrice">5</span>万</span></div>
+
+        <div class="editInvestNum">
+            <span class="reduceCount">—</span>
+            <input class="count-input" type="text" value="1" onpaste="return false"/>
+            <span class="addCount">＋</span></div>
+    </div>
+    </div>
+<div style="clear:both;background-color:#3BB9EC;color:white;height:2rem;line-height:2rem;padding-left:0.5rem;padding-right:0.5rem;margin-top:10px;">
+                    <span style="padding-left:1rem;padding-right:0.5rem;height:2rem;"><img src="../mainstyle/images/tipsIcon.png" style="width:1.3rem;height:1.3rem;"></span><span style="font-size:1.3rem;height:2rem;">您好，您的可用余额还剩100万</span>
+                </div>
+</div>
+    <div class="bottom-box" style="clear:both;">
+        <div class="confirmInvestBtn" style="background-color:black;">合计：<span style="color:#00BAF1">￥<span class="totalNumberValue">0</span>万</span></div>
+        <div class="haveconfirmedInvestBtn">
+        <a href="基金选购确认页面.html" style="color:white">确定</a></div>
+    </div>
+</body>
+
+</html>

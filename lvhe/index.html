@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="../mainstyle/css/lvhe.css">
+	<!-- <script type="text/javascript" src="../js/jquery-1.9.1.js"></script> -->
+	<script type="text/javascript" src="http://libs.useso.com/js/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/template.js"></script>
+	<script src="../js/swiper-3.3.1.jquery.min.js" type="text/javascript"></script>
+	<link href="../mainstyle/css/swiper-3.3.1.min.css" rel="stylesheet">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$.get("../data/InvestmentCases.json",function (data){
+				$("#logoDivList").html(template('logoTemplate', {datalist:data}));
+				var logoSwiper = new Swiper ('.swiper-logo', {
+				    direction: 'horizontal',
+				    loop : true,
+				    paginationClickable :true,
+				    autoplay : 5000,
+				});
+			});
+			$.get("../data/news.json",function (data){
+				data.sort(function(a,b){
+				    return Date.parse(b.addTime) - Date.parse(a.addTime);//时间正序
+				});
+				data.slice(0,5);//返回前6个数据
+				$("#DongTaiDivList").html(template('dongtaiTemplate', {datalist:data}));
+				var mySwiper = new Swiper ('.swiper-dongtai', {
+				    direction: 'vertical',
+				    loop : true,
+				    paginationClickable :true,
+				    autoplay : 5000,
+				});
+			});
+		})
+	</script>
+
+	<script>
+		window.onload = function() {
+		  var mySwiper1 = new Swiper ('.banner .swiper-container', {
+		    direction: 'horizontal',
+		    pagination: '.banner .swiper-container .swiper-pagination',
+		    loop : true,
+		    paginationClickable :true,
+		    autoplay : 5000,
+		  });
+  
+	      $('.banner .swiper-container').mouseover(function(){
+		  mySwiper1.stopAutoplay();
+		  });
+		  $('.banner .swiper-container').mouseout(function(){
+		  mySwiper1.startAutoplay();
+	      });
+
+		};
+	</script>
+
+	<style type="text/css">
+		.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: 130px;}
+		.swiper-pagination-bullet{ background: #fff; }
+	</style>
+</head>
+<body>
+
+<div class="head">
+	<div class="width-1200">
+		<div class="logo"></div>
+	</div>
+	<div class="nav">
+		<div class="width-1200">
+			<ul>
+				<a href="index.html"><li class="nav-active">首页</li></a>
+				<a href="about.html"><li>关于我们</li></a>
+				<a href="News.html"><li>绿河动态</li></a>
+				<a href="investmentPartner.html"><li>投资团队</li></a>
+				<a href="InvestmentCase.html"><li>投资案例</li></a>
+				<a href="JoinUs.html"><li>加入我们</li></a>
+				<a href="contact.html"><li>联系我们</li></a>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="banner" style="height:599px;">
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide">
+	        	<a class="banner-img" style=" background-image:url(mainstyle/images/banner1.jpg)"></a>
+	        </div>
+	        <!-- <div class="swiper-slide">
+	        	<a class="banner-img" style=" background-image:url(mainstyle/images/banner1.jpg)">
+	        		<div class="banner-text">
+						<div class="width-1200">
+							<div class="banner-text-img"></div>
+							<div>上海绿河投资有限公司成立于2007年，是一家专业从事股权投资的风险投资公司， 主要投资新兴产业早期创业项目，公司在新能源、新材料、 高端制造业、生物环保等领域均有专业的投资团队进行长期研究、跟踪。公司已完成多家早期成长型公司项目的风险投资，为优质创业项目提供资本 和运营支持，为中国经济转型发展提供助力，目前公司管理资产总规模近10亿元人民币。</div>
+						</div>
+					</div>
+	        	</a>
+	        </div> -->
+	    </div>	
+	    <div class="swiper-pagination"></div>
+	</div>
+	<div class="banner-text">
+		<div class="width-1200">
+			<div class="banner-text-img"></div>
+			<div>上海绿河投资有限公司成立于2007年，是一家专业从事股权投资的风险投资公司， 主要投资新兴产业早期创业项目，公司在新能源、新材料、 高端制造业、生物环保等领域均有专业的投资团队进行长期研究、跟踪。公司已完成多家早期成长型公司项目的风险投资，为优质创业项目提供资本 和运营支持，为中国经济转型发展提供助力，目前公司管理资产总规模近10亿元人民币。</div>
+		</div>
+	</div>
+</div>
+
+<div class="content-index width-1200">
+	<div class="content-top">
+		<div class="content-top-left">
+			<div>
+				<div class="dongtai"><img src="../mainstyle/images/dongtai.png"><p>动态</p></div>
+				<div class="dongtai-info" style="overflow:hidden;" id="DongTaiDivList">
+					<script type="text/html" id="dongtaiTemplate">
+						<div class="swiper-dongtai">
+						    <div class="swiper-wrapper">
+								{{each datalist as value i}}
+									<!-- {{if i < 6}} -->
+										{{if i % 3 == 0}}
+										<div class="swiper-slide">
+										{{/if}}
+											<p>{{value.title}}</p>										
+										{{if i % 3 == 2|| (i+1)== datalist.length}}
+										</div>
+										{{/if}}
+									<!-- {{/if}} -->
+								{{/each}}
+							</div>
+				    	</div>
+					</script>	
+				</div>
+			</div>
+			<div class="feature">
+				<div class="feature-box">
+					<div class="feature-cir">
+						<div class="feature-bg bg-position1"></div>
+					</div>
+					<p>优秀的研究能力</p>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="feature-box">
+					<div class="feature-cir">
+						<div class="feature-bg bg-position2"></div>
+					</div>
+					<p>经验丰富的投资决策团队</p>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="feature-box">
+					<div class="feature-cir">
+						<div class="feature-bg bg-position3"></div>
+					</div>
+					<p>严密的投资策略</p>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="feature-box">
+					<div class="feature-cir">
+						<div class="feature-bg bg-position4"></div>
+					</div>
+					<p>广泛优质的项目资源</p>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="feature-box">
+					<div class="feature-cir">
+						<div class="feature-bg bg-position5"></div>
+					</div>
+					<p>庞大的外部专家资源</p>
+				</div>
+			</div>
+		</div>
+		<div class="content-top-right">
+			<div class="wechat"></div>
+			<div>
+				<div class="wechat-text">
+					<p class="wechat-text1">原则:</p>
+					<p class="wechat-text2">“广聚财智、运筹帷幄、<br>&nbsp&nbsp&nbsp以人为本、诚信敬业”</p>
+				</div>
+				<div class="wechat-text">
+					<p class="wechat-text1">秉持:</p>
+					<p class="wechat-text2">“专业投资、稳健经营”</p>
+				</div>
+				<div class="wechat-text">
+					<p class="wechat-text1">坚信:</p>
+					<p class="wechat-text2">“实业兴国”</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="content-bottom" id="logoDivList">
+		<script type="text/html" id="logoTemplate">
+			<div class="swiper-logo">
+			    <div class="swiper-wrapper">
+					{{each datalist as value i}}
+						{{if i % 5 == 0}}
+						<div class="swiper-slide">
+						{{/if}}
+							<div class="logobox"><img src="{{value.imgPath}}"></div>
+						{{if i % 5 == 4|| (i+1)== datalist.length}}
+						</div>
+						{{/if}}
+					{{/each}}
+				</div>
+			</div>
+		</script>
+	</div>
+</div>
+
+<div class="foot">
+	<div class="width-1200">
+		<div class="foot-line1">沪ICP备14023913号  &copy;版权所有：上海绿河投资有限公司</div>
+		<div class="foot-line2"><img src="../mainstyle/images/address.png">上海浦东新区民生路1299号丁香国际商业中心西楼1802室<img src="../mainstyle/images/phone.png">021-5080 0699<img src="../mainstyle/images/email.png">contact@greenriver.cn</div>
+	</div>
+</div>
+
+</body>
+</html>
+

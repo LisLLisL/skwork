@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0; }
+body{ background-color:#F3F1F2}
+#content{
+	width: 1200px;
+	margin:40px auto;
+	background-color:white;
+	border:1px solid #e9e9e9;
+}
+
+.Box{
+	width:1200px;
+	border-bottom: dashed 1px #e9e9e9;
+	overflow:hidden;
+	}
+	
+.Box:last-of-type{ border:none;}
+
+.imgBox{
+	float:left;
+	width: 195px;
+	height: 140px;
+	margin: 45px ;
+	border: solid 1px #e9e9e9;
+	background-color:white;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+
+}
+
+.imgBox img{ 
+	margin:10px;
+	width:auto;
+}
+
+.textbox{
+	float:left;
+	width:870px;
+	margin-bottom:34px;
+}
+
+.touzi{
+	float:left;
+	width:870px;
+	margin-top:32px;
+}
+
+.textbox h1{
+	float:left;
+	width:84px;
+	font-family:"微软雅黑";
+	font-size:16px;
+	font-weight:bold;
+	line-height:24px;
+	
+}
+
+.textbox p{
+	float:left;
+	width:786px;
+	font-family:"宋体";
+	font-size:14px;
+	line-height:24px;
+}
+
+

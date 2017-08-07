@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="renderer" content="webkit">
+<script src="../js/jquery.min.js"></script>
+<script src="../js/amazeui.js"></script>
+<link rel="stylesheet" href="../mainstyle/css/amazeui.css">
+<link rel="stylesheet" href="../mainstyle/css/app.css">
+<link rel="stylesheet" href="../mainstyle/css/animate.min.css" />
+<script src="../js/iscroll.js"></script>
+<script src="../js/load.js"></script>
+
+
+<title>创业空间</title>
+</head>
+<body style="background:#e6e6e6;position:static;">
+<header data-am-widget="header"class="am-header header-grey sk-header">
+  <div class="am-header-left am-header-nav">
+      <a href="index.html" class="">
+            <i class="am-icon-chevron-left back-bef"></i>
+      </a>
+  </div>
+  <h1 class="am-header-title">
+      空间+
+  </h1>
+</header>
+<div id="top-box">
+    <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{"directionNav":true,}' >
+        <ul class="am-slides sk-img">
+            <li>
+                <img id="imgaa" src="../mainstyle/images/cykj-banner.png">            
+            </li>
+            <li>
+                <img src="../mainstyle/images/cykj-banner.png">
+            </li>
+            <li>
+                <img src="../mainstyle/images/cykj-banner.png">
+            </li>
+            <li>
+                <img src="../mainstyle/images/cykj-banner.png">
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="wrapper" style="bottom:0;">
+    <div id="scroller">
+        <div id="show" >
+            <div class="cykj-box">
+                <div class="cykj-img">
+                    <img src="http://s.amazeui.org/media/i/demos/bing-4.jpg">
+                    <div class="cykj-status cykj-status1">已申请</div>
+                </div>
+                <div class="cykj-content">
+                    <div class="cykj-title">空间+·融创动力社区</div>
+                    <div class="cykj-address"><img src="../mainstyle/images/cykj-address.png">鄞州区融创动力科技文化创意产业园B座A108</div>
+                    <div class="cykj-phone"><img src="../mainstyle/images/cykj-phone.png">4008073636</div>
+                    <div class="cykj-money">1500元/月/工位</div>
+                </div>
+            </div>
+            <div class="cykj-box">
+                <div class="cykj-img">
+                    <img src="http://s.amazeui.org/media/i/demos/bing-4.jpg">
+                    <div class="cykj-status cykj-status2">已确认</div>
+                </div>
+                <div class="cykj-content">
+                    <div class="cykj-title">空间+·融创动力社区</div>
+                    <div class="cykj-address"><img src="../mainstyle/images/cykj-address.png">鄞州区融创动力科技文化创意产业园B座A108</div>
+                    <div class="cykj-phone"><img src="../mainstyle/images/cykj-phone.png">4008073636</div>
+                    <div class="cykj-money">1500元/月/工位</div>
+                </div>
+            </div>
+            <div class="cykj-box">
+                <div class="cykj-img">
+                    <img src="http://s.amazeui.org/media/i/demos/bing-4.jpg">
+                    <div class="cykj-status cykj-status3">已拒绝</div>
+                </div>
+                <div class="cykj-content">
+                    <div class="cykj-title">空间+·融创动力社区</div>
+                    <div class="cykj-address"><img src="../mainstyle/images/cykj-address.png">鄞州区融创动力科技文化创意产业园B座A108</div>
+                    <div class="cykj-phone"><img src="../mainstyle/images/cykj-phone.png">4008073636</div>
+                    <div class="cykj-money">1500元/月/工位</div>
+                </div>
+            </div>
+            <div class="cykj-box">
+                <div class="cykj-img">
+                    <img src="http://s.amazeui.org/media/i/demos/bing-4.jpg">
+                </div>
+                <div class="cykj-content">
+                    <div class="cykj-title">空间+·融创动力社区</div>
+                    <div class="cykj-address"><img src="../mainstyle/images/cykj-address.png">鄞州区融创动力科技文化创意产业园B座A108</div>
+                    <div class="cykj-phone"><img src="../mainstyle/images/cykj-phone.png">4008073636</div>
+                    <div class="cykj-money">1500元/月/工位</div>
+                </div>
+            </div>
+        </div>
+        <div id="pullUp">
+            <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多</span>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+<script type="text/javascript">
+    $(window).load(function(){
+        var a=$(window).width();
+        var b=$(".sk-img li").height();
+        var c=$(".sk-img li").width();
+        d=a/c*b+55;
+        $("#wrapper").css("top",d);
+    })
+</script>
+
+
+
+

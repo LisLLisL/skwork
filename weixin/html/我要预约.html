@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../mainstyle/css/amazeui.css">
+    <link rel="stylesheet" href="../mainstyle/css/app.css">
+    <link rel="stylesheet" href="../mainstyle/css/animate.min.css" />
+    <script src="../layer/mobile/layer.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/amazeui.js"></script>
+    <script src="../js/app.js"></script>
+    <title>我要预约页面</title>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      
+
+
+$('#test1').on('click', function(){
+     
+          /*layer.open({
+                  type: 1,
+                  shadeClose: true, //点击遮罩关闭
+                  content: '\<\div style="padding:20px;">自定义内容\<\/div>'
+              });*/
+        layer.open({
+                        type: 1,
+                        content: $("#yuyue").html(),
+                        style: ' width:100%',
+                        scrollbar: true,
+                    });
+        var a=$(window).height();
+        $("#aaa").css("height",a)
+    });
+    
+    });
+
+    
+    </script>
+</head>
+
+<body >
+<button id="test1">小小提示层</button>
+<script type="text/template" id="yuyue">
+<div  style="background-color: #e6e6e6;">
+  
+  <div id="aaa" style="padding-bottom:70px; overflow:auto; ">
+    <header data-am-widget="header"class="am-header header-grey sk-header" style="background:#2f5981; color:#fff; ">
+    <div class="am-header-left am-header-nav">
+        <a >
+              <i class="am-icon-chevron-left back-bef" style="padding:0; color:#fff;"></i>
+        </a>
+    </div>
+    <h1 class="am-header-title" style="font-size:16px;">
+        我要预约
+    </h1>
+  </header>
+  	<div class ="confirm_InvestNavtitle">
+  	   <span style="padding-left:1rem;padding-right:0.2rem;"><img src="../mainstyle/images/tipsIcon.png" style="width:1.3rem;height:1.3rem;"></span>起投金额不能低于 3 万
+  	</div>
+  	<div class="yyjebox">
+  		<div class="yyje">预约金额</div>
+  	</div>
+  	<div class="yyje-inputbox">
+  		<div class="yyje-input">
+  			<input placeholder="请输入您要预约的金额"><span>万</span>
+  		</div>
+  	</div>
+  	<div class="applybox">
+  		<span class="gou gou3" style="margin:0 10px 0 20px;"></span>同时申请成为领投人
+  	</div>
+  	<div class="explainbox">
+  		<div class="explainbox-head"><span></span>领投人的主义务</div>
+  		<div class="explainbox-content">1. 对项目进行分析、尽职调查</div>
+  		<div class="explainbox-content">2. 协助项目方与其投资人对接</div>
+  		<div class="explainbox-content">3. 对项目进行投后管理</div>
+  	</div>
+  	<div class="explainbox">
+  		<div class="explainbox-head"><span></span>领投人的实物</div>
+  		<div class="explainbox-content">1. 获取项目认购额的部分比例作为服务费</div>
+  		<div class="explainbox-content">2. 分享跟投人本轮投资的分红收益</div>
+  		<div class="explainbox-content">3. 分享跟投人本轮投资的股权转让实物</div>
+  	</div>
+  </div>
+  <div id="doc-confirm-toggle" class="bottomBtn">
+          确定
+  </div>
+</div>
+</script>
+
+  <div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">
+      <div class="am-modal-dialog" style="border-radius: 0.6rem;overflow: hidden;">
+      	     <img  style="width:39px;height:39px;margin-top:1rem;"src="../mainstyle/images/tip_icon.png">
+            <div class="am-modal-bd" style="border-bottom: 1px solid #00BAF1;">
+              对不起，您还不是投资人，请先认证投资人
+            </div>
+            <div class="am-modal-footer">
+              <span class="am-modal-btn"  data-am-modal-cancel>取消</span>
+              <span class="am-modal-btn"  data-am-modal-confirm>确定</span>
+            </div>
+      </div>
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>关于我们</title>
+	<link rel="stylesheet" type="text/css" href="mainstyle/css/lvhe.css">
+	<!-- <script type="text/javascript" src="js/jquery-1.9.1.js"></script> -->
+	<script type="text/javascript" src="http://libs.useso.com/js/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".aboutimg-box").click(function(){
+				index=$(this).index();
+				$(".aboutimg-box .top-border").css("display","none");
+				$(this).children(".top-border").css("display","block");
+				$(".about-introduce").css("display","none").eq(index).css("display","block");
+			})
+		})
+	</script>
+</head>
+<body>
+<div class="head">
+	<div class="width-1200">
+		<div class="logo"></div>
+	</div>
+	<div class="nav">
+		<div class="width-1200">
+			<ul>
+				<a href="index.html"><li>首页</li></a>
+				<a href="about.html"><li  class="nav-active">关于我们</li></a>
+				<a href="News.html"><li>绿河动态</li></a>
+				<a href="investmentPartner.html"><li>投资团队</li></a>
+				<a href="InvestmentCase.html"><li>投资案例</li></a>
+				<a href="JoinUs.html"><li>加入我们</li></a>
+				<a href="contact.html"><li>联系我们</li></a>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="banner banner2"></div>
+
+<div class="content-about width-1200">
+	<div class="about-box">
+		<div class="content-about-top">上海绿河投资有限公司成立于2007年，是一家专业从事股权投资的创业投资公司， 主要投资新兴产业早期创业项目，公司在新能源、新材料、高端制造业、生物环保等领域均有专业的投资团队进行长期研究、跟踪。公司已完成多家早期成长型公司项目的战略投资，为优质创业项目提供资本和运营支持，为中国经济转型发展提供助力，目前公司管理资产总规模近10亿元人民币。</div>
+		<div style="margin-top:20px;">
+			<div class="aboutimg-box">
+				<div class="aboutimg"><img src="../mainstyle/images/focus-attention.png"></div>
+				<div class="aboutimg-text">重点关注</div>
+				<div class="top-border"></div>
+			</div>
+			<div class="aboutimg-box">
+				<div class="aboutimg"><img src="../mainstyle/images/investment-field.png"></div>
+				<div class="aboutimg-text">投资领域</div>
+				<div class="top-border" style="display:none"></div>
+			</div>
+			<div class="aboutimg-box">
+				<div class="aboutimg"><img src="../mainstyle/images/investment-object.png"></div>
+				<div class="aboutimg-text">投资对象</div>
+				<div class="top-border" style="display:none"></div>
+			</div>
+		</div>
+	</div>
+	<div class="about-introduce">
+		<div class="about-introduce-text"><span class="green-cir"></span>符合国家长期产业支持领域</div>
+		<div class="about-introduce-text"><span class="green-cir"></span>密切关注新能源、新材料、医疗健康领域的发展趋势</div>
+	</div>
+	<div class="about-introduce" style="display:none">
+		<div class="about-introduce-text"><span class="green-cir"></span>新能源、新材料、电子信息、医疗健康、节能环保、高端装备制造等领域</div>
+		<div class="about-introduce-text"><span class="green-cir"></span>细分行业优势企业，具有未来增长潜力的朝阳行业和企业。</div>
+	</div>
+	<div class="about-introduce" style="display:none">
+		<div class="about-introduce-text"><span class="green-cir"></span>优秀的创业团队</div>
+		<div class="about-introduce-text"><span class="green-cir"></span>具有自主创新能力，自主知识产权，高成长性的高科技企业</div>
+		<div class="about-introduce-text"><span class="green-cir"></span>细分行业的领先优势企业</div>
+	</div>
+	<div style="width:960px; margin:0 auto;">
+		<div class="feature">
+			<div class="feature-box">
+				<div class="feature-cir-white">
+					<div class="feature-bg bg-position1"></div>
+				</div>
+				<p>优秀的研究能力</p>
+			</div>
+		</div>
+		<div class="feature">
+			<div class="feature-box">
+				<div class="feature-cir-white">
+					<div class="feature-bg bg-position2"></div>
+				</div>
+				<p>经验丰富的投资决策团队</p>
+			</div>
+		</div>
+		<div class="feature">
+			<div class="feature-box">
+				<div class="feature-cir-white">
+					<div class="feature-bg bg-position3"></div>
+				</div>
+				<p>严密的投资策略</p>
+			</div>
+		</div>
+		<div class="feature">
+			<div class="feature-box">
+				<div class="feature-cir-white">
+					<div class="feature-bg bg-position4"></div>
+				</div>
+				<p>广泛优质的项目资源</p>
+			</div>
+		</div>
+		<div class="feature">
+			<div class="feature-box">
+				<div class="feature-cir-white">
+					<div class="feature-bg bg-position5"></div>
+				</div>
+				<p>庞大的外部专家资源</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="foot">
+	<div class="width-1200">
+		<div class="foot-line1">沪ICP备14023913号  &copy;版权所有：上海绿河投资有限公司</div>
+		<div class="foot-line2"><img src="../mainstyle/images/address.png">上海浦东新区民生路1299号丁香国际商业中心西楼1802室<img src="../mainstyle/images/phone.png">021-5080 0699<img src="../mainstyle/images/email.png">contact@greenriver.cn</div>
+	</div>
+</div>
+
+</body>
+</html>

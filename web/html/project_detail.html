@@ -1,0 +1,573 @@
+<!doctype html>
+<html>
+<head style="overflow:auto;overflow-x:hidden">
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script type="text/javascript" src="../js/jquery-1.9.1.js" charset="utf-8"></script>
+<link rel="stylesheet" href="../mainstyle/css/style.css" type="text/css">
+<link rel="stylesheet" href="../mainstyle/css/usercenter.css" type="text/css">
+<script type="text/javascript" src="../js/siderbar.js"></script>
+<style type="text/css">
+@font-face {
+  font-family: 'iconfont';
+  src: url(../mainstyle/iconfont/iconfont.eot); /* IE9*/
+  src: url(../mainstyle/iconfont/iconfont.eot) format('embedded-opentype'), /* IE6-IE8 */
+  url(../mainstyle/iconfont/iconfont.woff) format('woff'), /* chrome、firefox */
+  url(../mainstyle/iconfont/iconfont.ttf) format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url(../mainstyle/iconfont/iconfont.svg) format('svg'); /* iOS 4.1- */
+}
+.iconfont{font-family:"iconfont";
+font-size:30px;font-style:normal; width:50px; height:50px; border:1px solid #dadada; color:#70b7ec; line-height:50px; text-align:center; border-radius:25px; -moz-border-radius:25px; display:block; float:left; margin-right:10px; margin-left:10px; cursor:pointer;}
+.iconfont_active{ color:#fff; background-color:#70b7ec;}
+.iconfont:hover{color:#fff; background-color:#70b7ec;}
+.iconfont_text{ float:left; line-height:50px; display:block; width:100px; height:50px; font-size:14px; }
+
+.indicatorContainer{
+    display:inline-block;
+    position:relative;
+}
+.proLogo{
+    position:absolute;
+	width:42px;
+	height:42px;
+	margin-top:27px; 
+	margin-left:27px; 
+	background-color:#aaaaaa; 
+	text-align:center; 
+	line-height:42px; 
+	border-radius:20px; 
+	-moz-border-radius:20px; 
+	font-size:20px; 
+	color:#fff;
+}	
+</style>
+</head>
+
+<body style="background-color:#f2f2f2;">
+<!-- 顶部 -->
+<div class="xuanfu">
+    <div class="xuanfu4box xuanfubox" >
+    	<div class="xuanfu4"><img src="../mainstyle/images/weixin_xuanfu.png"></div>
+        <div class="xuanfu4_1">
+        	<div style="margin-left:-10px;"><img src="../mainstyle/images/saoyisao.png" style="width:18px; height:24px;">微信扫一扫，信息早知道!</div>
+            <div style="margin-left:-10px;"><img src="../mainstyle/images/weixin.png" style="width:140px; height:140px;"></div>
+        </div>
+    </div>
+    <div  class="xuanfu5box xuanfubox scrolltop" style=" margin-top:5px;">
+    	<div class="xuanfu5"><a href="#head"><img src="../mainstyle/images/scrolltop_xuanfu.png"></a></div>
+    </div>
+</div>
+<div class="head">
+	<div class="head_1">
+    	<div class="head_box">
+        	<div class="head_1_left">众筹成就梦想，众筹助力众创！</div>
+        	<div class="head_1_right">你好,张张张</div>
+        </div>
+    </div>
+    <div class="head_2">
+    	<div class="head_box">
+        	<div class="logo_new"><img src="../mainstyle/images/images/logo_new.png"></div>
+            <ul>
+            	<li>首页</li>
+                <li>浏览项目</li>
+                <li>发起项目</li>
+                <li>投资机构</li>
+                <li>新闻资讯</li>
+                <li>关于我们</li>
+            </ul>
+            <div class="medal_b"><img src="../mainstyle/images/medal_b.png"></div>
+            <div class="head_portrait"><img src="../mainstyle/images/images/head_portrait.png"></div>
+        </div>
+    </div>
+</div>
+
+<!-- 项目详情 --> 
+<div id="project_detial_nav" style="width:100%; background-color:#f7f7f7; position:fixed; top:0; z-index:99999; display:none ;  border-bottom: 2px solid #e0dfdf; height:67px;">
+	<div class="project_detial_nav" >
+    	<ul>
+        	<li class="nav_active xmgl">项目简介</li>
+            <li class="tdjs">公司团队</li>
+            <li class="xmxq">项目详情</li>
+            <li class="rzxx">融资信息</li>
+            <li class="syjhs">商业计划书</li>
+            <li class="pinlun">问答评论</li>
+            <div class="project_detial_button project_detial_button_active" style=" width:120px; height:40px; margin:0; line-height:40px; margin-left:60px; font-size:14px;">已申请领投人</div>
+            <div class="project_detial_button" style=" width:120px; height:40px; margin:0; line-height:40px; margin-left:40px; font-size:14px;">预约融资</div>
+            
+        </ul>
+        
+    </div>
+</div>
+<div class="project_detial_wrapper">
+	<div class="project_detial_top">
+    	<div class="project_detial_top_left">
+        	<div class="project_detial_xmly">
+            	<span style="color:#000; font-weight:bold">[项目领域]</span>
+                <span>生物技术,药品行业</span>
+                <span class="project_detial_deadline"><img src="../mainstyle/images/time.png" style="width:24px; height:24px;">1111139天</span>
+                <span class="project_detial_address"><img src="../mainstyle/images/address.png" style="width:24px; height:24px;">乌鲁木齐</span>
+                
+            </div>
+            <div class="project_detial_imgbox">
+            	<img src="../mainstyle/images/head_bg_01.png">
+                <div class="rm_icon">热募</div>
+            </div>
+            <div>
+            	浏览量：6130
+            </div>
+        </div>
+        <div class="project_detial_top_right">
+        	<div class="project_title">植物细胞大规模培养产业化平台</div>
+            <div class="project_produce">植物细胞新本草，规模培养价值高！凡植物，皆可为！环保、快速、占地少！</div>
+            <div class="porject_detial_progressbox">
+            	<div class="project_progress">
+                	<div class="prg-cont rad-prg cir_ma indicatorContainer" id="indicatorContainer">
+                    	<div class="proLogo">!</div>
+                    </div>
+                </div>
+                <div class="porject_mjebox">
+                	<div class="project_rz"><img src="../mainstyle/images/rz.png"><span>轮轮轮轮</span></div>
+                    <div class="project_mje">募筹额: ￥328.3万<span style="color:#0084d3">→</span>￥600万</div>
+                </div>
+            </div>
+            <div style="margin-top:20px;">
+            	<span class="iconfont iconfont_active" style="line-height:45px;">
+                    &#xe62f;
+                </span>
+                <span class="iconfont_text">收藏<span style="color:#70b7ec">345</span></span>
+                <span class="iconfont">
+                    &#xe624;
+                </span>
+                <span class="iconfont_text">点赞<span style="color:#70b7ec">345</span></span>
+                <span class="iconfont" style="margin-left:150px; position:relative">
+                    &#xe60b;
+                    <div class="red_cir">12</div>
+                </span>
+               	
+            </div>
+            <div>
+            	<div class="project_detial_button project_detial_button_active">已申请领投人</div>
+                <div class="project_detial_button">预约融资</div>
+            </div>
+        </div>
+    </div>
+    <div class="project_detial_middle" id="project_detial_middle">
+    	<ul>
+        	<li class="nav_active xmgl">项目简介</li>
+            <li class="tdjs">公司团队</li>
+            <li class="xmxq">项目详情</li>
+            <li class="rzxx">融资信息</li>
+            <li class="syjhs">商业计划书</li>
+            <li class="pinlun">问答评论</li>
+        </ul>
+    </div>
+    <div class="project_detial_bottom" id="project_detial_bottom" >
+    	<div class="project_detial_bottom_left" id="project_detial_bottom_left">
+        	<div class="project_detial_box">
+            
+                <div class="project_detial_box_title" id="xmgl"><span class="cir_blue"></span>项目介绍</div>
+                <p>800Bank立志于成为中国最受推崇的互联网私人财富管家。经过多年投行业务和资产管理的耕耘， 800Bank凭借着对产业和金融的深入理解，并积极响应大众创业万众创新的新国策，一举推出互联网金融3.0模式，不再局限于P2P，而是提供投贷联动、股权众筹、跨境投资等综合性的资本市场投融资方式，实现多维度的财富管理。</p>
+                <div class="project_detial_img"><img src="../mainstyle/images/head_bg_01.png"></div>
+                <div class="project_detial_img"><img src="../mainstyle/images/head_bg_01.png"></div>
+                
+            </div>
+            <div class="project_detial_box">
+            	
+                <div class="project_detial_box_title" id="tdjs"><span class="cir_blue"></span>团队成员</div>
+                <p>投资人除了股权增值分红、孵化项目跟投、创业沙龙、投资沙龙、股东照片墙、LOGO展示等8项基础权益外；根据认购额度的高低，还将享有孵化中心内活动冠名、互联网人才推送、DEMO DAY参与评审、硅谷总部考察机会、海归优质项目直接投资等12项特权。</p>
+                <div style="margin-top:15px; overflow:hidden;">
+                    <div class="project_member">
+                    	<div>
+                            <div class="project_member_img"><img src="../mainstyle/images/investor-left-jpg.jpg"></div>
+                            <div class="project_member_name"><b>张旺财</b><br>创始人</div>
+                            <div class="sixin">
+                                <div class="sixinimg"></div>
+                                <div>私信</div>
+                            </div>
+                        </div>
+                        <div style="clear:both;"></div>
+                        <div class="project_member_introduce">
+                        	西安交通大学硕士 在校期间曾获得校级最高企业奖学金《英飞凌企业奖学金》 2007年-2011年，威盛电子股份有限公司，项目经理 2011年-至今，极迈电子科技（上海）有限公司总经理。西安交通大学硕士 在校期间曾获得校级最高企业奖学金《英飞凌企业奖学金》 2007年-2011年，威盛电子股份有限公司，项目经理 2011年-至今，极迈电子科技（上海）有限公司总经理。
+                        </div>
+                    </div>
+                    <div class="project_member">
+                    	<div>
+                            <div class="project_member_img"><img src="../mainstyle/images/investor-left-jpg.jpg"></div>
+                            <div class="project_member_name"><b>张旺财</b><br>创始人</div>
+                            <div class="sixin">
+                                <div class="sixinimg"></div>
+                                <div>私信</div>
+                   			 </div>
+                        </div>
+                        <div style="clear:both;"></div>
+                        <div class="project_member_introduce">
+                        	西安交通大学硕士 在校期间曾获得校级最高企业奖学金《英飞凌企业奖学金》 2007年-2011年，威盛电子股份有限公司，项目经理 2011年-至今，极迈电子科技（上海）有限公司总经理。西安交通大学硕士 在校期间曾获得校级最高企业奖学金《英飞凌企业奖学金》 2007年-2011年，威盛电子股份有限公司，项目经理 2011年-至今，极迈电子科技（上海）有限公司总经理。
+                        </div>
+                    </div>
+                    <div class="project_member">
+                    	<div>
+                            <div class="project_member_img"><img src="../mainstyle/images/investor-left-jpg.jpg"></div>
+                            <div class="project_member_name"><b>张旺财</b><br>创始人</div>
+                            <div class="sixin">
+                                <div class="sixinimg"></div>
+                                <div>私信</div>
+                            </div>
+                        </div>
+                        <div style="clear:both;"></div>
+                        <div class="project_member_introduce">
+                        	西安交通大学硕士 在校期间曾获得校级最高企业奖学金《英飞凌企业奖学金》 2007年-2011年，威盛电子股份有限公司，项目经理 2011年-至今，极迈电子科技（上海）有限公司总经理。西安交通大学硕士 在校期间曾获得校级最高企业奖学金《英飞凌企业奖学金》 2007年-2011年，威盛电子股份有限公司，项目经理 2011年-至今，极迈电子科技（上海）有限公司总经理。
+                        </div>
+                    </div>
+                    <div class="project_member">
+                    	<div>
+                            <div class="project_member_img"><img src="../mainstyle/images/investor-left-jpg.jpg"></div>
+                            <div class="project_member_name"><b>张旺财</b><br>创始人</div>
+                            <div class="sixin">
+                                <div class="sixinimg"></div>
+                                <div>私信</div>
+                            </div>
+                        </div>
+                        <div style="clear:both;"></div>
+                        <div class="project_member_introduce">
+                        	西安交通大学硕士 在校期间曾获得校级最高企业奖学金《英飞凌企业奖学金》 2007年-2011年，威盛电子股份有限公司，项目经理 2011年-至今，极迈电子科技（上海）有限公司总经理。西安交通大学硕士 在校期间曾获得校级最高企业奖学金《英飞凌企业奖学金》 2007年-2011年，威盛电子股份有限公司，项目经理 2011年-至今，极迈电子科技（上海）有限公司总经理。
+                        </div>
+                    </div>
+                </div>
+                <div class="project_detial_box_title"><span class="cir_blue"></span>创业故事</div>
+                <p>艾赛博通过几年的艰苦努力，已经建立以下植物细胞规模培养核心技术：
+创新的植物细胞规模培养放大技术：耦连低剪切力的“波浪-回头浪生物反应器技术”及“杂化气升生物反应器技术”进行级联放大，克服了植物细胞规模培养放大的难题，可成功地实现10-100立方米规模的工业放大。</p>
+                <div class="project_detial_box_title"><span class="cir_blue"></span>公司信息</div>
+                <div class="gsxx_box">
+                	<div class="gsxx_left">
+                    	<img src="../mainstyle/images/head_bg_01.png">
+                        <span style=" margin:5px 0; display:block;">查看营业执照大图</span>
+                    </div>
+                    <div class="gsxx_right">
+                    	<p><b>公司全称：</b>xx科技有限责任公司</p>
+                    	<p><b>法定代表：</b>xxx</p>
+                        <p><b>注册资本：</b>200万</p>
+                        <p><b>注册时间：</b>2015-03</p>
+                        <p><b>公司官网：</b>www.shoukechou.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project_detial_box">
+            	<div class="project_detial_box_title" id="xmxq"><span class="cir_blue"></span>产品介绍</div>
+                <p>植物细胞次生代谢产物集成 “生物合成”和“后生物合成”调控技术：可提高植物小分子药物的产率达数千倍，实现每升产率从毫克级提高到克级，突破了植物细胞次生代谢产物产率低的瓶颈。该调控技术的基本思想和技术路线具有通用性，可用于提高大多数植物小分子药物，植物药和中药药材活性组分的生产，突破了有重大工业开发前景的植物细胞生物技术生产药物的核心技术。</p>
+                <div class="project_detial_img"><img src="../mainstyle/images/jigou.jpg"></div>
+                <div class="project_detial_box_title" ><span class="cir_blue"></span>市场状况</div>
+                <p>植物细胞次生代谢产物集成 “生物合成”和“后生物合成”调控技术：可提高植物小分子药物的产率达数千倍，实现每升产率从毫克级提高到克级，突破了植物细胞次生代谢产物产率低的瓶颈。该调控技术的基本思想和技术路线具有通用性，可用于提高大多数植物小分子药物，植物药和中药药材活性组分的生产，突破了有重大工业开发前景的植物细胞生物技术生产药物的核心技术。</p>
+                <div class="project_detial_img"><img src="../mainstyle/images/head_bg_01.png"></div>
+                <div class="project_detial_box_title"><span class="cir_blue"></span>竞争优势</div>
+                <p>植物细胞次生代谢产物集成 “生物合成”和“后生物合成”调控技术：可提高植物小分子药物的产率达数千倍，实现每升产率从毫克级提高到克级，突破了植物细胞次生代谢产物产率低的瓶颈。该调控技术的基本思想和技术路线具有通用性，可用于提高大多数植物小分子药物，植物药和中药药材活性组分的生产，突破了有重大工业开发前景的植物细胞生物技术生产药物的核心技术。</p>
+                 <div class="project_detial_img"><img src="../mainstyle/images/head_bg_01.png"></div>
+               <div class="project_detial_box_title"><span class="cir_blue"></span>运营现状</div>
+                <p>植物细胞次生代谢产物集成 “生物合成”和“后生物合成”调控技术：可提高植物小分子药物的产率达数千倍，实现每升产率从毫克级提高到克级，突破了植物细胞次生代谢产物产率低的瓶颈。该调控技术的基本思想和技术路线具有通用性，可用于提高大多数植物小分子药物，植物药和中药药材活性组分的生产，突破了有重大工业开发前景的植物细胞生物技术生产药物的核心技术。</p>
+                 <div class="project_detial_img"><img src="../mainstyle/images/head_bg_01.png"></div>
+                <div class="project_detial_box_title"><span class="cir_blue"></span>财务数据</div>
+                <p>植物细胞次生代谢产物集成 “生物合成”和“后生物合成”调控技术：可提高植物小分子药物的产率达数千倍，实现每升产率从毫克级提高到克级，突破了植物细胞次生代谢产物产率低的瓶颈。该调控技术的基本思想和技术路线具有通用性，可用于提高大多数植物小分子药物，植物药和中药药材活性组分的生产，突破了有重大工业开发前景的植物细胞生物技术生产药物的核心技术。</p>
+                 <div class="project_detial_img"><img src="../mainstyle/images/head_bg_01.png"></div>
+            </div>
+            <div class="project_detial_box">
+                   <div class="project_detial_box_title" id="rzxx"><span class="cir_blue"></span>融资信息</div>
+                   <p><b>融资时间：</b>2015.09~2016.05</p>
+                   <p><b>融资金额：</b>200万</p>
+                   <p><b>出让股份：</b>15%</p>
+                   <p><b>起投金额：</b>1万</p>
+                   <p><b>资金用途：</b>                                                                                                                                   </p>
+                   <p>1. 第一线项目产品：建设20，000L规模紫杉醇、10-DAB、巴卡亭三生产线。所需资金2000万元，主要用于生产车间建设、高达20套1000升生产模块建设；设备购置、人员工资、材料费及造浪器、反应器的设计标准化、自动化和系统模块化。紫杉醇临床前试验及验证活动 </p>
+                   <p>2. 第二线项目产品：白藜芦醇、天山雪莲等产品开发。所需资金1000万元，用于研发材料费用, 生产车间建设、人员工资, 高达10套1000升生产模块建设, 新食品验证活动 </p>
+                   <p>3. 第三线项目产品：人参皂苷、银杏提取物等产品开发。所需资金1000万元，主要用于研发材料费用、设备费用、人员工资,高达10套1000升生产模块建设, 新食品验证活动</p>
+                   <p>4. 完善技术、管理团队和市场服务体系建设、完善平台建设及产业化前期准备，所需资金1500万元，主要用于建立完善公司的技术研发及管理团队；建立市场营销服务体系以及为产业化发展做准备。</p>
+            </div>
+            <div class="project_detial_box">
+                    <div class="project_detial_box_title" style="margin-top:5px" id="syjhs"><span class="cir_blue"></span>商业计划书  </div>
+            <p style="text-align: center;margin-bottom:20px"> 请扫描二维码添加客服微信，我们的客服人员会与您联系！</p>
+            <div style="margin:0 auto; display:block; width:173px; height:173px;"><img style="width:173px;height:173px;" src="../mainstyle/images/weixin.png"></div>
+            </div>
+            <div class="project_detial_box">
+            	<div class="project_detial_box_title" id="pinlun"><span class="cir_blue"></span>评论</div>
+                <textarea style="width:760px; height:60px; margin-top:20px; border-radius:5px; -moz-border-radius:5px; border-color:#d3d3d3; padding:5px;"></textarea>
+                <div class="pinlun_button">评论</div>
+                <div style="clear:both"></div>
+                <div class="answerer_wrapper">
+                        <div class="answerer_box">
+                            <span class="answerer_name">钱多多</span>
+                            <span class="answerer_type left_huifu">回复</span>
+                            <span class="answerer_name">钱多多</span>
+                            <span class="answerer_time" style=" margin-right:50px;">2105-11-12 12:22</span>
+                            <span class="answerer_huifu">回复</span>
+                            <div class="answerer_line">
+                                5專業監控級別的OLED索尼一直有生產，而且索尼擁有JDI一半的股權的。
+                            </div>
+                            <div class="answerer_input">
+                                <input style="width:665px;"><span class="fbhf">发表回复</span>
+                            </div>
+                        </div>
+                 </div>
+                 <div class="answerer_wrapper">
+                        <div class="answerer_box">
+                            <span class="answerer_name">钱多多</span>
+                            <span class="answerer_type left_huifu">回复</span>
+                            <span class="answerer_name">钱多多</span>
+                            <span class="answerer_time" style=" margin-right:50px;">2105-11-12 12:22</span>
+                            <span class="answerer_huifu">回复</span>
+                            <div class="answerer_line">
+                                5專業監控級別的OLED索尼一直有生產，而且索尼擁有JDI一半的股權的。
+                            </div>
+                            <div class="answerer_input">
+                                <input style="width:665px;"><span class="fbhf">发表回复</span>
+                            </div>
+                        </div>
+                 </div>
+                <!--<div class="pinlun_box">
+                	<div>
+                    	<div class="project_detial_pinlun">wangfenfen</div>
+                        <div class="project_detial_time">2105-11-12 12:22</div>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div>5專業監控級別的OLED索尼一直有生產，而且索尼擁有JDI一半的股權的。</div>
+                </div>
+                <div class="pinlun_box">
+                	<div>
+                    	<div class="project_detial_pinlun">wangfenfen</div>
+                        <div class="project_detial_time">2105-11-12 12:22</div>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div>5專業監控級別的OLED索尼一直有生產，而且索尼擁有JDI一半的股權的。</div>
+                </div>
+                <div class="pinlun_box">
+                	<div>
+                    	<div class="project_detial_pinlun">wangfenfen</div>
+                        <div class="project_detial_time">2105-11-12 12:22</div>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div>5專業監控級別的OLED索尼一直有生產，而且索尼擁有JDI一半的股權的。</div>
+                </div>
+                <div class="pinlun_box">
+                	<div>
+                    	<div class="project_detial_pinlun">wangfenfen</div>
+                        <div class="project_detial_time">2105-11-12 12:22</div>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div>5專業監控級別的OLED索尼一直有生產，而且索尼擁有JDI一半的股權的。</div>
+                </div>
+                <div class="pinlun_box">
+                	<div>
+                    	<div class="project_detial_pinlun">wangfenfen</div>
+                        <div class="project_detial_time">2105-11-12 12:22</div>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div>5專業監控級別的OLED索尼一直有生產，而且索尼擁有JDI一半的股權的。</div>
+                </div>-->
+                <div style="margin-top:10px;">
+                	<span style="float:left; margin:0 10px 0 680px;">4/6</span>
+                    <span class="page_cir"><img src="../mainstyle/images/pre.png"></span>
+                    <span class="page_cir"><img src="../mainstyle/images/next.png"></span>
+                </div>
+            </div>
+        </div>
+        <div class="project_detial_bottom_right">
+        	<div class="project_detial_box">
+            	<div class="project_detial_box_title"><span class="cir_blue"></span>项目流程状态</div>
+                <div style="margin:20px 0 0 16px;">
+                    <div style="float:left">
+                        <div class="xmlc_yr xmlc_yr_unactive"></div>
+                        <div class="xmlc_text">预热</div>
+                    </div>
+                    <div style="float:left">
+                    	<div class="xmlc_arrow"></div>
+                    </div>
+                    <div  style="float:left">
+                        <div class="xmlc_rm xmlc_rm_unactive"></div>
+                        <div class="xmlc_text">热募</div>
+                    </div>
+                    <div style="float:left">
+                    	<div class="xmlc_arrow xmlc_arrow_unactive"></div>
+                    </div>
+                    <div  style="float:left">
+                        <div class="xmlc_wc xmlc_wc_unactive"></div>
+                        <div class="xmlc_text">完成</div>
+                    </div>
+                </div>
+            </div>
+        	<div class="project_detial_box">              
+                <embed src="http://player.youku.com/player.php/sid/XOTE5MDg2NTAw/v.swf" allowFullScreen="true" quality="high" width="330" height="200" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" style=" margin-top:10px;"></embed>
+                <div class="project_detial_box_title"><span class="cir_blue"></span>最新动态<span class="seemore">查看更多>></span></div>
+                <div class="wdxx_box ml_0">
+                	<div>
+                    	[<span class="font_blue">系统消息</span>]<span class="time">2015-11-16 09:22:21</span>
+                    </div>
+                    <div>您好，欢迎来到首科众筹！您现在可以 发布项目 或 认证投资人投资项目 啦!</div>
+                    <div><img src="../mainstyle/images/banner.jpg"></div>
+                </div>
+                <div class="wdxx_box ml_0">
+                	<div>
+                    	[<span class="font_blue">系统消息</span>]<span class="time">2015-11-16 09:22:21</span>
+                    </div>
+                    <div>您好，欢迎来到首科众筹！您现在可以 发布项目 或 认证投资人投资项目 啦!</div>
+                    <div></div>
+                </div>
+                <div class="wdxx_box ml_0">
+                	<div>
+                    	[<span class="font_blue">运营在admin推送</span>]<span class="time">2015-11-16 09:22:21</span>
+                    </div>
+                    <div><a href="">再评奥迪新Q7：宛若女明星</a></div>
+                    <div></div>
+                </div>
+                <div class="wdxx_box ml_0">
+                	<div>
+                    	[<span class="font_blue">项目笔记</span>]<span class="time">2015-11-16 09:22:21</span>
+                    </div>
+                    <div>当仇晓慧遇上蔡骏，当金融遇上悬疑：金融，其实可以很好看！</div>
+                    <div></div>
+                </div>
+            </div>
+            
+          <div class="project_detial_box">
+          		<div class="project_detial_box_title" style="overflow:hidden;">
+                	<div style="float:left;"><img src="../mainstyle/images/lintou.png" style="width:31px; height:31px; margin-right:5px;">领投人</div>
+                </div>
+            	<div style="margin-top:20px; overflow:hidden;">
+                    <div class="project_member_img"><img src="../mainstyle/images/investor-left-jpg.jpg"></div>
+                    <div class="project_member_name"><b>张旺财</b><br>首科众筹 技术总监</div>
+                    <div class="sixin">
+                    	<div class="sixinimg"></div>
+                    	<div>私信</div>
+                    </div>
+                </div>
+                <div class="project_detial_box_title"><span class="cir_blue"></span>领投理由</div>
+                <p>1.乐盒盒广告创意好玩，在杭州、广州、深圳等大城市目前还是蓝海市场，而且O2O行业的发展导致白领人群叫外卖频次增加，间接导致外卖盒上做广告的覆盖人群增加。</p>
+                <p>2.团队成员多为连续创业者，格局和执行力一流，多年互联网运营经验。CEO甲方出身，了解广告投放市场特点。“胸怀”宽广。</p>
+                <p>3.五百万的良心估值</p>
+                <div class="project_detial_box_title" style="overflow:hidden;">
+                	<div style="float:left;"><img src="../mainstyle/images/gentou.png" style="width:22px; height:22px; margin-right:5px;">跟投人</div>
+                </div>
+                <div style="margin-top:20px; overflow:hidden;">
+                    <div class="project_member_img"><img src="../mainstyle/images/investor-left-jpg.jpg"></div>
+                    <div class="project_member_name"><b>张旺财</b><br>首科众筹 技术总监</div>
+                    <div class="sixin">
+                    	<div class="sixinimg"></div>
+                    	<div>私信</div>
+                    </div>
+                </div>
+            	<div style="margin-top:20px; overflow:hidden;">
+                    <div class="project_member_img"><img src="../mainstyle/images/investor-left-jpg.jpg"></div>
+                    <div class="project_member_name"><b>张旺财</b><br>首科众筹 技术总监</div>
+                    <div class="sixin">
+                    	<div class="sixinimg"></div>
+                    	<div>私信</div>
+                    </div>
+                </div>
+                <div style="margin-top:20px; overflow:hidden;">
+                    <div class="project_member_img"><img src="../mainstyle/images/investor-left-jpg.jpg"></div>
+                    <div class="project_member_name"><b>张旺财</b><br>首科众筹 技术总监</div>
+                    <div class="sixin">
+                    	<div class="sixinimg"></div>
+                    	<div>私信</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- 底部 --> 
+<div class="foot">
+	<div class="foot_1">
+    	<div class="foot_1_box">
+        	<div class="phone">
+            	<div class="phone_img"><img src="../mainstyle/images/phone.png"></div>
+                <div class="phone_text">400-640-0695</div>
+            </div>
+            <div class="email">
+            	<div class="email_img"><img src="../mainstyle/images/email.png"></div>
+                <div class="email_text">service@shoukechou.com</div>
+            </div>
+            <ul>
+            	<li><a>关于我们</a></li>
+                <li><a>新手指引</a></li>
+                <li><a>用户协议</a></li>
+                <li><a>风险提示</a></li>
+                <li><a>用户反馈</a></li>
+                <li><a>法律声明</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="foot_2">Copyright @2015 首科众筹  浙ICP备15020073号-1</div>
+</div>
+</body>
+<script>
+	var aa=document.getElementById("project_detial_middle").offsetTop;
+	window.onscroll = function () {	
+		var n=document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+		
+		if(n>=aa){
+			
+			var x=document.getElementById("project_detial_nav")
+			var y=document.getElementById("project_detial_bottom")
+			x.style.display='block';
+			y.style.marginTop='35px';
+			}
+			else{
+			
+				var x=document.getElementById("project_detial_nav")
+				var y=document.getElementById("project_detial_bottom")
+			x.style.display='none';
+			y.style.marginTop='0px';
+			}
+	}
+	
+$(document).ready(function(){
+	$(".scrolltop").click(function(){
+		$("html,body").animate({scrollTop: $("html,body").offset().top}, 1000);
+		});
+	})
+
+	
+$(document).ready(function(){
+	$(".xmgl").click(function(){
+		$("html,body").animate({scrollTop: $("#xmgl").offset().top-80}, 1000);
+		$(".project_detial_middle ul li").removeClass("nav_active");
+		$(".project_detial_nav ul li").removeClass("nav_active");
+		$(".xmgl").addClass("nav_active");
+		});
+	$(".xmxq").click(function(){
+		$("html,body").animate({scrollTop: $("#xmxq").offset().top-80}, 1000);
+		$(".project_detial_middle ul li").removeClass("nav_active");
+		$(".project_detial_nav ul li").removeClass("nav_active");
+		$(".xmxq").addClass("nav_active");
+		});
+	$(".rzxx").click(function(){
+		$("html,body").animate({scrollTop: $("#rzxx").offset().top-80}, 1000);
+		$(".project_detial_middle ul li").removeClass("nav_active");
+		$(".project_detial_nav ul li").removeClass("nav_active");
+		$(".rzxx").addClass("nav_active");
+		});
+	$(".tdjs").click(function(){
+		$("html,body").animate({scrollTop: $("#tdjs").offset().top-80}, 1000);
+		$(".project_detial_middle ul li").removeClass("nav_active");
+		$(".project_detial_nav ul li").removeClass("nav_active");
+		$(".tdjs").addClass("nav_active");
+		});
+	$(".syjhs").click(function(){
+		$("html,body").animate({scrollTop: $("#syjhs").offset().top-80}, 1000);
+		$(".project_detial_middle ul li").removeClass("nav_active");
+		$(".project_detial_nav ul li").removeClass("nav_active");
+		$(".syjhs").addClass("nav_active");
+		});	
+	$(".pinlun").click(function(){
+		$("html,body").animate({scrollTop: $("#pinlun").offset().top-80}, 1000);
+		$(".project_detial_middle ul li").removeClass("nav_active");
+		$(".project_detial_nav ul li").removeClass("nav_active");
+		$(".pinlun").addClass("nav_active");
+		});
+});
+		
+</script>
+<script type="text/javascript" src="../js/radialIndicator.js"></script>
+<script type="text/javascript" src="../js/showProjectDetail.js"></script>
+</html>

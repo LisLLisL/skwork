@@ -1,0 +1,822 @@
+@charset "UTF-8";
+/* CSS Document */
+.score－contain{
+    min-height:700px!important;
+    font-family:"微软雅黑"!important;
+}
+.score－contain>h1{
+    font-family:"微软雅黑";
+    width:720px;
+    background:#fafafa;
+    color:#999;
+    padding:20px;
+    font-size:18px
+}
+.score-left{
+    float:left
+}
+.score-right{
+    float:right
+}
+.nano .pane   { background: #888;}
+.nano .slider {background: #111;}
+#left-nano{
+    width: 220px; height: 640px;
+}
+#right-nano{
+    width:510px;
+    height:340px
+}
+.item-box {
+    width:170px;
+    cursor:pointer;
+    position:relative;
+    border-radius:0px;
+    transition:All 0.4s ease-in-out;
+    -webkit-transition:All 0.4s ease-in-out;
+    -moz-transition:All 0.4s ease-in-out;
+    -o-transition:All 0.4s ease-in-out;
+    border:1px solid #fff;
+    margin:2px auto;
+    background:#fafafa;
+    opacity:.5;
+    margin-left:15px
+}
+.item-box:hover{
+    -moz-box-shadow:0px 0px 5px #000;
+    -webkit-box-shadow:0px 0px 5px #000;
+    box-shadow:0px 0px 5px #000;
+    border:1px solid #fff;
+    opacity:1
+}
+.item-box{
+    margin-top:2px
+}
+.item-box .item-numb{
+    position: absolute;
+    top:5px;
+    left:5px;
+    width:20px;
+    height:20px;
+    text-align:center;
+    background:#f60;
+    color:#fff;
+    border-radius:50%
+}
+.item-box .img-box{
+    transition:All 0.4s ease-in-out;
+    -webkit-transition:All 0.4s ease-in-out;
+    -moz-transition:All 0.4s ease-in-out;
+    -o-transition:All 0.4s ease-in-out;
+}
+.item-box:hover .img-box{
+    padding:10px
+}
+.img-box img{
+    display:block;
+    width:100%;
+    height:110px;
+    border-radius:0px
+}
+
+.item-name{
+    font-size:16px;
+    color:#fff;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    background:#000;
+    opacity:.6;
+    z-index:99;
+}
+
+.item-name p{
+    font-size:12px;
+    padding:0 5px;
+    margin:0px;
+    line-height:20px
+}
+.item-active, .item-active:hover{
+    -moz-box-shadow:0px 0px 5px #000;
+    -webkit-box-shadow:0px 0px 5px #000;
+    box-shadow:0px 0px 5px #000;
+    border:1px solid #999;
+    z-index:222;
+    transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    opacity:1
+}
+.item-active .img-box{
+    padding:10px
+}
+.triangle-right{
+    transition:All 0.4s ease-in-out;
+    -webkit-transition:All 0.4s ease-in-out;
+    -moz-transition:All 0.4s ease-in-out;
+    -o-transition:All 0.4s ease-in-out;
+}
+
+.score-right{
+    padding:0 15px 15px 15px;
+    width:510px;
+    position:relative
+}
+.score-right h1{
+    font-size:16px;
+    padding:15px 0;
+    display:inline-block
+}
+.item-tit{
+    border-bottom:1px  dotted #ddd;
+    padding-bottom:10px
+}
+.item-tit p{
+    margin-top:0px
+}
+.item-tit >span{
+    margin-left:10px;
+    color:#999
+}
+
+.submit-box{
+    padding:30px; text-align:center; border-top:1px solid #ddd;
+}
+.submit-box p{
+    margin-top:10px;
+    color:#999;
+    font-size:14px
+}
+.subbutton{
+    border:0px; background:#28bffe; color:#fff; padding:10px 20px; cursor:pointer; font-size:14px;
+    margin-left:10px;
+    border-radius:2px
+}
+.score-table .fir-td{
+    text-align:left;
+    font-size:16px;
+    padding:10px 0 5px 0
+}
+.score-table .sed-td{
+    font-size:12px;
+    color:#999
+}
+.item-people{
+    padding:15px 15px 5px 15px;
+    background:#ddd;
+    text-align:center;
+    margin:10px 0;
+    font-size:14px
+}
+.item-people>div:first-child{
+    border-left:1px solid #ddd;
+    padding-left:20px
+}
+.item-people>div{
+    width:139px;
+    text-align:left;
+    margin-bottom:20px
+}
+.item-people>div+div{
+    border-left:1px dotted #fff;
+    padding-left:20px
+}
+.item-people img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    margin-right:10px;
+    float:left
+}
+.peop-name{
+    text-align:left;
+    margin-top:10px;
+    font-size:16px
+}
+.peop-name div{
+}
+.peop-name p{
+    color:#999;
+    font-size:12px
+}
+.item-listb{
+    border-bottom:1px solid #f60;
+    margin-top:10px
+}
+.item-listb a{
+    font-size:12px;
+    font-weight:bold;
+    color:#999;
+    width:60px;
+    text-align:center;
+    padding:3px;
+    background:#fafafa;
+    display:inline-block;
+    border-radius:2px 2px 0 0
+}
+.item-listb a:hover{
+    color:#999;
+}
+.item-listb .active{
+    background:#f60;
+    color:#fff
+}
+.item-listb .active:hover{
+    color:#fff
+}
+.item-main{
+    padding:10px 0;
+    border-bottom:1px dotted #ddd
+}
+.item-main p{
+    text-indent:2em;
+    font-size:14px;
+    color:#666;
+}
+.item-main>img{
+    width:100%
+}
+.hides{
+    display:none
+}
+.member-box{
+    padding:10px 0;
+
+}
+.member-box +.member-box{border-top:1px dotted #ddd}
+.member-box img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    float:left;
+    margin-right:10px
+}
+.mem-name{
+    width:430px
+}
+.mem-name>div{
+    font-size:14px
+}
+.mem-name>div>span{
+    margin-left:10px;
+    color:#999
+}
+.mem-name>p{
+    background:#fafafa;
+    border-radius:4px;
+    padding:10px;
+    font-size:12px;
+    line-height:20px;
+    margin-top:5px
+}
+.planbutton{
+    background:#f60;
+    padding:10px;
+    color:#fff;
+    border-radius:2px
+}
+
+.planbutton:hover{
+    background:#f40;
+    color:#fff;
+}
+.choose-box{
+    position:absolute; right:0px; top:0px;
+    padding:10px;
+    opacity:.8;
+    background:#333;
+}
+
+
+.choose-box button{
+    width:80px;
+    margin:0 5px
+}
+.choose-box .active{
+    color:#fff!important;
+    background:#f60!important;
+    box-shadow: 0px 2px 0px #f27522, 0px 3px 3px #f27522!important;
+}
+
+.laybox{
+    padding:20px;
+    max-width:400px;
+    font-size:14px;
+    font-family:"微软雅黑";
+    text-align:center;
+    color:#666;
+    min-width:300px
+}
+.orangefont{
+    font-family:Georgia, "Times New Roman", Times, serif;
+    font-size:18px;
+    color:#f60
+}
+.la-p{
+    border-bottom:1px dashed #ddd;
+    margin-bottom:10px;
+    padding-bottom:10px
+}
+.btn-select {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 25px;
+    background-color: #666;
+    font: 14px/20px "Microsoft YaHei";
+    color: #666;
+}
+.btn-select .cur-select {
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    background:#fff;
+    text-indent: 10px;
+    border:1px solid #ddd;
+    border-radius:2px;
+    cursor:pointer
+}
+.btn-select:hover .cur-select {
+    background-color: #fafafa;
+    cursor:pointer;
+    color:#333
+}
+.btn-select select {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 151px;
+    height: 30px;
+    opacity: 0;
+    filter: alpha(opacity: 0);
+    font: 14px/20px "Microsoft YaHei";
+    color: #666;
+    cursor:pointer;
+    border:1px solid #ddd
+}
+.btn-select select option {
+    text-indent: 10px;
+}
+.btn-select select option:hover {
+    background-color: #333;
+    color: #fff;
+}
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #ddd;
+}
+#btn_select .triangle-down {
+    position:absolute;
+    right:10px;
+    top:10px
+}
+.classification-box{
+    padding:12px
+}
+.classification-box>span{
+    float:left;
+}
+.search-proj{
+    padding:10px;
+    width:265px;
+    border:1px solid #ddd;
+    border-radius:2px
+}
+.search-box{
+    border-left:1px solid #efefef;
+    padding:10px
+}
+.search-box button{
+    width:80px;
+    text-align:center;
+    border:0px;
+    font-size:12px;
+    height:35px;
+    line-height:35px;
+    border-radius:2px;
+    color:#fff;
+    background:#f60;
+    cursor:pointer;
+    margin-left:5px
+}
+.fixbox{
+    position:fixed;
+    z-index:999;
+    top:0px;
+    -moz-box-shadow:0px 2px 7px #333333; -webkit-box-shadow:0px 2px 7px #333333; box-shadow:0px 2px 7px #333333;
+    width:100%
+}
+/**
+ * This <div> element is wrapped by jCarousel around the list
+ * and has the classname "jcarousel-container".
+ */
+.jcarousel-container {
+    position: relative;
+}
+
+.jcarousel-clip {
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.jcarousel-list {
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel-list li,
+.jcarousel-item {
+    float: left;
+    list-style: none;
+    /* We set the width/height explicitly. No width/height causes infinite loops. */
+
+}
+
+/**
+ * The buttons are added dynamically by jCarousel before
+ * the <ul> list (inside the <div> described above) and
+ * have the classnames "jcarousel-next" and "jcarousel-prev".
+ */
+.jcarousel-next {
+    z-index: 3;
+    display: none;
+}
+
+.jcarousel-prev {
+    z-index: 3;
+    display: none;
+}
+
+.jcarousel-skin-tango .jcarousel-container {
+    -moz-border-radius: 10px;
+    background: #F0F6F9;
+}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    padding: 20px 40px;
+}
+
+.jcarousel-skin-tango .jcarousel-container-vertical {
+
+    padding:30px 10px;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+
+}
+
+.jcarousel-skin-tango .jcarousel-clip-vertical {
+    width:  200px;
+    height: 400px;
+    text-align:center
+}
+
+.jcarousel-skin-tango .jcarousel-item {
+
+}
+
+.jcarousel-skin-tango .jcarousel-item-horizontal {
+    margin-right: 10px;
+}
+
+.jcarousel-skin-tango .jcarousel-item-vertical {
+    margin-top:5px
+}
+
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+    position: absolute;
+    top: 43px;
+    right: 5px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(next-horizontal.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:hover {
+    background-position: -32px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:active {
+    background-position: -64px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:active{
+    cursor: default;
+    opacity:.5
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 43px;
+    left: 5px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(prev-horizontal.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover {
+    background-position: -32px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:active {
+    background-position: -64px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+    background-position: -96px 0;
+}
+
+/**
+ *  Vertical Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-vertical {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    width: 200px;
+    height: 20px;
+    cursor: pointer;
+    border:1px solid #ddd;
+    background:#fff;
+    cursor:pointer
+}
+
+.jcarousel-skin-tango .jcarousel-next-vertical:hover {
+    opacity:1
+}
+
+.jcarousel-skin-tango .jcarousel-next-vertical:active {
+    opacity:.7
+}
+
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical,
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical:active {
+    cursor: default;
+
+}
+.jcarousel-skin-tango .jcarousel-prev-vertical {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 200px;
+    height: 20px;
+    cursor: pointer;
+    border:1px solid #ddd;
+    background:#fff;
+    cursor:pointer
+}
+
+.jcarousel-skin-tango .jcarousel-prev-vertical:hover {
+    background-position: 0 -32px;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-vertical:active {
+    background-position: 0 -64px;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical,
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical:active {
+    cursor: default;
+    opacity:.7
+}
+
+label {
+    display: inline;
+    cursor:pointer
+}
+
+.regular-checkbox {
+    display: none;
+}
+
+.regular-checkbox + label {
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+.regular-checkbox + label:active, .regular-checkbox:checked + label:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.regular-checkbox:checked + label {
+    /*background-color: #e9ecee;*/
+    border: 1px solid #f60;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: #99a1a7;
+}
+.choose-box.regular-checkbox + label {
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+.regular-checkbox:checked + label:after {
+    content: '\2714';
+    font-size: 16px;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: #f60;
+}
+
+
+.big-checkbox + label {
+    padding: 18px;
+}
+
+.big-checkbox:checked + label:after {
+    font-size: 28px;
+    left: 6px;
+}
+
+.tag {
+    font-family: Arial, sans-serif;
+    width: 200px;
+    position: relative;
+    top: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    float: left;
+}
+
+.radio-1 {
+    width: 193px;
+}
+
+.button-holder {
+    float: left;
+}
+
+/* RADIO */
+
+.regular-radio {
+    display: none;
+}
+
+.regular-radio + label {
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 9px;
+    border-radius: 50px;
+    display: inline-block;
+    position: relative;
+}
+
+.regular-radio:checked + label:after {
+    content: ' ';
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+    position: absolute;
+    top: 3px;
+    background: #99a1a7;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+    text-shadow: 0px;
+    left: 3px;
+    font-size: 32px;
+}
+
+.regular-radio:checked + label {
+    background-color: #e9ecee;
+    color: #99a1a7;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.regular-radio + label:active, .regular-radio:checked + label:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.big-radio + label {
+    padding: 14px;
+}
+
+.big-radio:checked + label:after {
+    width: 24px;
+    height: 24px;
+    left: 4px;
+    top: 4px;
+}
+
+/* ------- IGNORE */
+
+#header {
+    width: 100%;
+    margin: 0px auto;
+}
+
+#header #center {
+    text-align: center;
+}
+
+#header h1 span {
+    color: #000;
+    display: block;
+    font-size: 50px;
+}
+
+#header p {
+    font-family: 'Georgia', serif;
+}
+#header h1 {
+    color: #892dbf;
+    font: bold 40px 'Bree Serif', serif;
+}
+
+#travel {
+    padding: 10px;
+    background: rgba(0,0,0,0.6);
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+    font-variant: normal;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+#travel a {
+    font-family: 'Georgia', serif;
+    text-decoration: none;
+    border-bottom: 1px solid #f9f9f9;
+    color: #f9f9f9;
+}
+.radio-box+.radio-box{
+    margin-left:20px
+}
+.radio-box>span{
+    line-height:25px;
+    padding-left:5px;
+    color:#fff
+}
+.jcarousel-next-vertical:after{
+    content: ' ';
+    width: 0px;
+    height: 0px;
+    border: 5px;
+    border-style: solid;
+    border-color:#aaa transparent transparent;;
+    display: inline;
+    position:absolute;
+    top:7px;
+    left:100px;
+}
+.jcarousel-prev-vertical:after {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;  /* 左边框的宽 */
+    border-right: 5px solid transparent; /* 右边框的宽 */
+    border-bottom: 5px solid #aaa; /* 下边框的长度|高,以及背景色 */
+    font-size: 0;
+    line-height: 0;
+    position:absolute;
+    top:7px;
+    left:100px
+}
+.fixbox1{
+    position:fixed;
+    top:60px;
+    opacity:1;
+}

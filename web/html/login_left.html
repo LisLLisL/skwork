@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0054)http://www.shoukechou.com/security/login?type=activity -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>首科众筹</title>
+    
+<meta name="view" content="width=device-width,initial-scale=1">
+<script type="text/javascript">
+    var contextPath = '';
+</script>
+<script type="text/javascript" src="../js/jquery-1.9.1.js" charset="utf-8"></script>
+<link href="../mainstyle/css/WdatePicker.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/dialog.js" charset="utf-8"></script>
+<script type="text/javascript" src="../js/d1d-common.js" charset="utf-8"></script>
+<script type="text/javascript" src="../js/common.js" charset="utf-8"></script>
+<script type="text/javascript" src="../js/playImg.js" charset="utf-8"></script>
+<script type="text/javascript" src="../js/banner.js" charset="utf-8"></script>
+
+<script type="text/javascript" src="../js/security.js" charset="utf-8"></script>
+<link rel="stylesheet" href="../mainstyle/css/verify.css" type="text/css">
+
+<script type="text/javascript" src="../js/jquery.myValidate.js" charset="utf-8"></script>
+
+<link rel="stylesheet" href="../mainstyle/css/style.css" type="text/css">
+<script type="text/javascript" src="../js/Address.js" charset="utf-8"></script>
+
+<script type="text/javascript" charset="utf-8">window.UEDITOR_HOME_URL = '/jslib/ueditor1_2_6_1-utf8-jsp/';</script>
+<script type="text/javascript" src="../js/ueditor.config.js"></script>
+<script type="text/javascript" src="../js/ueditor.all.min.js"></script>
+<script type="text/javascript" src="../js/jq.placeholder.js"></script>
+<script type="text/javascript" src="../js/plupload.full.min.js"></script>
+<script type="text/javascript" src="../js/zh_CN.js"></script><script type="text/javascript">
+    ($(document).keydown(function (event) {
+        if (event.keyCode == 13) {
+            $("#login").click();
+        }
+    }));
+
+    function submit13keyCode() {
+        if (event.keyCode == 13) {
+            submit();
+        }
+    }
+
+    $(function () {
+        var submit = $.validate("userLoginForm", [
+            {
+                name: "account",
+                rules: {
+                    errorMsg: "请输入4~20位字符（区分大小写）",
+                    defaultMsg: "请输入4~20位字符（区分大小写）",
+                    sucessMsg: "",
+                    requireMsg: "请输入用户名。",
+                    regx: "^[\u4e00-\u9fa5_0-9a-zA-Z_]{4,20}$",
+                }
+            }, {
+                name: "password",
+                rules: {
+                    errorMsg: "请输入6~16位字符（区分大小写）",
+                    defaultMsg: "请输入6~16位字符（区分大小写）",
+                    sucessMsg: "",
+                    requireMsg: "请输入密码",
+                    regx: "^[_0-9a-zA-Z]{6,16}$"
+                }
+            }
+        ], function () {
+            $("#userLoginForm").submit();
+        });
+        $("#login").on("click", function () {
+            submit();
+        });
+    });
+
+</script></head>
+
+<body>
+<div id="header-ucenter">
+	<div class="div-m top-cont">
+    	<div class="pr">
+            <h1 class="logo pa"><a href="http://www.shoukechou.com/index">首科众筹</a></h1>
+            <ul class="top-nav pa f-16">           
+                <li id="index"><a href="http://www.shoukechou.com/index">首页</a></li>
+                <li id="seePro"><a href="http://www.shoukechou.com/project/queryProjectByType?proType=4">浏览项目</a></li>
+                <li id="newProject"><a href="http://www.shoukechou.com/usercenter/usersafe/createProject?proType=0">发起项目</a></li>
+                <li id="investMan"><a href="http://www.shoukechou.com/findInvestUser">领投机构</a></li>
+                <li id="exercise"><a href="http://www.shoukechou.com/special/specialList">资讯专题</a></li>
+                <li id="about"><a target="_blank" href="http://www.shoukechou.com/helpcenter/aboutus/helpCenterSelected?helPage=1">关于我们</a></li>
+                <li id="activity" style="background: #ff4a03;"><a style="color: #ffffff;" target="_blank" href="http://www.shoukechou.com/activity/viewInfo">投融资大赛</a></li>
+                </ul>
+            <div class="top-login pa f-14">
+            		<a href="http://www.shoukechou.com/security/login" class="a-login white">登录</a> <a href="http://www.shoukechou.com/user!regIndex" class="">注册</a>
+            	</div>
+            </div> 
+    </div> 
+</div><div class="u-content bg-gray">
+    <div class="ucenter areaA">
+        <div class="login-area">
+            <div class="common-title pr">
+                <h2>
+                    <a class="red">用户登录</a>
+                </h2>
+                <div style="border-bottom:1px solid #ccc; height:52px;"></div>
+            </div>
+            <div class="login-content pr">
+
+ <!-- 111111111start -->
+<div class="login-content pr">
+
+	<div style="float:left;margin:60px 85px 0 80px"> 
+  
+        <h2 style="height:30px;margin-left:10px"> 首科众筹用户专享服务</h2> 
+        <div class="spancss"> 
+            <ul> 
+                 <li ><span>机构投资者:</span>放大资金杠杆 节省募集时间和精力</li> 
+                 <li><span>个人投资者:</span> 专业机构引导 优质项目进驻 门槛低 风险小</li> 
+                 <li><span>项目方: </span>快速融资 提升企业知名度 引入更多产业资源</li> 
+            </ul> 
+        </div>
+    
+        <div> 
+             <div style="margin:65px 100px 0 20px; width:120px ;float:left">
+        
+                <img src="../mainstyle/images/login_qrcode01.png" with="120px" height="114px"  /> 
+                <p align="center">首科PLUS</p>
+             </div>
+        
+             <div style="float:left; width:120px; margin:65px 0 0 0">
+                <img src="../mainstyle/images/login_qrcode02.png" with="120px" height="114px" /> 
+                <p align="center">我创我筹</p>
+             </div>
+        </div>
+	</div>
+	<div style="float:left;"><img src="../mainstyle/images/login_line.png" style="margin-top:50px;"></div>
+ <!-- 33333333end -->
+                <div class="reg-box login-box pa">
+                    <form name="userLoginForm" id="userLoginForm" action="http://www.shoukechou.com/security/login" method="post">
+                        <ul>
+                            <li>
+									<span class="input-wrap">
+										<i class="input-icon icon-user">&nbsp;</i>
+										<input type="text" placeholder="会员名/手机号" value="" class="inputs" name="account" id="account">
+                                    </span>
+                            </li>
+                            <li>
+									<span class="input-wrap">
+										<i class="input-icon icon-password">&nbsp;</i>
+										<input type="password" placeholder="密 码" value="" class="inputs" name="password" id="password">
+									</span>
+                            </li>
+                            <li class="fr"><a href="http://www.shoukechou.com/security/gofindPwdOne" class="forget">忘记密码？</a>
+                            </li>
+                            <li>
+                                <input type="button" class="btn login-btn f-18" value="登 录" id="login">
+                            </li>
+                            <li class="fr">没有账号，立即
+                                <a href="http://www.shoukechou.com/activity/register?type=0" class="register white"> 注册 </a>
+                                    </li>
+                            <li class="clear"></li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 底部 -->
+<script type="text/javascript">
+	function feedback1() {
+		moddialog('showdialog',$("#feedback").html());
+		
+		$('#fbContent').val('您的建议');
+		$('#fbEmail').val('邮件地址');
+	/* $("#showdialog").find("#feedback").show(); */
+		/* userfeedback(); */
+	}
+	
+	function inputContent(){
+		if($('#fbContent').val()=='您的建议'){
+			$('#fbContent').val('');
+		}
+	}
+	
+	function leaveContent(){
+		if($('#fbContent').val()==''){
+			$('#fbContent').val('您的建议');
+		}
+	}
+	
+	function inputEmail(){
+		if($('#fbEmail').val()=='邮件地址'){
+			$('#fbEmail').val('');
+		}
+	}
+	
+	function leaveEmail(){
+		if($('#fbEmail').val()==''){
+			$('#fbEmail').val('邮件地址');
+		}
+	}
+	
+	function  userfeedback() {
+		 var length=$("#fbContent").val().length;
+		$("#sayMe").html(length); 
+		var t=document.all.fbId;
+		t = document.getElementById("fbContent").value;
+		if(length>300){
+			 var str = t.substring(0,299);
+			 t = str; 
+			 $("#sayMe").css("color","red");
+			 $("#fbContent").val(t);
+			 
+			 alert("字符长度超出");
+			return;
+		}else{
+			$("#sayMe").css("color","");
+		} 
+	}
+	
+	function  userfeedbacksuccess() {
+		
+		 var fbEmail = document.getElementById("fbEmail").value; 
+		 var fbContent = document.getElementById("fbContent").value; 
+		 
+		 
+		 var reg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+		if(fbEmail.length==0){
+			alert("请输入邮箱");
+			return false;
+		}else if(!reg.test(fbEmail)){
+			
+			alert("邮箱格式不正确");
+			return false;
+		} else if(fbContent.length==0){
+			alert("请输入反馈信息");
+			return false;
+		}
+		
+		$.ajax({
+			url:"/feedback",
+			type:"post",
+			data:{
+				"fbEmail" : fbEmail,
+				"fbContent" : fbContent
+			},
+			success: function (result) {
+				$("#showdialog").remove();
+				moddialog('showdialog1',$("#feedbacksuucess").html());
+			}
+		});
+		
+		
+		/* $("#feedbackform").submit();
+		   $("#showdialog").css("display","none");
+		moddialog('showdialog',$("#feedbacksuucess").html()); */
+		
+	}
+	 function closedFeedback(){ //提交的方法
+	 	$("#showdialog1").remove();
+	 }
+	 function closedFeedback1(){ //提交的方法
+	     	$("#showdialog").remove();
+	 }
+
+</script>
+<!-- 底部 --> 
+<div class="footer u-footer">
+    <div class="footer_warp"> 
+        <ul class="footer_text f-14 pr">
+            <li><a target="_blank" href="http://www.shoukechou.com/helpcenter/aboutus/helpCenterSelected?helPage=1">关于我们</a> 丨</li>
+            <li><a target="_blank" href="http://www.shoukechou.com/helpcenter/aboutus/helpCenterSelected?helPage=2">新手指引</a> 丨</li>
+            <li><a target="_blank" href="http://www.shoukechou.com/helpcenter/aboutus/helpCenterSelected?helPage=3">用户协议</a> 丨</li>
+            <li><a target="_blank" href="http://www.shoukechou.com/helpcenter/aboutus/helpCenterSelected?helPage=4">风险提示</a> 丨</li>
+            <li><a onclick="feedback1()" href="javascript:void(0);">用户反馈</a> 丨</li>
+            <li><a target="_blank" href="http://www.shoukechou.com/helpcenter/aboutus/helpCenterSelected?helPage=6">合作机构</a> 丨</li>
+            <li><a target="_blank" href="http://www.shoukechou.com/helpcenter/aboutus/helpCenterSelected?helPage=7">法律声明</a></li>
+            
+        </ul>
+        <div class="clear"></div>
+       <div class="footer_bottom">
+            <ul class="footer_tg f-14">
+                <!-- <li class="dh">400-806-1896</li> -->
+                <li class="yx">service@shoukechou.com</li>
+            </ul>
+        </div>
+        <div class="footer_tag f-center">Copyright @2015 首科众筹  浙ICP备15020073号-1</div>
+    </div>
+</div>
+ <script type="text/template" id="feedback">
+<div class="modal-dialog f-center pr">
+    <div class="common-title pr">
+        <h2 class="login-h2 red"><a >用户反馈</a></h2>
+        <a onclick="closedFeedback1();" class="close-rt pa"></a>
+    </div>
+    <div class="login-box register-area u-list"  >
+        <form name="feedbackform" id="feedbackform" action="/feedback" method="post">
+            <textarea id="fbContent" class="t_area" name="fbContent"  onfocus="inputContent()" oninput="userfeedback();" onblur="leaveContent()"></textarea> 
+            <div class=" f-right"><p><a id="sayMe">0</a>/300</p></div>  
+        <input type="text" class="a_area f-left" id="fbEmail" name="fbEmail" onfocus="inputEmail()" onBlur="leaveEmail()">
+        </form>     
+    </div>
+    <input type="button" class="btn login-btn btn-raduis f-18 mar-t-40" onclick="userfeedbacksuccess();" value="提交反馈意见" />
+</div>
+</script>
+
+<script type="text/template" id="feedbacksuucess">
+<div class="modal-dialog f-center pr">
+<a onclick="closedFeedback();" class="close-rtr pa"></a>
+<p class="f-24 dialog-mar-p">感谢您的宝贵意见！</p>
+<input type="button" class="btn login-btn f-18 mar-b-60" onclick="closedFeedback();" value="确  定" />
+</div>
+</script>
+
+<embed id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd" type="application/thunder_download_plugin" height="0" width="0"></body></html>

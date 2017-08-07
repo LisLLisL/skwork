@@ -1,0 +1,339 @@
+@charset "utf-8";
+
+/*=========================== 全局样式============================== */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, dir, center {
+    margin: 0;
+    padding: 0;
+}
+
+center {
+    text-align: left;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+img {
+    border: none;
+}
+
+body {
+    font-size: 12px;
+    font-family: "microsoft Yahei";
+    line-height: 24px;
+    color: #333;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+select, input, img, select {
+    vertical-align: middle;
+}
+
+input, button, select, textarea {
+    outline: none
+}
+
+textarea {
+    resize: none
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+em {
+    font-weight: bold;
+}
+
+i {
+    font-style: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.head{width: 100%; height: 130px; border-top: 5px solid #049442;}
+
+.foot{ width: 100%; height: 100px; background: #4a4848; }
+
+.foot-line1{ font-size: 16px; font-weight: bold; padding-top: 27px; color: #fff; text-align: center;}
+
+.foot-line2{ font-size: 14px; padding-top: 10px; color: #fff; text-align: center;}
+
+.foot-line2 img{ margin:0 10px 0 25px; }
+
+.width-1200{ width: 1200px; margin: 0 auto; }
+
+.clear{ clear: both; }
+
+.logo{ width: 272px; height: 50px; background: url(../images/logo.png) no-repeat; margin: 40px 0;}
+
+.nav{ width: 100%; height: 40px; background-color: #dcdbdb; }
+
+.nav ul li{ float: left; width: 120px; height: 35px; text-align: center; color: #000; line-height: 40px; font-size: 16px; cursor: pointer;}
+
+.nav ul li:hover{ background: #049442; color: #fff; border-bottom: 5px solid #007231;  }
+
+.nav ul .nav-active{ background: #049442; color: #fff; border-bottom: 5px solid #007231; }
+
+.nav ul li a{ display:block;}
+
+.banner{min-width: 1200px; position: relative;}
+
+.banner-img{ width: 100%; height: 599px; display: block; background: center top no-repeat; }
+
+/*=========================== 首页 ============================== */
+
+.banner1{ background: url(../images/banner1.jpg) center center no-repeat; height: 666px;}
+
+.banner-text{ position: absolute; bottom: 0; background: rgba(0,0,0,0.5); height: 70px; padding: 30px 0; width: 100%; font-size: 14px; line-height: 24px; color: #fff;z-index: 999;}
+
+.banner-text-img{ float: left; width: 142px; height: 70px; margin: 0 20px; background: url(../images/banner-text.png)}
+
+.content-index{ margin: 25px auto 0 auto; overflow: hidden; }
+
+.content-top{ min-height: 340px; border-bottom: 2px solid #007231; }
+
+.content-top-left{ float: left; width: 960px;}
+
+.dongtai{ float: left; padding: 17px 13px; background: #007231;}
+
+.dongtai p{ text-align: center; font-size: 16px; color: #fff; margin-top: 10px;}
+
+.dongtai-info{ float: left; width: 877px; height: 86px; background: rgba(220,218,218,0.3); padding:10px 0; }
+
+.dongtai-info p{ font-size: 14px; line-height: 28px; color: #666; margin:0 0 0 20px ; cursor: pointer; }
+
+.dongtai-info p:hover{ color: #007231; }
+
+.feature-box{ float: left; width: 192px; }
+
+.feature-box p{ text-align: center; font-size: 15px; color: #333; font-weight: bold;}
+
+.feature-cir{ width: 107px; height: 107px; background: #f4f4f4; margin:34px 32px 18px 32px; border-radius: 54px; -moz-border-radius: 54px; -webkit-border-radius: 54px; -o-border-radius: 54px;}
+
+.feature-bg{ background: url(../images/feature.png) no-repeat; width: 107px; height: 107px;}
+
+.feature-cir:hover{ background: #049442; }
+
+.bg-position1{ background-position: 0 0; }
+
+.bg-position2{ background-position: -107px 0; }
+
+.bg-position3{ background-position: -214px 0; }
+
+.bg-position4{ background-position: -321px 0; }
+
+.bg-position5{ background-position: -428px 0; }
+
+.bg-position1:hover {background-position: 0 -107px; }
+
+.bg-position2:hover {background-position: -107px -107px; }
+
+.bg-position3:hover {background-position: -214px -107px; }
+
+.bg-position4:hover {background-position: -321px -107px; }
+
+.bg-position5:hover {background-position: -428px -107px; }
+
+.content-top-right{ float: right; width: 200px;}
+
+.wechat{ width: 170px; height: 172px; background: url(../images/lvhe-wechat.png); margin:0 auto 30px auto; }
+
+.wechat-text{ margin-bottom:5px; overflow: hidden;}
+
+.wechat-text1{ float: left; font-size: 16px; color: #999; width: 50px; text-align: left;}
+
+.wechat-text2{ float: left; width: 150px; text-align: left; color: #007231;}
+
+.content-bottom{ width: 1200px; height: 102px; overflow:hidden; background: #f4f4f4; padding: 25px 0; overflow:hidden;}
+
+.logobox{ width: 204px; height: 102px; float: left; margin-left: 30px;}
+
+
+/*=========================== 绿河动态 ============================== */
+.banner3{ background: url(../images/banner3.jpg) center center no-repeat; height: 168px;}
+
+.content-dongtai{ padding: 30px 0; background: #f7f6f6; overflow: hidden; min-height: 415px;}
+
+.content-navbox{ width: 187px; float: left; overflow: hidden;}
+
+.content-nav{ width: 157px; height: 51px; background: url(../images/dongtai-nav-bg.png) no-repeat 0 -51px; margin:0 0 1px 30px; text-align: center; line-height: 51px; font-size: 16px; color: #333; font-weight: bold; cursor: pointer;}
+
+.content-nav-active{ background-position: 0 0; color: #fff;}
+
+.content-dongtai-right{ width: 880px; float: right; margin-right: 30px;}
+
+.content-dongtai-titlebox{ padding: 0 30px; height: 50px; line-height: 50px; list-style: circle; background: #fff; margin-bottom: 1px; cursor: pointer;}
+
+.content-cir{ width: 6px; height: 6px; display: inline-block; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; background: #b5b5b5;}
+
+.content-dongtai-title{ margin-left: 20px; font-size: 14px; color: #666; }
+
+.content-dongtai-time{ font-size: 12px; color: #999; float: right;}
+
+.content-dongtai-titlebox:hover{ background: #f3f4ec; }
+
+.content-dongtai-titlebox:hover .content-cir{ background: #049442; }
+
+.content-dongtai-titlebox:hover .content-dongtai-title{ text-decoration: underline; }
+
+.open-title{ width: 100%; border-bottom: 1px dotted #000; text-align: center; margin-top:30px; padding-bottom: 10px; font-size: 16px;}
+
+.open-content{ margin-top: 20px; }
+
+
+.content-rightbox{ width: 930px; float: right; margin:0 30px 30px 0; }
+
+.content-rightbox-img{ width: 930px; height: 350px; background: url(../images/banner.jpg) no-repeat top center; background-size: auto 100%; }
+
+.content-rightbox-text{ text-indent: 28px;color: #666; font-size: 14px; margin-top: 25px;}
+
+.content-rightbox-title{ font-size: 20px; color: #3a85b9; border-bottom: 1px solid #3a85b9; padding-bottom: 10px;}
+
+.detail-top{ background: #007231; color: #fff; height: 40px; line-height: 40px; text-indent: 32px;}
+
+.detail-box{ background: #fff;padding: 20px; }
+
+.detail-title{ text-align: center;font-size: 16px; }
+
+.detail-inf{ text-align: center; color: #999; height: 40px; line-height: 40px; border-bottom: 1px dotted #999;}
+
+.detail-inf span{ margin: 0 20px; }
+
+.detail-img { margin: 20px auto; width: 400px; height: 220px; overflow:hidden;}
+
+.detail-img img{ width: 100%; height: 220px; }
+
+.detail-paragraph{ text-indent: 24px;margin-bottom: 10px; font-size: 14px; color: #777;}
+
+.img-title{position: absolute; bottom: 0; left: 0; background: rgba(0,0,0,0.5); width: 100%; height: 40px; color: #fff; line-height: 40px; text-indent: 24px; z-index: 1;}
+
+
+/*=========================== 投资案例 ============================== */
+.banner5{ background: url(../images/banner5.jpg) center center no-repeat; height: 168px;}
+
+.content-porject{ overflow: hidden; padding:30px 0; background: #f7f6f6; min-height: 470px; }
+
+.content-projectbox{ float: left; width: 856px; margin-left: 70px;}
+
+.content-projectlogo{ width: 204px; height: 102px; margin:0 10px 10px 0; float: left;position: relative; cursor: pointer;}
+
+.link{ width: 204px; height: 78px; background: #007231; position: absolute;left: 0; top: 0; font-size: 24px; color: #fff; text-align: center; padding-top: 24px; display: none;}
+
+.link p{ margin-bottom: 10px; }
+
+.link img{ width: 36px; height: 36px;  margin: 0 auto;border-radius: 18px;-webkit-border-radius: 18px; -moz-border-radius: 18px; -o-border-radius: 18px; }
+
+.content-projectlogo:hover .link{ display: block;}
+
+
+/*=========================== 加入我们 ============================== */
+.banner6{ background: url(../images/banner6.jpg) center center no-repeat; height: 168px;}
+
+.content-joinus{ overflow:hidden; padding:30px 0; background: #f7f6f6; }
+
+.zpgw{ float: left; width: 143px; height: 62px; background: url(../images/zpgw.png) no-repeat; margin-left: 50px;}
+
+.zp-content{ float: right; width: 780px; min-height: 670px; margin-right: 55px; padding: 30px 45px; border:1px solid #bfbfbf; background: #fffafa; position: relative;}
+
+.zp-title{ font-size: 24px; color: #049442; width: 100%; border-bottom: 1px solid #049442; padding-bottom: 10px;}
+
+.mar-b-35{ margin-bottom: 35px; }
+
+.mar-b-35 p{ font-size: 14px; color: #666; padding-top:10px;}
+
+.bt-apply{ width: 140px; height: 40px; line-height: 40px; background: #049442; font-size: 14px; text-align: center; color: #fff; cursor: pointer;}
+
+.bt-apply a{ color: #fff; }
+
+.job{ position: absolute; width: 250px; height: 65px; background: #959595; left: -250px; font-size: 16px; color: #fff; line-height: 70px; text-indent: 30px; cursor: pointer;}
+
+.job1{ top: 80px; }
+
+.job2{ top: 160px; }
+
+.job3{ top: 240px; }
+
+.green-active{ background: url(../images/green-active.png); width: 273px; height: 77px; line-height: 93px;}
+
+
+
+/*=========================== 关于我们 ============================== */
+.banner2{ background: url(../images/banner2.jpg) center center no-repeat; height: 168px;}
+
+.content-about{ overflow:hidden; padding:30px 0; background: #f7f6f6; }
+
+.about-box{ padding:0 70px; overflow: hidden;}
+
+.content-about-top{ font-size: 14px; color: #666; }
+
+.aboutimg-box{ float: left; width: 353px; height: 175px; position: relative;border-bottom: 3px solid #e0dfdf;cursor: pointer;}
+
+.aboutimg{ width: 132px; height: 132px;  margin: 0 auto; }
+
+.aboutimg-text{ width: 100%; height: 30px; font-size: 16px; line-height: 30px; font-weight: bold; text-align: center;}
+
+.top-border{ width: 353px; height: 11px; position: absolute; bottom: -3px; left: 0; z-index: 999;  background: url(../images/top-border.png) }
+
+.about-introduce{ width: 1030px; margin:0 70px; height: 200px; background: #fff; padding: 25px 0 0 30px;}
+
+.about-introduce-text{ font-size: 18px; color: #666; margin-bottom: 10px; }
+
+.green-cir{ width: 6px; height: 6px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; background: #049442; display: inline-block; margin-right: 10px;}
+
+.feature-cir-white{width: 107px; height: 107px; background: #fff; margin:34px 32px 18px 32px; border-radius: 54px; -moz-border-radius: 54px; -webkit-border-radius: 54px; -o-border-radius: 54px;}
+
+.feature-cir-white:hover{ background: #049442; }
+
+
+/*=========================== 投资团队 ============================== */
+.banner4{ background: url(../images/banner4.jpg) center center no-repeat; height: 168px;}
+
+.content-investmentPartner{ overflow:hidden; padding:30px 0; background: #f7f6f6; }
+
+.investmentPartnerbox{ width: 255px; height: 370px; float: left;  background: url(../images/boxdiv-smallBox-bg.png); margin:0  0 20px 36px;}
+
+.investmentPartnerbox-top{ width: 235px; height: 106px; padding: 30px 0 0 20px;}
+
+.partner-img{ float: left; width: 80px; height: 80px; border-radius: 40px; -webkit-border-radius: 40px; -moz-border-radius: 40px; -o-border-radius: 40px;}
+
+.partner-info{ float: left; }
+
+.parner-name{ font-size: 16px; color: #333; margin: 20px 0 0 20px; }
+
+.parner-position{ font-size: 12px; color: #666;  margin-left: 20px; }
+
+.investmentPartnerbox-bottom{ padding: 10px; color: #666; }
+
+
+/*=========================== 联系我们 ============================== */
+.banner7{ background: url(../images/banner7.jpg) center center no-repeat; height: 481px;}
+
+.contact-index{ overflow:hidden; padding:30px 0; background: #f7f6f6;  }
+
+.contactbox-top{ margin-left: 30px; }
+
+.contactbox-img{ float: left; width: 600px; }
+
+.imgbox1{ float: left; margin:20px 0 0 30px;}
+
+.imgbox2{ float: left; margin:20px 0 0 10px; width: 147px;}
+
+.contactbox-text{ float: left; margin-top: 20px; color: #666;}

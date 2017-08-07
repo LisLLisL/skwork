@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>投资案例</title>
+	<link rel="stylesheet" type="text/css" href="mainstyle/css/lvhe.css">
+	<!-- <script type="text/javascript" src="js/jquery-1.9.1.js"></script> -->
+	<script type="text/javascript" src="http://libs.useso.com/js/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/template.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$.get("../data/InvestmentCases.json",function (data){
+				$(".content-nav").click(function(){
+					$(".content-nav").removeClass("content-nav-active");
+					$(this).addClass("content-nav-active");
+
+					var type=$(this).attr("type");
+					$("#logoDivList").html(template('logoTemplate', {datalist:data,type:type}));
+				});
+				$(".content-nav-active").click();
+			});
+
+		})
+	</script>
+</head>
+<body>
+
+<div class="head">
+	<div class="width-1200">
+		<div class="logo"></div>
+	</div>
+	<div class="nav">
+		<div class="width-1200">
+			<ul>
+				<a href="index.html"><li>首页</li></a>
+				<a href="about.html"><li>关于我们</li></a>
+				<a href="News.html"><li>绿河动态</li></a>
+				<a href="investmentPartner.html"><li>投资团队</li></a>
+				<a href="InvestmentCase.html"><li  class="nav-active">投资案例</li></a>
+				<a href="JoinUs.html"><li>加入我们</li></a>
+				<a href="contact.html"><li>联系我们</li></a>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="banner banner5"></div>
+
+<div class="content-porject width-1200">
+	<div class="content-navbox">
+		<div class="content-nav content-nav-active" type="">投资案例</div>
+		<div class="content-nav"  type="TMT">TMT</div>
+		<div class="content-nav" type="NEWMATERIAL">新材料</div>
+		<div class="content-nav" type="NEWENERGY">新能源</div>
+		<div class="content-nav" type="HEALTH">医疗健康</div>
+		<div class="content-nav" type="OTHER">其他</div>
+	</div>
+	<div class="content-projectbox" id="logoDivList">
+		<script id="logoTemplate" type="text/html">
+			{{each datalist as value i}}
+			{{if type==""||(type!=""&&value.type==type)}}	
+			<div class="content-projectlogo">
+				<img src="{{value.imgPath}}">
+				<a href="{{value.href}}" target="_blank">
+					<div class="link">
+						<p>{{value.title}}</p>
+						<img src="../mainstyle/images/link.png">
+					</div>
+				</a>
+			</div>
+			{{/if}}
+			{{/each}}
+		</script>
+	</div>
+</div>
+
+<div class="foot">
+	<div class="width-1200">
+		<div class="foot-line1">沪ICP备14023913号  &copy;版权所有：上海绿河投资有限公司</div>
+		<div class="foot-line2"><img src="../mainstyle/images/address.png">上海浦东新区民生路1299号丁香国际商业中心西楼1802室<img src="../mainstyle/images/phone.png">021-5080 0699<img src="../mainstyle/images/email.png">contact@greenriver.cn</div>
+	</div>
+</div>
+</body>
+</html>

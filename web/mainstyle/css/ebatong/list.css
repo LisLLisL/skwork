@@ -1,0 +1,68 @@
+
+.bank_a { width:210px; overflow:hidden; height:41px;}
+.input_order{width:128px;padding:0 }
+.bank{ width:220px; margin-left:20px;}
+.bankBox{ width:900px;}
+.bank_a,.bank,.bank_b{ float:left;}
+
+
+.bank_b{ width:208px;}
+.bank_c{ width:100px;float:left;}
+.user_i4_dl { line-height:55px; _height:75px; margin-top:5px; margin-bottom:5px; display:block; padding-left:35px; vertical-align:middle }
+
+
+/*-----------------------------------------------日期控件-----------------------*/
+
+/**
+ * 日期控件
+ **/
+
+.datebox{width:170px;  height:185px;border:1px #ccc solid; margin-top:50px;font-family:"Arial";margin:0 auto; position:relative;}
+.datebox a.sr_u{ background:url(../images/date_bg.png) no-repeat;}
+.datebox a.sr_d{ background:url(../images/date_bg3.png) no-repeat;}
+.datebox .y_m{width:170px;  height:18px;background-position:0 -162px; background-repeat:repeat-x;border-bottom:1px #ccc solid;overflow:hidden;margin:0 auto;padding:5px 0;}
+.datebox .y_m a{height:16px;border:1px #ccc solid; display:block;float:left; text-align:left;text-indent:3px; color:#333;font-weight:bold; margin-left:4px;}
+.datebox .y_m a:hover{border:1px #ffb84d solid;text-decoration:none}
+.datebox .y_m a.y{width:63px; background-position:50px 6px; margin-left:4px !important;margin-left:2px;}
+.datebox .y_m a.y:hover{ background-position:50px -44px;}
+.datebox .y_m a.m{width:46px; background-position:33px 6px;}
+.datebox .y_m a.m:hover{background-position:33px -44px;}
+.datebox .y_m a.l{width:16px; background:url(../images/date_bg5.png) no-repeat;}
+.datebox .y_m a.l:hover{}
+.datebox .y_m a.r{width:16px; background:url(../images/date_bg4.png) no-repeat;}
+.datebox .y_m a.r:hover{}
+
+
+.datebox .y_select{ text-align:center;width:63px;height:167px; border:1px #ccc  solid; position:absolute; background-color:#fff; top:23px; left:4px; z-index:100;}
+.datebox .y_select a{display:block;height:18px; width:100%; line-height:18px; color:#333;}
+.datebox .y_select a:hover{ color:#fff;background-color:#4484db; text-decoration:none}
+.datebox .y_select a.nonce{font-weight:bold;}
+.datebox .y_select a.sr_u{ background-position:26px 5px;margin-bottom:2px;}
+.datebox .y_select a.sr_u:hover{background:url(../images/date_bg1.png) no-repeat;}
+.datebox .y_select a.sr_d{ background-position:26px 5px;margin-top:2px;}
+.datebox .y_select a.sr_d:hover{background:url(../images/date_bg2.png) no-repeat;}
+.datebox .m_select{width:46px; border:1px #ccc  solid; position:absolute; background-color:#fff; top:23px; left:73px; z-index:100; padding:5px 0px;}
+.datebox .m_select a{display:block;height:18px; line-height:18px; color:#333; text-align:center;}
+.datebox .m_select a:hover{ color:#fff;background-color:#4484db; text-decoration:none}
+.datebox .m_select a.nonce{font-weight:bold;}
+.datebox .d{width:160px; margin:0 auto ;overflow:hidden;height:175px;}
+.datebox .d ul{height:26px; line-height:26px;}
+.datebox .d li{float:left; width:22px;height:20px; margin-right:1px;}
+.datebox .d li.mr0{margin-right:0px;}
+.datebox .d .c{width:160px;} 
+.datebox .d .c a{ display:block;width:22px;height:20px; float:left;background-color:#f4f1f3;margin-right:1px; margin-bottom:1px; color:#000; line-height:20px; text-align:center}
+.datebox .d .c a.n{color:#ccc;} /*不可选日期的颜色*/
+.datebox .d .c a.n:hover{color:#ccc;background-color:#eee;} /*不可选日期的颜色*/
+.datebox .d .c a:hover{background-color:#ff6320; color:#fff;font-weight:bold;text-decoration:none}
+.datebox .d .c a.first{ background-color:#f6ecdc;}
+.datebox .d .c a.first:hover{background-color:#ff6320;color:#fff;font-weight:bold;text-decoration:none}
+.datebox .d .c a.bd{ border:1px solid #ff6320; width:20px; height:18px; line-height:18px; font-weight:bold;text-decoration:none}
+
+.datebox .d .c a.last{margin-right:0px; background-color:#e4ebf2;}
+.datebox .d .c a.last:hover{background-color:#ff6320;color:#fff;font-weight:bold;text-decoration:none}
+.datebox .d .c a.nonce:hover{background-color:#ff6320;text-decoration:none}
+.datebox .d table td{ height:26px; line-height:26px;}
+
+.datebox .d .c a.disabled{ color:#ccc; cursor:default}
+.datebox .d .c a.disabled:hover{background-color:#f4f1f3; font-weight:normal;text-decoration:none}
+/*----------------------------------------------------日期控件-----*/

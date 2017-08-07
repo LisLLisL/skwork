@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首科首页</title>
+<link href="../mainstyle/css/new-version.css" rel="stylesheet">
+<link rel="stylesheet" href="../mainstyle/css/usercenter.css" type="text/css">
+<script src="../js/jquery-1.9.1.js" type="text/javascript"></script>
+<script src="../js/swiper-3.3.1.jquery.min.js" type="text/javascript"></script>
+<link href="../mainstyle/css/swiper-3.3.1.min.css" rel="stylesheet">
+<script type="text/javascript">
+$(document).ready(function(){
+  
+        $("#type .newtip").click(function(){
+            $("#type .newtip").removeClass("select-tip");
+            $(this).addClass("select-tip");
+            });
+        $("#static .newtip").click(function(){
+            $("#static .newtip").removeClass("select-tip");
+            $(this).addClass("select-tip");
+            });
+
+        var a=$(window).height()-134-230-40;
+        $(".itemshow").css("height",a)
+});
+</script>
+
+</head>
+
+<body style="background:#f2f2f2;">
+
+<div class="head">
+    <div class="head_1">
+        <div class="head_box">
+            <div class="head_1_left">众筹成就梦想，众筹助力众创！</div>
+            <div class="head_1_right">你好,张张张</div>
+        </div>
+    </div>
+    <div class="head_2">
+        <div class="head_box">
+            <div class="logo_new" style="margin-top:5px;"><img src="../mainstyle/images/images/logo_new.png"></div>
+            <ul>
+                <li>首页</li>
+                <li>浏览项目</li>
+                <li>发起项目</li>
+                <li>投资机构</li>
+                <li>新闻资讯</li>
+                <li>关于我们</li>
+            </ul>
+            <div class="medal_b"><img src="../mainstyle/images/index/logo_2.png" style=" margin:32px 0 0 20px; width:113px; "></div>
+            <div class="head_portrait">
+                <img src="../mainstyle/images/images/head_portrait.png">
+                <div class="head_portrait_box">
+                    <div ><a class="icon-user-t">个人信息</a></div>
+                    <div ><a class="icon-exit">退出登录</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="itemshow">
+    <div class="itemshow-type">
+        <div class="itemshow-type-top">
+            <div class="itemshow-type-box" id="type">
+                <span>领域：</span>
+                <a class="select-tip newtip">热门项目</a>
+                <a class="newtip">先进制造</a>
+                <a class="newtip">TMT</a>
+                <a class="newtip">大健康</a>
+                <a class="newtip">新材料</a>
+                <a class="newtip">生物制药</a>
+                <a class="newtip">智能硬件</a>
+                <a class="newtip">能源环保</a>
+            </div>
+            <div class="itemshow-type-box" id="static">
+                <span>状态：</span>
+                <a class="select-tip newtip">全部状态</a>
+                <a class="newtip">预热</a>
+                <a class="newtip">热募</a>
+                <a class="newtip">完成</a>
+            </div>
+        </div>
+        <div class="itemshow-type-bottom">
+            <div class="itemshow-type-bottom-left">共<span style="color:#3fb9ea;">105</span>个项目</div>
+            <div class="itemshow-type-bottom-right"><input><img src="../mainstyle/images/index/search.png"></div>
+        </div>
+    </div>
+</div>
+
+<div class="foot">
+    <div class="foot-top-wrapper">
+        <div class="foot-top">
+            <div class="foot-wechat">
+                <img src="../mainstyle/images/index/wechat.png"><br>
+                首科众筹公众号
+            </div>
+            <div class="foot-contact">
+                <div class="contact-line1">联系方式</div>
+                <div class="contact-line2">周一至周五 9:00 ~ 18:00</div>
+                <div class="contact-line3"><img src="../mainstyle/images/index/iphone.png" style="width:30px;">400-640-0695</div>
+                <div class="contact-line4"><img src="../mainstyle/images/index/email.png" style="width:24px;">service@shoukechou.com</div>
+            </div>
+            <div class="foot-about">
+                <ul>
+                    <a class="about about-active">关于我们</a>
+                    <a class="about">新手指引</a>
+                    <a class="about">用户协议</a>
+                    <a class="about">风险提示</a>
+                    <a class="about">用户反馈</a>
+                    <a class="about">法律声明</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="foot-bottom">Copyright @2015 首科众筹 浙ICP备15020073号-1</div>
+</div>
+
+</body>
+</html>

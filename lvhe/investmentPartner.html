@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>投资团队</title>
+	<link rel="stylesheet" type="text/css" href="mainstyle/css/lvhe.css">
+    <!-- <script type="text/javascript" src="js/jquery-1.9.1.js"></script> -->
+    <script type="text/javascript" src="http://libs.useso.com/js/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/template.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $.get("../data/partner.json",function (data){
+                $("#PartnerList").html(template('PartnerTemplate', {datalist:data}));
+            });
+        })
+    </script>
+</head>
+<body>
+<div class="head">
+    <div class="width-1200">
+        <div class="logo"></div>
+    </div>
+    <div class="nav">
+        <div class="width-1200">
+            <ul>
+                <a href="index.html"><li>首页</li></a>
+                <a href="about.html"><li>关于我们</li></a>
+                <a href="News.html"><li>绿河动态</li></a>
+                <a href="investmentPartner.html"><li  class="nav-active">投资团队</li></a>
+                <a href="InvestmentCase.html"><li>投资案例</li></a>
+                <a href="JoinUs.html"><li>加入我们</li></a>
+                <a href="contact.html"><li>联系我们</li></a>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="banner banner4"></div>
+
+<div class="content-investmentPartner width-1200" id="PartnerList">
+    <script type="text/html" id="PartnerTemplate">
+        {{each datalist as value i}}
+        <div class="investmentPartnerbox">
+            <div class="investmentPartnerbox-top">
+                <div class="partner-img"><img src="{{value.partnerimg}}"></div>
+                <div class="partner-info">
+                    <div class="parner-name">{{value.name}}</div>
+                    <div class="parner-position">{{value.position}}</div>
+                </div>
+            </div>
+            <div class="investmentPartnerbox-bottom">{{value.introduce}}</div>
+        </div>
+        {{/each}}
+    </script>
+ 
+</div>
+
+<div class="foot">
+    <div class="width-1200">
+        <div class="foot-line1">沪ICP备14023913号  &copy;版权所有：上海绿河投资有限公司</div>
+        <div class="foot-line2"><img src="../mainstyle/images/address.png">上海浦东新区民生路1299号丁香国际商业中心西楼1802室<img src="../mainstyle/images/phone.png">021-5080 0699<img src="../mainstyle/images/email.png">contact@greenriver.cn</div>
+    </div>
+</div>
+
+</body>
+</html>

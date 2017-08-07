@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>新闻详情</title>
+	<meta charset="utf-8">
+	<meta name="view" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="mainstyle/css/base.css">
+	<script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+	<script src="js/swiper-3.3.1.jquery.min.js" type="text/javascript"></script>
+	<link href="mainstyle/css/swiper-3.3.1.min.css" rel="stylesheet">
+	<script>
+		window.onload = function() {
+		  var mySwiper1 = new Swiper ('.detail-img .swiper-container', {
+		    direction: 'horizontal',
+		    loop : true,
+		    paginationClickable :true,
+		    autoplay : 5000,
+		    nextButton: ' .swiper-button-next',
+		    prevButton: ' .swiper-button-prev',
+		  });
+		};
+	</script>
+	<style type="text/css">
+		.swiper-button-prev{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");}
+        .swiper-button-next{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}
+	</style>
+</head>
+<body>
+<div class="top">
+	<div class="width-1200">
+		<span>
+			<img src="mainstyle/images/email.png">service@shoukecapital.cn
+			<img src="mainstyle/images/phone.png">service@shoukecapital.cn
+		</span>
+	</div>
+</div>
+<div class="headbox">
+	<div class="width-1200">
+		<div class="logo"></div>
+		<div class="nav">
+			<ul>
+				<li>首页</li>
+				<li>关于我们</li>
+				<li class="nav-active">首科动态</li>
+				<li>投资业务</li>
+				<li>财富汇</li>
+				<li>合作伙伴</li>
+				<li>加入我们</li>
+				<li>联系我们</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div style="clear:both;"></div>
+<div class="banner banner3"></div>
+
+<div class="content width-1200">
+	<div class="content-navbox">
+		<div class="content-nav content-nav-active" id="gszx">公司资讯</div>
+		<div class="content-nav" id="hyzx">行业资讯</div>
+		<div class="content-nav" id="zcfg">政策法规</div>
+	</div>
+	<div class="content-rightbox">
+		<div class="detail-top">新闻详情</div>
+		<div class="detail-box">
+			<div class="detail-title">美信金融获数千万人民币融资，以固收类产品切入海外理财市场</div>
+			<div class="detail-inf"><span>发布时间：2016-06-27 13:35:17</span><span>来源：XXX</span><span>阅读量：XXX</span></div>
+			<div class="detail-img">
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide">
+							<img src="mainstyle/images/product-img.png">
+							<div class="img-title">标题1</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="mainstyle/images/product-img.png">
+							<div class="img-title">标题2</div>
+						</div>
+					</div>
+					<div class="swiper-button-prev"></div>
+			    	<div class="swiper-button-next"></div>
+				</div>
+			</div>
+			<div class="detail-paragraph">跨境理财投资平台美信金融宣布完成数千万元人民币 Pre-A 轮融资，此轮融资由 BAI 和梅花创投领投，原子创投与陶石资本跟投。新一轮资金将主要用于产品和技术开发，此前美信金融曾获得微众银行某独立董事的天使轮投资。</div>
+			<div class="detail-paragraph">美信金融 2015年7月 成立于纽约，主要业务是针对华人市场提供海外资产配置服务，首款产品是一个房产抵押债权的项目。一般来说，海外开发商自身会向开发项目投入一定资金，再从银行获得一定低息贷款，另外会通过众筹等渠道获得一部分股权融资。</div>
+			<div class="detail-paragraph">美信提供给投资者的产品是夹心层债权，相当于为开发商自己的股权部分加杠杆。在安全性方面，除了物业资产的抵押，还要求房产开发商进行担保。目前美信金融还提供一些其他的债权和股权产品，例如美元市场间借贷基金、SpaceX 的 Pre-IPO 股权等，此外美信也提供投资移民咨询服务。
+美信金融的长远规划是成为大众富裕阶层的海外资产配置平台，有点类似 “海外版真容宝”。美信的 CEO 刁盛鑫说，他们最初计划覆盖基金、房产等各类资产，但后来发现这样对用户的教育成本更高。用户对海外市场的了解不多，迈出第一步的门槛已经很高，美信希望把这一步变得尽量容易，因此最后将首款产品定义为简单的债权，而且起投门槛只有 1 万美元。</div>
+			<div class="detail-paragraph">在市场推广方面，美信认为线上的覆盖面更广，但是线下的转化率更高。不过作为创业公司，线下直接 to C 很难起量，因此其在线下主要依靠与信托、券商和财富管理公司合作。美信自身将重点集中在线上的运营，包括对留学、移民、海外购物、旅游和理财的场景进行覆盖。</div>
+			<div class="button" style="margin: 0 auto;"><a href="mailto:contact@greenriver.cn">返回上一页</a></div>
+		</div>
+
+	</div>
+</div>
+
+<div class="foot">
+	<div class="foot-line1">
+		<div class="width-1200">
+			<div class="contactbox">
+				<p class="contact-title">上海</p>
+				<p><img src="mainstyle/images/address.png">上海浦东新区长柳路58号证大立方大厦2006室</p>
+				<p><img src="mainstyle/images/phone1.png">021-60756350</p>
+			</div>
+			<div class="contactbox">
+				<p class="contact-title">北京</p>
+				<p><img src="mainstyle/images/address.png">北京海淀区海淀大街3号鼎好大厦A座1526室</p>
+				<p><img src="mainstyle/images/phone1.png">010-89940281 </p>
+			</div>
+			<div class="contactbox">
+				<p class="contact-title">宁波</p>
+				<p><img src="mainstyle/images/address.png">宁波市高新区聚贤路587弄研发园A2-10楼</p>
+				<p><img src="mainstyle/images/phone1.png">0574-55663988</p>
+			</div>
+		</div>
+	</div>
+	<div class="foot-line2">沪ICP备14023913号  &copy;版权所有：首科资本</div>
+</div>
+</body>
+</html>

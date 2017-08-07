@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>绿河动态</title>
+	<link rel="stylesheet" type="text/css" href="mainstyle/css/lvhe.css">
+	<!-- <script type="text/javascript" src="js/jquery-1.9.1.js"></script> -->
+	<script type="text/javascript" src="http://libs.useso.com/js/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<script type="text/javascript" src="js/template.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$.get("../data/news.json",function (data){
+				$("#newsDiv").html(template('newsTemplate', {datalist:data}));
+
+				$(".content-nav").click(function(){
+					$(".content-nav").removeClass("content-nav-active");
+					$(this).addClass("content-nav-active");
+				});
+				$("#hyxw").click(function(){
+					$(".content-dongtai-right").css("display","none");
+					$(".content-dongtai-right.hyxw").css("display","block");
+				});
+				$("#gsxw").click(function(){
+					$(".content-dongtai-right").css("display","none");
+					$(".content-dongtai-right.gsxw").css("display","block");
+				});
+
+			});
+
+		});
+
+		function openNews(title,content){
+			template.isEscape = false
+			layer.open({
+			  type: 1,
+			  title:['新闻详情','background:#049442; color:#fff;'],
+			  skin: 'layui-layer-rim', //加上边框
+			  area: ['880px', '600px'], //宽高
+			  content: template('newContentTemplate',{title:title,content:content})
+			});
+		}
+
+	</script>
+</head>
+<body>
+
+<div class="head">
+	<div class="width-1200">
+		<div class="logo"></div>
+	</div>
+	<div class="nav">
+		<div class="width-1200">
+			<ul>
+				<a href="index.html"><li>首页</li></a>
+				<a href="about.html"><li>关于我们</li></a>
+				<a href="News.html"><li  class="nav-active">绿河动态</li></a>
+				<a href="investmentPartner.html"><li>投资团队</li></a>
+				<a href="InvestmentCase.html"><li>投资案例</li></a>
+				<a href="JoinUs.html"><li >加入我们</li></a>
+				<a href="contact.html"><li>联系我们</li></a>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="banner banner3"></div>
+
+<div class="content-dongtai width-1200" id="newsDiv">
+	
+</div>
+<div class="foot">
+	<div class="width-1200">
+		<div class="foot-line1">沪ICP备14023913号  &copy;版权所有：上海绿河投资有限公司</div>
+		<div class="foot-line2"><img src="../mainstyle/images/address.png">上海浦东新区民生路1299号丁香国际商业中心西楼1802室<img src="../mainstyle/images/phone.png">021-5080 0699<img src="../mainstyle/images/email.png">contact@greenriver.cn</div>
+	</div>
+</div>
+<script id="newsTemplate" type="text/html">
+	<div class="content-navbox">
+		<div class="content-nav content-nav-active" id="hyxw">行业新闻</div>
+		<div class="content-nav" id="gsxw">公司新闻</div>
+	</div>
+	<div class="content-dongtai-right hyxw">
+		{{each datalist as value i}}
+		{{if value.type=="IndustryNews"}}
+		<div class="content-dongtai-titlebox" onclick="openNews('{{value.title}}','{{value.content}}')">
+			<span class="content-cir"></span>
+			<span class="content-dongtai-title">{{ value.title }}</span>
+			<span class="content-dongtai-time">{{ value.addTime }}</span>
+		</div>
+		{{/if}}
+		{{/each}}
+	</div>
+
+	<div class="content-dongtai-right gsxw" style="display:none;">
+		{{each datalist as value i}}
+		{{if value.type=="CompanyNews"}}
+		<div class="content-dongtai-titlebox" onclick="openNews('{{value.title}}','{{value.content}}')">
+			<span class="content-cir"></span>
+			<span class="content-dongtai-title">{{ value.title }}</span>
+			<span class="content-dongtai-time">{{ value.addTime }}</span>
+		</div>
+		{{/if}}
+		{{/each}}
+
+	</div>
+</script>
+<script id="newContentTemplate" type="text/html">
+	<div style="width:820px; margin:0 auto;">
+		<div class="open-title">{{title}}</div>
+		<div class="open-content">{{#content}}</div>
+	</div>
+</script>
+</body>
+</html>
+

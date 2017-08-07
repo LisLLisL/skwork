@@ -1,0 +1,466 @@
+@charset "utf-8";
+
+/*=========================== 全局样式============================== */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, dir, center {
+    margin: 0;
+    padding: 0;
+}
+
+center {
+    text-align: left;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+img {
+    border: none;
+}
+
+body {
+    font-size: 12px;
+    font-family: "microsoft Yahei";
+    line-height: 24px;
+    color: #333;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+select, input, img, select {
+    vertical-align: middle;
+}
+
+input, button, select, textarea {
+    outline: none
+}
+
+textarea {
+    resize: none
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+em {
+    font-weight: bold;
+}
+
+i {
+    font-style: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.width-1200{width:1200px; margin:0 auto;}
+
+.top{width: 100%; min-width: 1200px; background: #f4f4f4; padding: 6px 0; overflow:hidden; }
+
+.top span{ float: right; }
+
+.top span img{ margin:0 10px; }
+
+.headbox{ width: 100%; min-width: 1200px; background: #fefefe; }
+
+.logo{ margin: 25px 0; background: url(../images/sk-logo.png); width: 208px; height: 56px;}
+
+.nav ul li{ float: left; width: 120px; height: 44px; color: #010101; font: 16px/40px "Microsoft YaHei"; text-align: center; cursor: pointer; position: relative;}
+
+.nav ul li:hover{ background: #f4f4f4;}
+
+.nav ul li:hover:after{content: "";position: absolute; left: 0;bottom: 0; width: 100%; height: 3px; background: #83badb;z-index: 1;}
+
+.nav ul li a{ display:block;}
+
+.nav-active{ background: #f4f4f4;}
+
+.nav-active:after{content: "";position: absolute; left: 0;bottom: 0; width: 100%; height: 3px; background: #83badb;z-index: 1;}
+
+.banner{ min-width: 1200px; position: relative;}
+
+.banner-img{ width: 100%; height: 599px; display: block; background: center top no-repeat; }
+
+.gsjj-box{position:absolute ; left:50%;bottom:0; margin-left:-600px; z-index: 1;}
+
+.gsjj-left{ float: left; width: 150px; height: 130px; background: rgba(244,244,244,0.53); color: #fff; font-size: 26px; text-align: center;}
+
+.gsjj-left p{ margin-top: 10px; }
+
+.gsjj-left p:first-child{ margin-top: 35px; }
+
+.gsjj-right{ float: left; width: 1020px; height: 100px; background: rgba(0,0,0,0.6); color: #fff; padding: 15px; font-size: 14px;}
+
+
+.content{ overflow: hidden; box-shadow: 0px 1px 4px rgba(0,0,0,0.3),0px 0px 20px rgba(0,0,0,0.1); background: #fbfaf9; min-height: 400px;padding-top: 25px;}
+
+.column-new{ padding: 15px 30px 20px 30px; border-top: 1px solid #7cb6d9;   overflow:hidden;}
+
+.new{ float: left;width: 950px;  }
+
+.new-img{ background: url(../images/title1.png) no-repeat; height: 20px;margin:15px 30px; overflow:hidden;}
+
+.title-more{ font-size: 14px; float: right; color: #3a85b9; cursor: pointer;}
+
+.new-information{ overflow:hidden; margin-top: 10px;}
+
+.new-information img{ float: left; display: block; }
+
+.new-information p{ width:740px;float: right; margin-bottom: 10px;}
+
+.title{ font-weight: bold; font-size: 14px; }
+
+.new-content{ font-size: 12px; color: #666; }
+
+.detail{ text-align: right; font-size: 12px; color:#3a85b9; cursor: pointer;}
+
+.wechat{ width: 139px; height: 139px; background: url(../images/wechat.png); float: right; margin-top: 20px; background-size: 100% 100%}
+
+.column-product{background: rgba(226,211,178,0.35); overflow:hidden;}
+
+.product-top{ border-bottom: 1px solid #f98818; padding:15px 30px 0 30px; overflow:hidden;}
+
+.product-top div{ float: left; width: 190px; height: 35px; background: #fff; text-align: center; line-height: 35px; margin-right: 5px; cursor: pointer;}
+
+.product-top .product-top-active{ background: #f98818;color: #fff; }
+
+.product-top div:hover{ background: #f98818;color: #fff; }
+
+.product-top p{ line-height: 35px; }
+
+.product-bottom{ padding: 20px 30px ; overflow:hidden;}
+
+.product-img{ width: 393px; height: 220px; float: left; display: block;}
+
+
+
+.product-box{overflow: hidden; margin:  0 0 20px 20px;}
+
+
+
+.investment-straregy{ background: #fbfaf9; overflow:hidden; }
+
+.investment-straregy-top{ background: url(../images/title2.png) no-repeat;/* width: 239px;*/ height: 20px;margin:15px 30px; overflow:hidden;}
+
+.investment-straregy-bottom{ width: 1200px; height: 451px; background: url(../images/img2.jpg); overfow:hidden;}
+
+.investment-straregy-wrapper{margin-top:88px;overflow:hidden;float:left; margin-left:108px;}
+
+.investment-straregy-box{ width: 236px; height: 270px; padding: 10px; background: #f4f4f4; margin:0 108px 0 0; float: left;}
+
+.service-content{ overflow:hidden; background: #fbfaf9;}
+
+.service-content-top{ padding:15px 30px; overflow:hidden; border-bottom: 1px solid #7cb6d9;}
+
+.service-content-top img{ vertical-align: top;}
+
+.service-content-bottom{ width: 885px; height: 145px;margin:20px auto; }
+
+
+.service-content-box{ float: left; width: 107px; height: 145px; margin:0 35px; overflow:hidden;}
+
+.cir{ position: relative; width: 107px;height: 107px; border-radius: 54px; -moz-border-radius: 54px; -webkit-border-radius: 54px; -o-border-radius: 54px; background: #f2f0f0; overflow: hidden;}
+
+.cir img{ position: absolute; cursor: pointer; }
+
+.name{ height: 35px; line-height: 35px; text-align: center;font-size: 16px; font-weight: bold; }
+
+.fxtz img{ left: -107px;}
+
+.ssyz img{ left: -214px;}
+
+.zccz img{ left: -321px;}
+
+.cfgl img{ left: -428px;}
+
+.cir:hover{ background:#5398c6; }
+
+.cir:hover img{top: -107px;}
+
+.partner{ overflow:hidden; background: #fbfaf9;}
+
+.partner-top{  padding:15px 30px; overflow:hidden; border-bottom: 1px solid #7cb6d9;}
+
+.partner-top img{ vertical-align: top;}
+
+.logobox{ width: 1200px; height: 102px; margin:30px 0; }
+
+.logobox img{ float: left; width: 204px; height: 102px; margin:0 18px; }
+
+
+.foot{ width: 100%;min-width: 1200px;}
+
+.foot-line1{ width: 100%; height: 110px; background: #4a4848; }
+
+.contactbox{ width: 380px; float: left; margin-left: 20px;color: #fff;}
+
+.contactbox p{ margin-top: 8px; }
+
+.contactbox p img{ margin-right: 5px; }
+
+.contact-title{ font-size: 16px; color: #78b3d6; font-weight: bold;}
+
+.foot-line2{ width: 100%; height: 65px; background: #313131; font-size: 14px; text-align: center; line-height: 65px;color: #fff;}
+
+
+
+/*关于我们*/
+
+.banner2{ background: url(../images/banner2.jpg) center center no-repeat; height: 180px;}
+
+.content-dongtai{ padding: 30px 0; background: #f7f6f6; overflow: hidden; min-height: 415px;}
+
+.content-navbox{ width: 187px; float: left; overflow: hidden;}
+
+.content-nav{ width: 157px; height: 51px; background: url(../images/aboutus-nav.jpg) no-repeat 0 -51px; margin:0 0 1px 30px; text-align: center; line-height: 51px; font-size: 16px; color: #333; font-weight: bold; cursor: pointer;}
+
+.content-nav-active{ background-position: 0 0; color: #fff;}
+
+.content-rightbox{ width: 930px; float: right; margin:0 30px 30px 0; }
+
+.content-rightbox-img{ width: 930px; height: 350px; background: url(../images/banner.jpg) no-repeat top center; background-size: auto 100%; }
+
+.content-rightbox-text{ text-indent: 28px;color: #666; font-size: 14px; margin-top: 25px;}
+
+.content-rightbox-title{ font-size: 20px; color: #3a85b9; border-bottom: 1px solid #3a85b9; padding-bottom: 10px;}
+
+/*首科动态*/
+
+.banner3{ background: url(../images/banner3.jpg) center center no-repeat; height: 180px;}
+
+.content-dongtai-titlebox{ padding: 0 30px; height: 50px; line-height: 50px; list-style: circle; background: #fff; margin-bottom: 1px; cursor: pointer;}
+
+.content-cir{ width: 6px; height: 6px; display: inline-block; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; background: #b5b5b5;}
+
+.content-dongtai-title{ margin-left: 20px; font-size: 14px; color: #666; }
+
+.content-dongtai-time{ font-size: 12px; color: #999; float: right;}
+
+.content-dongtai-titlebox:hover{ background: #eef3f6; }
+
+.content-dongtai-titlebox:hover .content-cir{ background: #3a85b9; }
+
+.content-dongtai-titlebox:hover .content-dongtai-title{ text-decoration: underline; }
+
+/*首科动态详情页面*/
+.detail-top{ background: #3a85b9; color: #fff; height: 40px; line-height: 40px; text-indent: 32px;}
+
+.detail-box{ background: #fff;padding: 20px; }
+
+.detail-title{ text-align: center;font-size: 16px; }
+
+.detail-inf{ text-align: center; color: #999; height: 40px; line-height: 40px; border-bottom: 1px dotted #999;}
+
+.detail-inf span{ margin: 0 20px; }
+
+.detail-img { margin: 20px auto; width: 400px; height: 220px; overflow:hidden;}
+
+.detail-img img{ width: 100%; height: 220px; }
+
+.detail-paragraph{ text-indent: 24px;margin-bottom: 10px; font-size: 14px; color: #777;}
+
+.img-title{position: absolute; bottom: 0; left: 0; background: rgba(0,0,0,0.5); width: 100%; height: 40px; color: #fff; line-height: 40px; text-indent: 24px; z-index: 1;}
+
+/*投资业务*/
+
+.banner4{ background: url(../images/banner4.jpg) center center no-repeat; height: 180px;}
+
+.logo-box{ float: left;  margin-right:40px; }
+
+.logo-box a{ overflow: hidden; width: 270px; height: 137px; display: block; position: relative;}
+
+.logo-div{ width: 268px; height: 135px; border:1px solid #d9d9d9; background-color: #fff; }
+
+.logo-inf { position: absolute; background: rgba(0,0,0,0.5); top: 137px; left: 0; width: 238px; height: 107px; padding: 15px; color: #fff;    -webkit-transition: top.4s;transition: top .4s;transition: top .4s; transition: top .4s;}
+
+.logo-box a:hover .logo-inf{ top: 0; }
+
+.logo-title{ text-align: center; font-size: 16px; color: #333; height: 50px; line-height: 50px; }
+
+/*合作伙伴*/
+
+.banner5{ background: url(../images/banner5.jpg) center center no-repeat; height: 180px;}
+
+.partner-topbox{ background: #fbfaf9; }
+
+.partner-topbox p{ text-align: center;font-size: 24px; color: #3b85b9; line-height: 48px; }
+
+.partner-logobox{ background: #7cb6d9; overflow:hidden; padding: 35px 0 ; margin-top: 25px;}
+
+.content-porject{ overflow: hidden; padding:30px 0; background: #3a85b9; min-height: 470px; }
+
+.content-projectbox{  width:1120px; float: left; margin-left: 50px; overflow:hidden; display: block;}
+
+.classify{ font-size: 16px; color: #fff; height: 40px; line-height: 40px;}
+
+.content-projectlogo{ width: 204px; height: 102px; margin:0 20px 20px 0 ; float: left;position: relative; cursor: pointer; overflow:hidden;}
+
+.content-projectlogo img{ width: 100%; height: 100%; }
+
+.link{ width: 204px; height: 86px; background: #5a99c4; position: absolute;left: 0; top: 0; font-size: 24px; color: #fff; text-align: center; padding-top: 16px; display: none;}
+
+.link p{ margin-bottom: 10px; font-size:16px; }
+
+.link img{ width: 36px; height: 36px;  margin: 0 auto;border-radius: 18px;-webkit-border-radius: 18px; -moz-border-radius: 18px; -o-border-radius: 18px; }
+
+.content-projectlogo:hover .link{ display: block;}
+
+
+
+
+
+/*加入我们*/
+
+.banner6{ background: url(../images/banner6.jpg) center center no-repeat; height: 180px;}
+
+.content-joinus{ overflow:hidden; padding:30px 0; background: #f7f6f6; }
+
+.zpgw{ float: left; width: 143px; height: 62px; background: url(../images/zpgw.png) no-repeat; margin-left: 50px;}
+
+.zp-content{ float: right; width: 780px; min-height: 670px; margin-right: 55px; padding: 30px 45px; border:1px solid #bfbfbf; background: #fffafa; position: relative;}
+
+.zp-title{ font-size: 24px; color: #3a85b9; width: 100%; border-bottom: 1px solid #7cb6d9; padding-bottom: 10px;}
+
+.mar-b-35{ margin-bottom: 35px; }
+
+.mar-b-35 p{ font-size: 14px; color: #666; padding-top:10px;}
+
+.button{ width: 140px; height: 40px; line-height: 40px; background: #3a85b9; font-size: 14px; text-align: center; color: #fff; cursor: pointer;}
+
+.button a{ color: #fff; }
+
+.job{ position: absolute; width: 250px; height: 65px; background: #7cb6d9; left: -250px; font-size: 16px; color: #fff; line-height: 70px; text-indent: 30px; cursor: pointer;}
+
+.job1{ top: 80px; }
+
+.job2{ top: 160px; }
+
+.job3{ top: 240px; }
+
+.blue-active{ background: url(../images/blue-active.png); width: 273px; height: 77px; line-height: 93px;}
+
+
+/*联系我们*/
+
+.banner7{ background: url(../images/banner7.jpg) center center no-repeat; height: 180px;}
+
+.contactus-wrapper{ height: 670px; position: absolute; top: 0; left: 0;z-index: 2;}
+
+.contactusbox{ width: 300px; margin:20px 70px;}
+
+.contactus-title{ width: 300px; height: 60px; background: #3a85b9; color: #fff; font-size: 30px; line-height: 60px; text-indent: 15px; cursor: pointer;}
+
+.contactus-cont{ width: 300px; background: #1e5173; color: #fff; text-indent: 15px; padding:  20px 0;}
+
+.arrow{ background: url(../images/arrow.png); width: 27px; height: 14px; display: inline-block; margin-left: 175px;}
+
+.arrow-active{ transform: rotate(180deg);
+-ms-transform: rotate(180deg);       
+-webkit-transform: rotate(180deg); 
+-o-transform: rotate(180deg);  
+-moz-transform: rotate(180deg); }
+
+/*首科基金*/
+.fixed-box{ position: fixed; left: 10px; top: 50%; margin-top: -161px; width: 140px; height: 180px; background-color: #0099ff; z-index: 999;}
+
+.fixed-box ul{ margin-top: 25px; }
+
+.fixed-box ul li{ width: 140px; margin:0 auto; height: 40px; line-height: 40px; border-bottom: 1px dotted #fff; color: #fff; font-size: 20px; font-weight: bold; cursor: pointer;}
+
+.fixed-arrow{ background: url(../images/fixed-arrow.png); width: 19px; height: 17px; display: block; float: left; margin: 11px 10px 0 10px; }
+
+.content-fund{ overflow: hidden;}
+
+.banner8{ background: url(../images/banner8-1.jpg) center center no-repeat; height: 180px;}
+
+.fund-elements{ background: #eef5fb; width: 100%; padding: 30px 0; overflow:hidden;}
+
+.fund-elements-title{ background: url(../images/fund-elements.png); width: 197px; height: 48px; margin: 0 auto; }
+
+.fund-elements-content{ width: 1000px; margin:0 auto;}
+
+.product-content{ float: left; display: block; margin-top: 40px; height: 400px; overflow:hidden;}
+
+.star{background: url(../images/star.png); width: 17px; height: 17px; float: left; margin:6px 3px 0 0;display: inline-block;}
+
+.product-title{ float: left; color: #999; width: 160px; font-size: 16px; height: 30px; line-height: 30px;}
+
+.product-text{ float: left; color:#333; width: 800px; font-size: 16px; line-height: 30px;}
+
+.full{ float: right; font-size: 16px; line-height: 24px; }
+
+.triangle-down{ width:0; height:0; border-left:8px solid transparent; border-right:8px solid transparent; border-top:14px solid #999; margin: 5px 5px 0 0; display: block; float: left;}
+
+.special-title{ font-size: 16px; font-weight: bold; color: #0d96e7;}
+
+.special-content{ font-size: 16px; color: #0d96e7; }
+
+.fund-advantage{ background: url(../images/fund-advantage-bg.jpg) no-repeat center center; width:100%; height: 600px; padding-top: 50px;}
+
+.fund-advantage-title{ background: url(../images/fund-advantage-title.png); width: 197px; height: 48px; margin: 0 auto; }
+
+.fund-advantage-content{ width: 1000px; margin:0 auto; height: 400px;}
+
+.advantage-box{ width: 308px; height: 400px; border:2px solid #74a9d8; float: left; margin:60px 10px 0 11px; overflow:hidden;}
+
+.advantage-top{ height: 400px;
+    transition: margin-top 1s;
+-moz-transition:margin-top 1s; 
+-webkit-transition: margin-top 1s;  
+-o-transition: margin-top 1s;    
+}
+
+.advantage-text-head{ background: #fff;width: 100%;height: 360px; }
+
+.advantage-title{ text-align: center; color:#fff; font-size: 24px; }
+
+.advantage-text{ width: 312px; height: 400px;}
+
+.advantage-text-title{ font-size: 20px; color: #0d96e7; width: 120px; margin:0 auto; text-align: center; padding: 20px 0; }
+
+.page,.arrow-left,.arrow-right{ float: left; margin:0 5px; }
+
+.page{ font-size: 24px; line-height: 46px; height: 46px; color: #666; }
+
+.arrow-left{ width: 52px; height: 46px; display: block; background: url(../images/arrow-left.png); cursor: pointer;}
+
+.arrow-right{ width: 52px; height: 46px;  display: block; background: url(../images/arrow-right.png); cursor: pointer;}
+
+.advantage-text-content{ padding: 10px; font-size: 16px; color: #595757;}
+
+.advantage-text-foot{ width:312px; height: 40px; background: url(../images/advantage-text-foot.png)}
+
+.fund-project{ width:1000px; margin:0 auto; padding-top: 40px;}
+
+.fund-project-top{ padding-bottom: 10px; border-bottom: 2px solid #71c0f0; overflow:hidden;}
+
+.fund-project-top-title{ background: url(../images/fund-project-top-title.png) no-repeat; width: 154px; height: 87px; float: left;}
+
+.fund-project-bottom{ padding: 40px 0 20px 0; margin-right: -80px; overflow:hidden;}
+
+.fund-project-box{ float: left; margin-right: 80px; margin-bottom: 50px;}
+
+.fund-project-inf{ margin-top:35px; padding-left: 10px; border-left: 2px solid #ccc;}
+
+.fund-project-name{ font-size: 16px; line-height: 24px; color: #0d96e7; margin-top: 5px;}
+
+.special-declaration{ width: 1000px; margin: 0 auto;}
+
+.special-declaration-top{ width: 940px; height: 30px; background: #959595; color: #fafafa; font-size: 14px; line-height: 30px; padding: 0 30px;}
+
+.special-declaration-bottom{ width: 940px; height: 50px; background: #d5d9dd; color: #333; font-size: 12px; padding: 0 30px;}

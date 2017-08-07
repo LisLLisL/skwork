@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>首科基金</title>
+	<meta charset="utf-8">
+	<meta name="view" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="mainstyle/css/base.css">
+	<script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+	<script src="js/swiper-3.3.1.jquery.min.js" type="text/javascript"></script>
+	<link href="mainstyle/css/swiper-3.3.1.min.css" rel="stylesheet">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".full").click(function(){
+				$(".product-content").css("height","auto");
+				$(this).parent().css("display","none");
+			})
+
+			$(".advantage-box").hover(
+				function(){
+				$(this).children(".advantage-top").css("margin-top","-400px");
+				},
+				function(){
+				$(this).children(".advantage-top").css("margin-top","0px");
+				}
+			)
+			$('.jjys').click(function(){$('html,body').animate({scrollTop:$('#jjys').offset().top}, 800);}); 
+			$('.jjysh').click(function(){$('html,body').animate({scrollTop:$('#jjysh').offset().top}, 800);}); 
+			$('.ntxm').click(function(){$('html,body').animate({scrollTop:$('#ntxm').offset().top}, 800);});  
+		})
+	</script>
+	<script>
+		window.onload = function() {
+			var activeIndex;
+			var mySwiper = new Swiper ('.swiper-container', {
+				direction: 'horizontal',
+				pagination: '.swiper-pagination',
+				loop : true,
+				paginationClickable :true,
+				autoplay : 5000,
+				prevButton:'.swiper-button-prev',
+				nextButton:'.swiper-button-next',
+				onSlideChangeStart: function(swiper){
+			  		activeIndex=swiper.activeIndex;
+			  		if(swiper.activeIndex==(swiper.slides.length-1)){
+			  			activeIndex=1;
+			  		}
+			  		if(swiper.activeIndex==0){
+			  			activeIndex=swiper.slides.length-2;
+			  		}
+
+			  		$(".page").text(activeIndex+"/"+(swiper.slides.length-2));
+			    	
+			    }
+			});
+		    $('.arrow-left').click(function(){
+				mySwiper.slidePrev();
+			});
+			$('.arrow-right').click(function(){
+				mySwiper.slideNext();
+			});
+			$(".page").text(mySwiper.activeIndex+"/"+(mySwiper.slides.length-2));
+
+			$('.swiper-container').mouseover(function(){
+			mySwiper.stopAutoplay();
+			});
+			$('.swiper-container').mouseout(function(){
+			mySwiper.startAutoplay();
+			});
+		};
+	</script>
+</head>
+<body>
+
+<div class="top">
+	<div class="width-1200">
+		<span>
+			<img src="mainstyle/images/email.png">service@shoukecapital.cn
+			<img src="mainstyle/images/phone.png">service@shoukecapital.cn
+		</span>
+	</div>
+</div>
+<div class="headbox">
+	<div class="width-1200">
+		<div class="logo"></div>
+		<div class="nav">
+			<ul>
+				<li>首页</li>
+				<li>关于我们</li>
+				<li>首科动态</li>
+				<li>投资业务</li>
+				<li class="nav-active">首科基金</li>
+				<li>合作伙伴</li>
+				<li>加入我们</li>
+				<li>联系我们</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div style="clear:both;"></div>
+<div class="banner banner8"></div>
+
+<div class="fixed-box">
+	<ul>
+		<a class="jjys"><li><span class="fixed-arrow"></span>基金要素</li></a>
+		<a class="jjysh"><li><span class="fixed-arrow"></span>基金优势</li></a>
+		<a class="ntxm"><li><span class="fixed-arrow"></span>拟投项目</li></a>
+	</ul>
+</div>
+
+<div class="content-fund">
+	<div class="fund-elements">
+		<div class="width-1200">
+			<div class="fund-elements-title" id="jjys"></div>
+			<div class="fund-elements-content">
+				<div class="product-content">
+					<div class="product-box">
+						<div class="star"></div>
+						<div class="product-title">产品名称：</div>
+						<div class="product-text">宁波智投首科创业投资基金贰期</div>
+					</div>
+					<div class="product-box">
+						<div class="star"></div>
+						<div class="product-title">基金管理人：</div>
+						<div class="product-text">宁波首科燕园投资管理有限公司</div>
+					</div>
+					<div class="product-box">
+						<div class="star"></div>
+						<div class="product-title">基金托管人：</div>
+						<div class="product-text">中信银行</div>
+					</div>
+					<div class="product-box">
+						<div class="star"></div>
+						<div class="product-title">基金存续期限：</div>
+						<div class="product-text">基金成立日至其投资退出清算完毕止,预计为5年。其中投资期 3 年,回收期2年。回收期结束时,如合伙企业的被投资项目仍 没有完全变现,合伙企业的回收期可自动延长一年。在延长的 合伙期限内,不得投资新的项目</div>
+					</div>
+					<div class="product-box">
+						<div class="star"></div>
+						<div class="product-title">募集规模：</div>
+						<div class="product-text">计划募集金额约6000万元</div>
+					</div>
+					<div class="product-box">
+						<div class="star"></div>
+						<div class="product-title">募集形式与认购方式：</div>
+						<div class="product-text">投资人认购基金份额成为基金份额持有人,认购起点100万。第 一、二、三年分别到位认缴金额的40%、30%和30%,可根据 项目情况和投资人意愿灵活调整</div>
+					</div>
+					<div class="product-box" style="cursor:pointer;">
+						<div class="full"><span class="triangle-down"></span>展开全文</div>
+					</div>
+					<div class="product-box">
+						<div class="star"></div>
+						<div class="product-title">基金财产承担的费用：</div>
+						<div class="product-text">
+							1.基金管理费:一次性3.0%,盈利后支付;<br>
+							2.基金托管费:费率为0.1%/年,基数为基金认购额; <br>
+							3.其他费用:法律服务费、会计师费、基金终止时的清算费用 等,由管理人据实支出
+						</div>
+					</div>
+					
+					<div class="product-box">
+						<div class="star"></div>
+						<div class="product-title">超额收益分配机制</div>
+						<div class="product-text">
+							期间分配与到期分配,部分重点投资项目即退即分: <br>
+							1.如果投资年化收益率R满足:R≤8%,则基金管理人不计提业 绩报酬; <br>
+							2.如果投资年化收益率R满足:R>8%,则将年化收益率R大于 8%部分的20%作为基金管理人的业绩报酬;
+						</div>
+					</div>
+					
+					<div class="product-box">
+						<div class="star"></div>
+						<div class="product-title">基金财产管理报告披露：</div>
+						<div class="product-text">
+							每年度五月底之前管理人编制完成契约型基金年度报告并经托管人复核,向基金份额持有人披露基金投资、资产负债、投资收益分配、承担的费用等重大信息
+						</div>
+					</div>
+					<div class="product-box">
+						<div class="star"></div>
+						<div class="product-title">其他：</div>
+						<div class="product-text">
+							每年度五月底之前管理人编制完成契约型基金年度报告并经托管人复核,向基金份额持有人披露基金投资、资产负债、投资收益分配、承担的费用等重大信息
+						</div>
+					</div>
+					<div class="product-box">
+						<div class="special-title">[特别声明]</div>
+						<div class="special-content">以上列示产品要素供参考，具体交易情况以实际签署的合同文件、投资文件为准。本报告的任何收益表述仅供参     考，不代表任何确定性的判断，不代表投资者可能获得的实际收益。且任何收益表述均属不具有法律约束力的用语，不构成任何要约与承诺。</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="fund-advantage">
+		<div class="width-1200">
+			<div class="fund-advantage-title" id="jjysh"></div>
+			<div class="fund-advantage-content">
+				<div class="advantage-box">
+					<div class="advantage-top">
+						<img src="mainstyle/images/advantage-bg1.png">
+						<div class="advantage-title">领先的基金管理团队</div>
+					</div>
+					<div class="advantage-text">
+						<div  class="advantage-text-head">
+							<div class="advantage-text-title">领先的基金管理团队</div>
+							<div class="advantage-text-content">首科文创投资管理有限公司及股东管理百亿左右的基金，总部位于北京，在上海、浙江、江苏均建有投资基金或办公室。创始合伙人与管理团队在股权投资领域有出色的投资业绩。所投企业涉及生物医药、新材料、TMT等多个国家支持的高新技术领域并都获得了良好的收益。</div>
+						</div>
+						<div class="advantage-text-foot"></div>
+					</div>
+				</div>
+				<div class="advantage-box">
+					<div class="advantage-top">
+						<img src="mainstyle/images/advantage-bg2.png">
+						<div class="advantage-title">深厚的产业与科技创新背景</div>
+					</div>
+					<div class="advantage-text">
+						<div  class="advantage-text-head">
+							<div class="advantage-text-title">深厚的产业与科技创新背景</div>
+							<div class="advantage-text-content">首科文创背靠国企和各大名校，是北京地区科研院所与高校科学技术转化的排他性投资机构。首科文创与各级政府、地方领军企业合作共设科技金融产业平台、产业园区等合作平台，为地方经济注入科技资源、人才资源和资本力量，助推地方企业转型升级和地方经济可持续发展。与多个地方政府成立并购基金。</div>
+						</div>
+						<div class="advantage-text-foot"></div>
+					</div>
+				</div>
+				<div class="advantage-box">
+					<div class="advantage-top">
+						<img src="mainstyle/images/advantage-bg3.png">
+						<div class="advantage-title">多样化的退出渠道</div>
+					</div>
+					<div class="advantage-text">
+						<div  class="advantage-text-head">
+							<div class="advantage-text-title">多样化的退出渠道</div>
+							<div class="advantage-text-content">所投企业都是高新技术创业优质企业依靠基金管理团队的专业能力和资源条件，可通过新三板挂牌、创业板上市、IPO、上市公司并购等多渠道退出获利。</div>
+						</div>
+						<div class="advantage-text-foot"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="fund-project">
+		<div class="fund-project-top">
+			<div class="fund-project-top-title" id="ntxm"></div>
+			<div style="float:right; margin-top:26px;">
+				
+					<span class="page"></span>
+					<span class="arrow-left"></span>
+					<span class="arrow-right"></span>
+				
+			</div>
+		</div>
+		<div class="fund-project-bottom">
+			<div class="swiper-container">
+	    		<div class="swiper-wrapper">
+	    			<div class="swiper-slide">
+						<div class="fund-project-box">
+							<div class="fund-project-img"><img src="mainstyle/images/fund-project-img1.png"></div>
+							<div class="fund-project-inf">
+								<div class="fund-project-logo"><img src="mainstyle/images/fund-project-logo1.png"></div>
+								<div class="fund-project-name">宁波江丰生物信息技术有限公司</div>
+							</div>
+						</div>
+						<div class="fund-project-box">
+							<div class="fund-project-img"><img src="mainstyle/images/fund-project-img2.png"></div>
+							<div class="fund-project-inf">
+								<div class="fund-project-logo"><img src="mainstyle/images/fund-project-logo2.png"></div>
+								<div class="fund-project-name">吉林奥莱徳光电材料股份有限公司</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="fund-project-box">
+							<div class="fund-project-img"><img src="mainstyle/images/fund-project-img3.png"></div>
+							<div class="fund-project-inf">
+								<div class="fund-project-logo"><img src="mainstyle/images/fund-project-logo3.png"></div>
+								<div class="fund-project-name">甘肃宏良皮业股份有限公司</div>
+							</div>
+						</div>
+						<div class="fund-project-box">
+							<div class="fund-project-img"><img src="mainstyle/images/fund-project-img4.png"></div>
+							<div class="fund-project-inf">
+								<div class="fund-project-logo"><img src="mainstyle/images/fund-project-logo4.png"></div>
+								<div class="fund-project-name">北京九州一轨隔振技术有限公司</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="fund-project-box">
+							<div class="fund-project-img"><img src="mainstyle/images/fund-project-img5.png"></div>
+							<div class="fund-project-inf">
+								<div class="fund-project-logo"><img src="mainstyle/images/fund-project-logo5.png"></div>
+								<div class="fund-project-name">上海指南工业设计有限公司</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination" style="left:-40px;"></div>
+			</div>
+		</div>
+	</div>
+	<div class="special-declaration">
+		<div class="special-declaration-top">特别声明</div>
+		<div class="special-declaration-bottom">以上列示产品要素供参考,具体交易情况以实际签署的合同文件、投资文件为准。本报告的任何收益表述仅供参考,不代表任何确定性的判断,不代表投资者可能获得的实际收益。且任何收益表述均属不具有法律约束力的用语,不构成任何要约与承诺。</div>
+	</div>
+</div>
+
+<div class="foot">
+	<div class="foot-line1">
+		<div class="width-1200">
+			<div class="contactbox">
+				<p class="contact-title">上海</p>
+				<p><img src="mainstyle/images/address.png">上海浦东新区长柳路58号证大立方大厦2006室</p>
+				<p><img src="mainstyle/images/phone1.png">021-60756350</p>
+			</div>
+			<div class="contactbox">
+				<p class="contact-title">北京</p>
+				<p><img src="mainstyle/images/address.png">北京海淀区海淀大街3号鼎好大厦A座1526室</p>
+				<p><img src="mainstyle/images/phone1.png">010-89940281 </p>
+			</div>
+			<div class="contactbox">
+				<p class="contact-title">宁波</p>
+				<p><img src="mainstyle/images/address.png">宁波市高新区聚贤路587弄研发园A2-10楼</p>
+				<p><img src="mainstyle/images/phone1.png">0574-55663988</p>
+			</div>
+		</div>
+	</div>
+	<div class="foot-line2">沪ICP备14023913号  &copy;版权所有：首科资本</div>
+</div>
+
+</body>
+</html>

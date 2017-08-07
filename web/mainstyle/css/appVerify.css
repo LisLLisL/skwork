@@ -1,0 +1,14 @@
+@charset "utf-8";
+/*app*/ 
+/*===========================验证样式============================== */ 
+ 
+.error-tips,.right-tips,.default-tips,em.input-text-error{ display:block; border:none; line-height:20px;font-size:14px; padding-top:5px;} 
+.error-tips i,.right-tips i{ display:inline-block; vertical-align:-1px; margin-right:5px;}
+.error-tips i{ color:#fc4343;}
+.right-tips i{ color:#5bc92e; }
+input:focus{border: 1px solid #000000}
+input{border: 1px solid #ccc}
+.input-text-hover{ border:1px solid #a5a5a5;}
+.input-text-error{ border:1px solid #ee0022;}
+.input-wrap input{ border:none; background:none;}
+.tips-none{ padding:10px; color:#ee0022; background:#f1f1f1; margin-top:20px; /*width:252px;*/ text-align:center; }

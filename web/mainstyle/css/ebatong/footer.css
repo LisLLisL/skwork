@@ -1,0 +1,30 @@
+.ny_bg {
+    background: #ededed none repeat scroll 0 0;
+    border-top: 1px solid #e5e5e5;
+    height: 130px;
+    margin-top: 20px;
+}
+.bottom_font14 {
+    color: #b3b3b3;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 15px;
+    text-align: center;
+    width: 976px;
+}
+
+.bottom_font14 a:link, .bottom_font14 a:visited, .bottom_font14 a:active,.bottom_font14 a:hover {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+.bottom_font12 {
+    color: #b3b3b3;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 976px;
+}

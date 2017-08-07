@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- Set render engine for 360 browser -->
+<meta name="renderer" content="webkit">
+<link rel="stylesheet" href="../mainstyle/css/amazeui.css">
+<link rel="stylesheet" href="../mainstyle/css/app.css">
+<link rel="stylesheet" href="../mainstyle/css/animate.min.css" />
+<script src="../js/jquery.min.js"></script>
+<script src="../js/amazeui.js"></script>
+<script src="../js/iscroll.js"></script>
+<script src="../js/load.js"></script>
+<script type="text/javascript" src="../js/radialIndicator.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script>
+$(document).ready(function() {
+    
+    $(".am-u-sm-3").click(function(){
+        $(".proj-box1").remove();
+        myScroll.refresh();
+        myScroll.scrollTo(0,0);
+        var n=$(".am-u-sm-3").index($(this));
+        $(".am-u-sm-3").removeClass("active active_bold");
+        $(".thelist").hide();
+        $(".am-u-sm-3").eq(n).addClass("active active_bold");
+        $(".thelist").eq(n).show();
+        $(".thelist").removeAttr("id");
+        $(".thelist").eq(n).attr("id","show");
+    })
+
+    
+});
+</script>
+<script type="text/javascript">
+$(window).load(function() {
+    var hei=parseInt($("#top-box").height());
+    $("#wrapper").css("top",hei+"px");
+    
+    setTimeout(function aaa(){
+    $(".top-contain").slideUp("slow");
+    },2000);
+    
+    setTimeout(function bbb(){
+    $("#wrapper").animate({"top":"4rem"},"slow")
+    },2000);
+    
+});
+
+
+</script>
+
+<title>首页</title>
+</head>
+<body style="position:static;">
+<div class="am-cf" id="top-box">
+    <div class="wraps top-contain ">
+        <img src="../mainstyle/images/bannerback.jpg" width="100%" class="animated fadeIn top-back " />
+        <div class="topmid-box">
+            <img src="../mainstyle/images/top-mid.png"  width="85%" class=" animated zoomIn top-mid"/>
+        </div>
+      
+    </div>
+    <div class="wraps">
+        <div class="am-g sk-nav boxflex">
+            <a href="#" class=" active active_bold">最新上线</a>
+            <a href="#" class="">支持对多</a>
+            <a href="#" class="">评分最多</a>
+            <a href="#" class="">金额最多</a>
+            <a href="#" class="">11111</a>
+            <a href="#" class="">11111</a>
+        </div>
+    </div>
+</div>
+<div id="wrapper">
+    <div id="scroller">
+        <ul id="show" class="thelist" style="max-width:640px; margin:0 auto" >
+            
+            <li class="proj-box ">
+                <a href="#">
+                    <img src="http://img.shoukechou.com/ssheUploadFile/userPhoto/20151104/949a1ee6-232c-4e32-b26e-9f9a1bc1475c.jpg" alt=""/>
+                    <div class="proj-adress"><span class="iconfont" >&#xe605;</span>北京</div>
+                    <div class="proj-tit" style="height:6rem; padding:0;">
+                        
+                    </div>
+                    <div class="proj-tit-inner" style="margin-bottom:2rem;">
+                        <div>
+                            <div style="float:left; width:60%;">
+                                <div style="margin-left:5px;">
+                                    <span class="text_over" style="font-size:1.5rem; ">
+                                        苏打出行苏打出行苏打出行苏打出行苏打出行
+                                    </span>
+                                </div>
+                                <div style="clear:both"></div>
+                                <div style="margin-left:5px;">
+                                    <div style="width:40px; height:40px; overflow:hidden; float:left; display:block; position:relative;">
+                                        <div class="prg-cont rad-prg cir_ma indicatorContainer" id="indicatorContainer"></div>
+                                        <div class="proLogo">!</div>
+                                    </div>
+                                    <div class="xm_box_bottom_text" style="float:left; display:block; height:40px;font-size:1.2rem; margin-left:5px;">融资信息只对认证<br>投资人开放</div>
+                                </div>
+                            </div>
+                            <div style="float:left; width:35%; margin-left:2.5%;">
+                                
+                                    <div class="other-span" style=" width:50%; text-align:center; float:left; margin-top:6px; font-size:1.2rem;">
+                                        <div class="iconfont item">&#xe62f;</div>
+                                        <div>收藏1212</div>
+                                    </div>
+                                    <div class="other-span" style=" width:50%; text-align:center; float:left; margin-top:5px;font-size:1.2rem;">
+                                        <div class="iconfont item">&#xe624;</div>
+                                        <div>点赞1212</div>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    </div> 
+                     <div class="status prestatus">预热</div>
+                </a>
+            </li>
+            <li class="proj-box ">
+                <a href="#">
+                    <img src="http://img.shoukechou.com/ssheUploadFile/userPhoto/2015/11/05/073283508e3748fa867995be00b7b15f.jpg" class="am-img-responsive" alt=""/>
+                    <div class="proj-adress"><i class="iconfont">&#xe605;</i>天津</div>
+                    <div class="proj-tit" style="height:6rem; padding:0;">
+                    </div>
+                    <div class="proj-tit-inner" style="margin-bottom:2rem;">
+                        <div>
+                            <div style="float:left; width:60%;">
+                                <div style="margin-left:5px;">
+                                    <span class="text_over" style="font-size:1.5rem; ">
+                                        苏打出行苏打出行苏打出行苏打出行苏打出行
+                                    </span>
+                                </div>
+                                <div style="clear:both"></div>
+                                <div style="margin-left:5px;">
+                                    <div style="width:40px; height:40px; overflow:hidden; float:left; display:block; ">
+                                        <div class="prg-cont rad-prg cir_ma indicatorContainer" id="indicatorContainer2"></div>
+                                        
+                                    </div>
+                                    <div class="xm_box_bottom_text" style="float:left; display:block; height:40px;font-size:1.2rem; margin-left:5px;">募筹额：<br>￥3000万→￥6000万</div>
+                                </div>
+                            </div>
+                            <div style="float:left; width:35%; margin-left:2.5%;">
+                                
+                                    <div class="other-span" style=" width:50%; text-align:center; float:left; margin-top:6px; font-size:1.2rem;">
+                                        <div class="iconfont item">&#xe62f;</div>
+                                        <div>收藏1212</div>
+                                    </div>
+                                    <div class="other-span" style=" width:50%; text-align:center; float:left; margin-top:5px;font-size:1.2rem;">
+                                        <div class="iconfont item">&#xe624;</div>
+                                        <div>点赞1212</div>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="status hotstatus">热募</div>
+                </a>
+            </li>
+            <li class="proj-box ">
+                <a href="#">
+                    <img src="http://img.shoukechou.com/ssheUploadFile/userPhoto/2015/11/05/ba973043d370459f82a8f778ac998123.jpg" class="am-img-responsive" alt=""/>
+                    <div class="proj-adress"><i class="iconfont">&#xe605;</i>上海</div>
+                    <div class="proj-tit">
+                    </div>
+                    <div class="proj-tit-inner">
+                        宣合  &nbsp; RPG手游开发项目 
+                        <div>
+                            <span class="fir-span">已筹集：¥12345</span>
+                            <span class="other-span"><i class="am-icon-star"></i>1212</span>
+                            <span class="other-span"><i class="am-icon-thumbs-up"></i>2323</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+           
+        </ul>
+        <ul class="thelist" style="max-width:640px; margin:0 auto; display:none;" >
+            <li class="proj-box ">
+                <a href="#">
+                    <img src="http://img.shoukechou.com/ssheUploadFile/userPhoto/2015/11/05/073283508e3748fa867995be00b7b15f.jpg" class="am-img-responsive" alt=""/>
+                    <div class="proj-adress"><i class="iconfont">&#xe605;</i>天津</div>
+                    <div class="proj-tit">
+                    </div>
+                    <div class="proj-tit-inner">
+                        黑马 &nbsp; 数据型现场演出票务平台 
+                        <div>
+                            <span class="fir-span">已筹集：¥12345</span>
+                            <span class="other-span"><i class="am-icon-star"></i>1212</span>
+                            <span class="other-span"><i class="am-icon-thumbs-up"></i>2323</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="proj-box ">
+                <a href="#">
+                    <img src="http://img.shoukechou.com/ssheUploadFile/userPhoto/20151104/949a1ee6-232c-4e32-b26e-9f9a1bc1475c.jpg" alt=""/>
+                    <div class="proj-adress"><i class="iconfont">&#xe605;</i>北京</div>
+                    <div class="proj-tit">
+                    </div>
+                    <div class="proj-tit-inner">
+                        大米科技 &nbsp; 少儿在线英语教育平台 
+                        <div>
+                            <span class="fir-span">已筹集：¥12345</span>
+                            <span class="other-span"><i class="am-icon-star"></i>1212</span>
+                            <span class="other-span"><i class="am-icon-thumbs-up"></i>2323</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="proj-box ">
+                <a href="#">
+                    <img src="http://img.shoukechou.com/ssheUploadFile/userPhoto/2015/11/05/ba973043d370459f82a8f778ac998123.jpg" class="am-img-responsive" alt=""/>
+                    <div class="proj-adress"><i class="iconfont">&#xe605;</i>上海</div>
+                    <div class="proj-tit">
+                    </div>
+                    <div class="proj-tit-inner">
+                        宣合  &nbsp; RPG手游开发项目 
+                        <div>
+                            <span class="fir-span">已筹集：¥12345</span>
+                            <span class="other-span"><i class="am-icon-star"></i>1212</span>
+                            <span class="other-span"><i class="am-icon-thumbs-up"></i>2323</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="thelist" style="max-width:640px; margin:0 auto; display:none;" >
+            <li class="proj-box ">
+                <a href="#">
+                    <img src="http://img.shoukechou.com/ssheUploadFile/userPhoto/2015/11/05/ba973043d370459f82a8f778ac998123.jpg" class="am-img-responsive" alt=""/>
+                    <div class="proj-adress"><i class="iconfont">&#xe605;</i>上海</div>
+                    <div class="proj-tit">
+                    </div>
+                    <div class="proj-tit-inner">
+                        宣合  &nbsp; RPG手游开发项目 
+                        <div>
+                            <span class="fir-span">已筹集：¥12345</span>
+                            <span class="other-span"><i class="am-icon-star"></i>1212</span>
+                            <span class="other-span"><i class="am-icon-thumbs-up"></i>2323</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="proj-box ">
+                <a href="#">
+                    <img src="http://img.shoukechou.com/ssheUploadFile/userPhoto/20151104/949a1ee6-232c-4e32-b26e-9f9a1bc1475c.jpg" alt=""/>
+                    <div class="proj-adress"><i class="iconfont">&#xe605;</i>北京</div>
+                    <div class="proj-tit">
+                    </div>
+                    <div class="proj-tit-inner">
+                        大米科技 &nbsp; 少儿在线英语教育平台 
+                        <div>
+                            <span class="fir-span">已筹集：¥12345</span>
+                            <span class="other-span"><i class="am-icon-star"></i>1212</span>
+                            <span class="other-span"><i class="am-icon-thumbs-up"></i>2323</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="proj-box ">
+                <a href="#">
+                    <img src="http://img.shoukechou.com/ssheUploadFile/userPhoto/2015/11/05/073283508e3748fa867995be00b7b15f.jpg" class="am-img-responsive" alt=""/>
+                    <div class="proj-adress"><i class="iconfont">&#xe605;</i>天津</div>
+                    <div class="proj-tit">
+                    </div>
+                    <div class="proj-tit-inner">
+                        黑马 &nbsp; 数据型现场演出票务平台 
+                        <div>
+                            <span class="fir-span">已筹集：¥12345</span>
+                            <span class="other-span"><i class="am-icon-star"></i>1212</span>
+                            <span class="other-span"><i class="am-icon-thumbs-up"></i>2323</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="thelist" style="max-width:640px; margin:0 auto; display:none;" >
+            <li class="proj-box ">
+                <a href="#">
+                    <img src="http://img.shoukechou.com/ssheUploadFile/userPhoto/20151104/949a1ee6-232c-4e32-b26e-9f9a1bc1475c.jpg" alt=""/>
+                    <div class="proj-adress"><i class="iconfont">&#xe605;</i>北京</div>
+                    <div class="proj-tit">
+                    </div>
+                    <div class="proj-tit-inner">
+                        大米科技 &nbsp; 少儿在线英语教育平台 
+                        <div>
+                            <span class="fir-span">已筹集：¥12345</span>
+                            <span class="other-span"><i class="am-icon-star"></i>1212</span>
+                            <span class="other-span"><i class="am-icon-thumbs-up"></i>2323</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="proj-box ">
+                <a href="#">
+                    <img src="http://img.shoukechou.com/ssheUploadFile/userPhoto/2015/11/05/ba973043d370459f82a8f778ac998123.jpg" class="am-img-responsive" alt=""/>
+                    <div class="proj-adress"><i class="iconfont">&#xe605;</i>上海</div>
+                    <div class="proj-tit">
+                    </div>
+                    <div class="proj-tit-inner">
+                        宣合  &nbsp; RPG手游开发项目 
+                        <div>
+                            <span class="fir-span">已筹集：¥12345</span>
+                            <span class="other-span"><i class="am-icon-star"></i>1212</span>
+                            <span class="other-span"><i class="am-icon-thumbs-up"></i>2323</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="proj-box ">
+                <a href="#">
+                    <img src="http://img.shoukechou.com/ssheUploadFile/userPhoto/2015/11/05/073283508e3748fa867995be00b7b15f.jpg" class="am-img-responsive" alt=""/>
+                    <div class="proj-adress"><i class="iconfont">&#xe605;</i>天津</div>
+                    <div class="proj-tit">
+                    </div>
+                    <div class="proj-tit-inner">
+                        黑马 &nbsp; 数据型现场演出票务平台 
+                        <div>
+                            <span class="fir-span">已筹集：¥12345</span>
+                            <span class="other-span"><i class="am-icon-star"></i>1212</span>
+                            <span class="other-span"><i class="am-icon-thumbs-up"></i>2323</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+        <div id="pullUp">
+            <span class="pullUpIcon"></span><span class="pullUpLabel">下拉加载更多</span>
+        </div>
+    </div>
+</div>
+ 
+<div data-am-widget="navbar" class="am-navbar am-cf  "id="bottom-tool">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+        <li >
+        <a href="#" class="">
+            <span class="iconfont">&#xe614;</span>
+            <span class="am-navbar-label">项目</span>
+        </a>
+        </li>
+        <li >
+        <a href="###" class="">
+            <span class="iconfont">&#xe60a;</span>
+            <span class="am-navbar-label">评委</span>
+        </a>
+        </li>
+        <li>
+        <a href="###" class="">
+            <span class=" iconfont">&#xe611;</span>
+            <span class="am-navbar-label">日程</span>
+        </a>
+        </li>
+        <li >
+        <a href="#" class="">
+            <span class=" iconfont">&#xe60b;</span>
+            <span class="am-navbar-label">动态</span>
+        </a>
+        </li>
+        <li >
+        <a href="#" class="">
+            <span class=" iconfont">&#xe616;</span>
+            <span class="am-navbar-label">我的</span>
+        </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

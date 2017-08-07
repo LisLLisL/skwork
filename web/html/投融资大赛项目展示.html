@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://www.shoukechou.com/activity/queryProject -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>投融资大赛项目展示</title>
+
+    <!--<script type="text/javascript" src="../js/jquery-1.9.1.js"></script>-->
+    <script type="text/javascript"  src="http://libs.useso.com/js/jquery/1.8.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/template.js"></script>
+    <script type="text/javascript" src="../js/template.plugin.js"></script>
+    <script type="text/javascript" src="../js/dialog.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/d1d-common.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="../js/security.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="../mainstyle/css/verify.css" type="text/css">
+    <link rel="stylesheet" href="../mainstyle/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../mainstyle/css/kkpager.css" type="text/css">
+    <script type="text/javascript" src="../js/kkpager.js"></script>
+
+    <script type="text/javascript" src="../js/jquery.myValidate.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/jq.placeholder.js"></script>
+    <script type="text/javascript" src="../js/project.js" charset="utf-8"></script>
+    <link href="../mainstyle/css/activity2.css" rel="stylesheet">
+    <link rel="stylesheet" href="../mainstyle/css/activity_new.css">
+    
+    
+<script type="text/javascript">
+		$(document).ready(function() {
+            /*$(".xm_box .item").hover(function(){
+				var n = $(".xm_box .item").index($(this));
+				$(".xm_box .item").removeClass('item_active');
+				$(".xm_box .item").eq(n).addClass('item_active');
+				});*/
+        });
+	</script>
+
+
+    <style type="text/css">
+.indicatorContainer{
+    display:inline-block;
+    position:relative;
+}
+
+/*修改*/
+.proLogo{
+    position:absolute;
+	width:20px;
+	height:20px;
+	margin-top:-42px; 
+	margin-left:19px; 
+	background-color:#aaaaaa; 
+	text-align:center; 
+	line-height:20px; 
+	border-radius:15px; 
+	-moz-border-radius:15px; 
+	font-size:10px; 
+	color:#fff;
+}
+		
+@font-face {
+  font-family: 'iconfont';
+  src: url(../mainstyle/iconfont/iconfont.eot); /* IE9*/
+  src: url(../mainstyle/iconfont/iconfont.eot) format('embedded-opentype'), /* IE6-IE8 */
+  url(../mainstyle/iconfont/iconfont.woff) format('woff'), /* chrome、firefox */
+  url(../mainstyle/iconfont/iconfont.ttf) format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url(../mainstyle/iconfont/iconfont.svg) format('svg'); /* iOS 4.1- */
+}
+                    
+                   
+
+                    
+	
+        #head {
+            height: 594px;
+            background: url(/mainstyle/images/head.jpg) top center no-repeat;
+        }
+
+        .head1 {
+            width: 1000px;
+            height: 594px;
+            background: url(/mainstyle/images/head.jpg) top center no-repeat;
+            margin: 0 auto;
+        }
+
+        #nav {
+            height: 50px;
+        }
+
+        .navbox {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        #nav .navbox ul li {
+            float: left;
+            width: 120px;
+            font-size: 18px;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .denglu {
+            float: right;
+            background-color: #cd4fa9;
+            color: white;
+            width: 150px;
+            height: 50px;
+            font-size: 18px;
+            line-height: 50px;
+            text-align: center;
+        }
+		
+		
+    </style>
+    
+    <script type="text/javascript">
+        //绑定回车
+        $(document).keydown(function (event) {
+            if (event.keyCode == 13) {
+                searchPro(1);
+            }
+        });
+        var getProjectInfoByAjax = function (id) {
+            $.ajax({
+                url: "/activity/getProjectInfo",
+                type: "post",
+                data: {"proId": id},
+                success: function (result) {
+                    if (result.status == "true") {
+                        var html = template('queryInfoByItem', result);
+                        $(".ph-right").html(html);
+                    }
+
+                }
+            });
+        };
+        template.helper('subString', function (str, startIndex, length) {
+            return str.length > length ? str.substring(startIndex, length) + "..." : str;
+        });
+        template.helper('generPagination', function (pageNo, totalPage, totalRecord) {
+
+            //生成分页控件
+            kkpager.generPageHtml({
+                pagerid: 'kkpager',
+                pno: pageNo,
+                mode: 'click', //设置为click模式
+                //总页码
+                total: totalPage,
+                //总数据条数
+                totalRecords: totalRecord,
+                isGoPage: false,
+                isShowCurrPage: false,
+                isShowTotalPage: false,
+                //点击页码、页码输入框跳转、以及首页、下一页等按钮都会调用click
+                //适用于不刷新页面，比如ajax
+                click: function (n) {
+                    //这里可以做自已的处理
+                    searchPro(n);
+                    //处理完后可以手动条用selectPage进行页码选中切换
+                    this.selectPage(n);
+                    return false;
+                },
+                //getHref是在click模式下链接算法，一般不需要配置，默认代码如下
+                getHref: function (n) {
+                    return '#';
+                }
+
+            }, true);
+        });
+        $(document).ready(function () {
+            getProjectInfoByAjax($(".ph-left ul li:first-child").attr("id"));
+
+            $(".ph-left ul li").mouseover(function () {
+                var n = $(".ph-left ul li").index($(this));
+                $(".ph-left ul li .line_1 ").removeClass("hide");
+                $(".ph-left ul li .line_1").eq(n).addClass("hide");
+                $(".ph-left ul li .line_2 ").removeClass("selected");
+                $(".ph-left ul li .line_2").eq(n).addClass("selected");
+                $(".ph-left ul li ").removeClass("bgred");
+                $(".ph-left ul li ").eq(n).addClass("bgred");
+                $(".box img").hide();
+                $(".box img").eq(n).show();
+
+                getProjectInfoByAjax($(this).attr("id"));
+
+            });
+
+            $(".wjxbg").click(function () {
+                $(this).css("background-image", "url(/mainstyle/images/activity/wjx1.png)");
+            });
+            $(".shoubg").click(function () {
+                $(this).css("background-image", "url(/mainstyle/images/activity/shou1.png)");
+            });
+
+            $(".xmzs .p-top li").click(function () {
+                var n = $(".xmzs .p-top li").index($(this));
+                $(".xmzs .p-top li").removeClass("selectblue");
+                $(".xmzs .p-top li").eq(n).addClass("selectblue");
+                searchPro(1);
+            });
+
+
+            //个人中心入口
+            $("div.abc>img").click(function () {
+                if ($("div.abc>div").is(":visible") == false) {
+                    $("div.abc>div").animate({height: "130px"}, 200).slideDown();
+                } else {
+                    $("div.abc>div").slideUp().animate({height: "0"}, 200);
+                }
+            });
+            $(".orange").mouseover(function () {
+                $(".orange").css("color", "black")
+                $(this).css("color", "#FF8352")
+            });
+            $(".orange").mouseout(function () {
+                $(".orange").css("color", "black")
+            });
+            searchPro(1);
+        });
+
+        function ajaxLoginCallback() {
+            //首先加载页面
+            location.reload();
+        }
+        //收藏项目
+        var clickAttention = function (e, proId) {
+            $.ajax({
+                url: "/usercenter/usersafe/addMyattention",
+                type: "post",
+                data: {"proId": proId},
+                success: function (result) {
+                    if (result.state == "1") { //1：表示没有登录
+                        isloginfilter(result);
+                    } else {
+                        $(e).css("background-image", "url(/mainstyle/images/activity/wjx1.png)");
+
+                        var pTag = $(e).parent().children('p');
+                        $(pTag).text(result.data);
+                        $(pTag).removeAttr("onclick");
+                    }
+                }
+            });
+        };
+
+        //点赞
+        var clickZan = function (e, proId) {
+            $.ajax({
+                url: "/usercenter/usersafe/addZan",
+                type: "post",
+                data: {"proId": proId},
+                success: function (result) {
+                    if (result.state == "1") { //1：表示没有登录
+                        isloginfilter(result);
+                    } else {
+                        $(e).css("background-image", "url(/mainstyle/images/activity/shou1.png)");
+
+                        var pTag = $(e).parent().children('p');
+                        $(pTag).text(result.data);
+                        $(pTag).removeAttr("onclick");
+                    }
+                }
+            });
+        };
+        //搜索项目
+        function searchPro(pageNo) {
+            $.ajax({
+                url: "/activity/searchProjectList",
+                type: "post",
+                data: {
+                    pageNo: pageNo, words: $('#words').val(), orderBy: $('.xmzs .p-top ul .selectblue').attr('orderBy')
+                },
+                dataType: "json",
+                success: function (result) {
+                    if (result.status) {
+                        var html = template('searchProjectsTemplate', result);
+                        $("#projectList").html(html);
+                    }
+                }
+            });
+        }
+
+    </script>
+</head>
+
+<body>
+<div id="head" style="position:relative">
+    
+    <div class="head1"></div>
+    <div class="headbottom" style="position:absolute; bottom:0; background-color:#eee7e7; opacity:0.8; width:100%;">
+        <div class="headbottombox" style="width:1000px; height:100px; margin:0 auto;"><img src="../mainstyle/images/headbottom.png"></div>
+    </div>
+</div>
+<div id="content">
+
+    <div id="nav">
+        <div class="navbox">
+    <ul>
+        <li>
+            <a href="http://www.shoukechou.com/activity/viewInfo">大赛首页</a>
+        </li>
+        <li style="background-color:#2a81eb;">
+                <a href="../js/投融资大赛项目展示.html" style="color:white;">大赛项目</a>
+            </li>
+        <li>
+            <a href="http://www.shoukechou.com/activity/introduce">关于大赛</a></li>
+        <li>
+            <a href="http://www.shoukechou.com/activity/information">大赛动态</a></li>
+        <li><a href="http://www.shoukechou.com/activity/viewInfo#lxwm">联系我们</a></li>
+        <li><a href="http://www.shoukechou.com/index">首科众筹</a></li>
+        <div class="denglu">
+            <a href="http://www.shoukechou.com/security/login?type=activity" style="color:white;">登录</a>
+                    /
+                    <a style="color: #ffffff;" target="_blank" href="http://www.shoukechou.com/activity/register?type=0">注册</a>
+                </div>
+    </ul>
+</div></div>
+</div>
+
+<div id="xmzs_content" style="width: 1200px;">
+    <div class="rqph" style="width: 1200px;">
+        <div class="p-top" style="width: 1200px;">
+            <h1>人气排行</h1>
+
+            <div class="pic"><img src="../mainstyle/images/activity/rqph.png"></div>
+        </div>
+        <div class="ph">
+            <div class="ph-left">
+                <img src="../mainstyle/images/activity/ph_hg.png" class="ph_hg">
+                <ul style="font-size:16px;">
+                    <li class="bgblue" id="f460a0e7-47b7-4969-ad6a-0edd6fcbb22c" style="cursor: pointer;">
+                                    <img src="../mainstyle/images/activity/ph-1.png">
+
+                                    <p class="line_1">
+                                        植物细胞大规模培养产业化平</p>
+
+                                    <p class="line_2">413人支持</p>
+                                </li>
+                            <li class="bgblue" id="e8f4bae1-9a74-4dce-8744-14fcb9c2a750" style="cursor: pointer;">
+                                    <img src="../mainstyle/images/activity/ph-2.png">
+
+                                    <p class="line_1">
+                                        苏打出行</p>
+
+                                    <p class="line_2">331人支持</p>
+                                </li>
+                            <li class="bgblue" id="18ef9e07-b13c-4e6e-bcc3-0fcb027e9de5" style="cursor: pointer;">
+                                    <img src="../mainstyle/images/activity/ph-3.png">
+
+                                    <p class="line_1">
+                                        宜生到家 中医保健按摩平台</p>
+
+                                    <p class="line_2">328人支持</p>
+                                </li>
+                            <li class="bgblue" id="00c0a8a2-0d73-4868-bed8-46610f069f2f" style="cursor: pointer;">
+                                    <img src="../mainstyle/images/activity/ph-4.png">
+
+                                    <p class="line_1">
+                                        沃太能源 光伏储能家居云系</p>
+
+                                    <p class="line_2">295人支持</p>
+                                </li>
+                            <li class="bgblue bgred" id="9c2f0d10-e800-4380-88c1-5b2c7881e46c" style="cursor: pointer;">
+                                    <img src="../mainstyle/images/activity/ph-5.png">
+
+                                    <p class="line_1 hide">
+                                        Citylink智能照明云</p>
+
+                                    <p class="line_2 selected">288人支持</p>
+                                </li>
+                            </ul>
+            </div>
+
+            <div class="ph-right"><div class="middle">
+        <h1><a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;9c2f0d10-e800-4380-88c1-5b2c7881e46c&#39;);">Citylink智能照明云平台</a> </h1>
+        <p>项目领域：节能环保</p>
+        <p>我们帮助企业部署云平台、实现产业转型、从而为终端提供高附加值的产品与解决方案。</p>
+        <div class="wjx">
+            <p> 169</p>
+            
+            <div class="wjxbg" onclick="clickAttention(this,&#39;9c2f0d10-e800-4380-88c1-5b2c7881e46c&#39;)"></div>
+            
+        </div>
+        <div class="shou">
+            <p> 288</p>
+            
+            <div class="shoubg" onclick="clickZan(this,&#39;9c2f0d10-e800-4380-88c1-5b2c7881e46c&#39;)"></div>
+            
+        </div>
+        <div style="clear:both"></div>
+        <div class="rwjs">
+            
+            <div class="rwbox">
+                <img src="../js/966999c6-d87b-43c0-879c-ef97577cb2db.png">
+
+                <p class="name">黄伟奇Sky</p>
+
+                <p class="zw">
+                    创始人
+                </p>
+            </div>
+            
+            <div class="rwbox">
+                <img src="../js/d852f918-cb5d-4b84-bb50-862d723da659.jpg">
+
+                <p class="name">徐小刚Edward</p>
+
+                <p class="zw">
+                    技术负责人
+                </p>
+            </div>
+            
+            <div class="rwbox">
+                <img src="../js/228367cb-6899-40d7-9435-e7a4a5897c69.png">
+
+                <p class="name">章高魁Jacky</p>
+
+                <p class="zw">
+                    运营负责人
+                </p>
+            </div>
+            
+        </div>
+        <div class="pinglun">
+            <div class="pinglunimg"></div>
+            <span style=" margin-left:40px;  display:block;">4</span>
+        </div>
+        <div class="weizhi"><img src="../js/weizhi.png">宁波
+        </div>
+    </div>
+    <div class="ph-rightimg">
+        <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;9c2f0d10-e800-4380-88c1-5b2c7881e46c&#39;);"><img src="../js/f1cb5f2cac92416eb3a8afc20186ce1a.jpg"></a>
+    </div></div>
+
+            <div style="clear:both"></div>
+        </div>
+    </div>
+
+
+    <div class="xmzs" style="width: 1200px;">
+        <div class="p-top" style="width: 1200px;">
+            <h1>项目展示</h1>
+
+            <div class="search">
+                <input id="words" value="" placeholder="输入关键词">
+                <img src="../js/search_07.png" onclick="searchPro(1)">
+            </div>
+            <ul>
+                <li class="selectblue zxsx" orderby="hotproject">热门项目</li>
+                <li orderby="MANUFACTURING">先进制造</li>
+                <li orderby="TMT">TMT</li>
+                <li orderby="PHARMACY">大健康</li>
+                </ul>
+        </div>
+        <div class="xm" id="projectList">
+    
+    
+    <div class="xm_line">
+        <div class="xm_box ml-0">
+            
+            
+                <div style="width:260px; height:160px;background-image:
+                        url(&#39;/mainstyle/images/activity/1.gif&#39;);background-size: 100%;margin:0 auto 5px auto;">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;f460a0e7-47b7-4969-ad6a-0edd6fcbb22c&#39;);" id="f460a0e7-47b7-4969-ad6a-0edd6fcbb22c">
+                        <img src="../js/95dc8183efb14f179c98e1bd212bdd9e.jpg" style="width: 100%; height: 100%;">
+                    </a>
+                </div>
+               
+                <p class="p1" style="float:left">
+                    <span>
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;f460a0e7-47b7-4969-ad6a-0edd6fcbb22c&#39;);" id="f460a0e7-47b7-4969-ad6a-0edd6fcbb22c" >苏打出行苏打出行苏打出行苏打出行苏打出行</a>
+                    </span>
+                    <div style="float:right; margin-right:5px;">
+                    <span class="num" style="float:left; line-height:24px;">12312</span>
+                    <span class="item">
+                    &#xe624;
+                    </span>
+                    </div>
+                </p>
+                    
+                    
+                
+                <p class="p3">苏打出行，一个真正做到按分钟计费，可异地还车的智能共享产品</p>
+                <div class="xm_box_bottom" >
+                	<div style="width:60px; height:60px; overflow:hidden; float:left; margin:5px 0 0 5px;">
+                    	<div class="prg-cont rad-prg cir_ma indicatorContainer" id="indicatorContainer"></div>
+                        <div class="proLogo">!</div>
+                        
+                    </div>
+                 	
+                    <div class="xm_box_bottom_text">融资信息只对认证投资人开放</div>
+                    <div class="xm_box_bottom_iconbox">
+                   		<span class="num" style="float:left;">1</span>
+                        <span class="item">
+                        &#xe62f;
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+        
+    
+            
+            <div class="xm_box">
+                
+                <div style="width:260px; height:160px;background-image:
+                        url(&#39;/mainstyle/images/activity/1.gif&#39;);background-size: 100%;margin:0 auto 5px auto;">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;f460a0e7-47b7-4969-ad6a-0edd6fcbb22c&#39;);" id="f460a0e7-47b7-4969-ad6a-0edd6fcbb22c">
+                        <img src="../js/95dc8183efb14f179c98e1bd212bdd9e.jpg" style="width: 100%; height: 100%;">
+                    </a>
+                </div>
+               
+                <p class="p1" style="float:left">
+                    <span><a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;f460a0e7-47b7-4969-ad6a-0edd6fcbb22c&#39;);" id="f460a0e7-47b7-4969-ad6a-0edd6fcbb22c">苏打出行</a></span>
+                    <div style="float:right; margin-right:5px;">
+                    <span class="num">123</span>
+                    <span class="item item_active">
+                        &#xe624;
+                    </span>
+                    </div>
+                </p>
+                    
+                    
+                
+                <p class="p3">苏打出行，一个真正做到按分钟计费，可异地还车的智能共享产品</p>
+                <div class="xm_box_bottom" >
+                	<div style="width:60px; height:60px; overflow:hidden; float:left; margin:5px 0 0 5px;">
+                    	<div class="prg-cont rad-prg cir_ma indicatorContainer" id="indicatorContainer2"></div>
+                    </div>
+                 	
+                    <div class="xm_box_bottom_text">募筹额：<br>￥3000万→￥6000万</div>
+                    <div class="xm_box_bottom_iconbox">
+                   		<span class="num">1</span>
+                        <span class="item item_active">
+                        &#xe62f;
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+        
+    
+            
+            <div class="xm_box">
+                
+                <div style="width:260px; height:160px;background-image:
+                        url(&#39;/mainstyle/images/activity/1.gif&#39;);background-size: 100%;margin:0 auto 5px auto;">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;18ef9e07-b13c-4e6e-bcc3-0fcb027e9de5&#39;);" id="18ef9e07-b13c-4e6e-bcc3-0fcb027e9de5">
+                        <img src="../js/d474c5ea-ad29-4c98-b33f-a2cf8a01bcae.jpg" style="width: 100%; height: 100%;">
+                    </a>
+                </div>
+                <p class="p1">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;18ef9e07-b13c-4e6e-bcc3-0fcb027e9de5&#39;);" id="18ef9e07-b13c-4e6e-bcc3-0fcb027e9de5">宜生到家 中医保健按...</a>
+                </p>
+                <p class="p2"><img src="../js/weizhi.png">北京
+                </p>
+                <p class="p3">020上门推拿领域第一梯队，行业标准化制定者。</p>
+                <div>
+                    <div class="sc">
+                        <p>
+                            194</p>
+                        
+                        <div class="wjxbg" onclick="clickAttention(this,&#39;18ef9e07-b13c-4e6e-bcc3-0fcb027e9de5&#39;)"></div>
+                        
+                    </div>
+                    <div class="dz">
+                        <p> 328</p>
+                        
+                        <div class="shoubg" onclick="clickZan(this,&#39;18ef9e07-b13c-4e6e-bcc3-0fcb027e9de5&#39;)"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        
+    
+            
+            <div class="xm_box">
+                
+                <div style="width:260px; height:160px;background-image:
+                        url(&#39;/mainstyle/images/activity/1.gif&#39;);background-size: 100%;margin:0 auto 5px auto;">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;00c0a8a2-0d73-4868-bed8-46610f069f2f&#39;);" id="00c0a8a2-0d73-4868-bed8-46610f069f2f">
+                        <img src="../js/4cf4fff8b8d5451783a82eface5795e9.jpg" style="width: 100%; height: 100%;">
+                    </a>
+                </div>
+                <p class="p1">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;00c0a8a2-0d73-4868-bed8-46610f069f2f&#39;);" id="00c0a8a2-0d73-4868-bed8-46610f069f2f">沃太能源 光伏储能家...</a>
+                </p>
+                <p class="p2"><img src="../js/weizhi.png">南通
+                </p>
+                <p class="p3">专注于提供先进的储能产品和智能能源管理方案</p>
+                <div>
+                    <div class="sc">
+                        <p>
+                            178</p>
+                        
+                        <div class="wjxbg" onclick="clickAttention(this,&#39;00c0a8a2-0d73-4868-bed8-46610f069f2f&#39;)"></div>
+                        
+                    </div>
+                    <div class="dz">
+                        <p> 295</p>
+                        
+                        <div class="shoubg" onclick="clickZan(this,&#39;00c0a8a2-0d73-4868-bed8-46610f069f2f&#39;)"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div style="clear:both"></div>
+        
+        
+    
+    <div class="xm_line">
+        <div class="xm_box ml-0">
+            
+            
+                <div style="width:260px; height:160px;background-image:
+                        url(&#39;/mainstyle/images/activity/1.gif&#39;);background-size: 100%;margin:0 auto 5px auto;">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;9c2f0d10-e800-4380-88c1-5b2c7881e46c&#39;);" id="9c2f0d10-e800-4380-88c1-5b2c7881e46c">
+                        <img src="../js/f1cb5f2cac92416eb3a8afc20186ce1a.jpg" style="width: 100%; height: 100%;">
+                    </a>
+                </div>
+                <p class="p1">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;9c2f0d10-e800-4380-88c1-5b2c7881e46c&#39;);" id="9c2f0d10-e800-4380-88c1-5b2c7881e46c">Citylink智能...</a>
+                </p>
+                <p class="p2"><img src="../js/weizhi.png">宁波
+                </p>
+                <p class="p3">我们帮助企业部署云平台、实现产业转型、从而为终端提供高附加值的产品与解决方案。</p>
+                <div>
+                    <div class="sc">
+                        <p>
+                            169</p>
+                        
+                        <div class="wjxbg" onclick="clickAttention(this,&#39;9c2f0d10-e800-4380-88c1-5b2c7881e46c&#39;)"></div>
+                        
+                    </div>
+                    <div class="dz">
+                        <p> 288</p>
+                        
+                        <div class="shoubg" onclick="clickZan(this,&#39;9c2f0d10-e800-4380-88c1-5b2c7881e46c&#39;)"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        
+    
+            
+            <div class="xm_box">
+                
+                <div style="width:260px; height:160px;background-image:
+                        url(&#39;/mainstyle/images/activity/1.gif&#39;);background-size: 100%;margin:0 auto 5px auto;">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;ad1b7239-87fe-4773-8799-ced85472f5d7&#39;);" id="ad1b7239-87fe-4773-8799-ced85472f5d7">
+                        <img src="../js/078df2b6bce24476aafd1cdac50b419f.jpg" style="width: 100%; height: 100%;">
+                    </a>
+                </div>
+                <p class="p1">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;ad1b7239-87fe-4773-8799-ced85472f5d7&#39;);" id="ad1b7239-87fe-4773-8799-ced85472f5d7">六元 精神健康项目</a>
+                </p>
+                <p class="p2"><img src="../js/weizhi.png">北京
+                </p>
+                <p class="p3">解决项目所在传统行业存在的危机状况</p>
+                <div>
+                    <div class="sc">
+                        <p>
+                            133</p>
+                        
+                        <div class="wjxbg" onclick="clickAttention(this,&#39;ad1b7239-87fe-4773-8799-ced85472f5d7&#39;)"></div>
+                        
+                    </div>
+                    <div class="dz">
+                        <p> 280</p>
+                        
+                        <div class="shoubg" onclick="clickZan(this,&#39;ad1b7239-87fe-4773-8799-ced85472f5d7&#39;)"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        
+    
+            
+            <div class="xm_box">
+                
+                <div style="width:260px; height:160px;background-image:
+                        url(&#39;/mainstyle/images/activity/1.gif&#39;);background-size: 100%;margin:0 auto 5px auto;">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;5c389699-028c-42fc-8e6c-3b950aee0850&#39;);" id="5c389699-028c-42fc-8e6c-3b950aee0850">
+                        <img src="../js/b76af7c00a2d4dd782f9cb373b99374d.jpg" style="width: 100%; height: 100%;">
+                    </a>
+                </div>
+                <p class="p1">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;5c389699-028c-42fc-8e6c-3b950aee0850&#39;);" id="5c389699-028c-42fc-8e6c-3b950aee0850">睡眠脑电波改善系统</a>
+                </p>
+                <p class="p2"><img src="../js/weizhi.png">宁波
+                </p>
+                <p class="p3">通过自主研发的脑波采集设备和脑波交互系统，为都市白领提供一套系统的睡眠解决方案。</p>
+                <div>
+                    <div class="sc">
+                        <p>
+                            158</p>
+                        
+                        <div class="wjxbg" onclick="clickAttention(this,&#39;5c389699-028c-42fc-8e6c-3b950aee0850&#39;)"></div>
+                        
+                    </div>
+                    <div class="dz">
+                        <p> 278</p>
+                        
+                        <div class="shoubg" onclick="clickZan(this,&#39;5c389699-028c-42fc-8e6c-3b950aee0850&#39;)"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        
+    
+            
+            <div class="xm_box">
+                
+                <div style="width:260px; height:160px;background-image:
+                        url(&#39;/mainstyle/images/activity/1.gif&#39;);background-size: 100%;margin:0 auto 5px auto;">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;a76016b2-6b0f-4136-9349-fd9e7abddc52&#39;);" id="a76016b2-6b0f-4136-9349-fd9e7abddc52">
+                        <img src="../js/7cb849cf81ff4e9da79f49236330c3c0.jpg" style="width: 100%; height: 100%;">
+                    </a>
+                </div>
+                <p class="p1">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;a76016b2-6b0f-4136-9349-fd9e7abddc52&#39;);" id="a76016b2-6b0f-4136-9349-fd9e7abddc52">原粮电子商务平台</a>
+                </p>
+                <p class="p2"><img src="../js/weizhi.png">北京
+                </p>
+                <p class="p3">大宗粮食交易整合电子商务平台，整合交易、支付、物流、金融资源</p>
+                <div>
+                    <div class="sc">
+                        <p>
+                            139</p>
+                        
+                        <div class="wjxbg" onclick="clickAttention(this,&#39;a76016b2-6b0f-4136-9349-fd9e7abddc52&#39;)"></div>
+                        
+                    </div>
+                    <div class="dz">
+                        <p> 274</p>
+                        
+                        <div class="shoubg" onclick="clickZan(this,&#39;a76016b2-6b0f-4136-9349-fd9e7abddc52&#39;)"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div style="clear:both"></div>
+        
+        
+    
+    <div class="xm_line">
+        <div class="xm_box ml-0">
+            
+            
+                <div style="width:260px; height:160px;background-image:
+                        url(&#39;/mainstyle/images/activity/1.gif&#39;);background-size: 100%;margin:0 auto 5px auto;">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;23555e5d-608a-4c6a-9b1a-b5b0a483e3eb&#39;);" id="23555e5d-608a-4c6a-9b1a-b5b0a483e3eb">
+                        <img src="../js/520f7fe33b2442949ec4253f5af28d40.jpg" style="width: 100%; height: 100%;">
+                    </a>
+                </div>
+                <p class="p1">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;23555e5d-608a-4c6a-9b1a-b5b0a483e3eb&#39;);" id="23555e5d-608a-4c6a-9b1a-b5b0a483e3eb">微鹅 磁共振无线充电</a>
+                </p>
+                <p class="p2"><img src="../js/weizhi.png">宁波
+                </p>
+                <p class="p3">更远距离、更大范围、更低发热、更快速度</p>
+                <div>
+                    <div class="sc">
+                        <p>
+                            147</p>
+                        
+                        <div class="wjxbg" onclick="clickAttention(this,&#39;23555e5d-608a-4c6a-9b1a-b5b0a483e3eb&#39;)"></div>
+                        
+                    </div>
+                    <div class="dz">
+                        <p> 274</p>
+                        
+                        <div class="shoubg" onclick="clickZan(this,&#39;23555e5d-608a-4c6a-9b1a-b5b0a483e3eb&#39;)"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        
+    
+            
+            <div class="xm_box">
+                
+                <div style="width:260px; height:160px;background-image:
+                        url(&#39;/mainstyle/images/activity/1.gif&#39;);background-size: 100%;margin:0 auto 5px auto;">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;cac4284d-edf3-4fcc-80a4-fdd31cd2e484&#39;);" id="cac4284d-edf3-4fcc-80a4-fdd31cd2e484">
+                        <img src="../js/72a3a8b727c04ee6883cc2f22999ab34.jpg" style="width: 100%; height: 100%;">
+                    </a>
+                </div>
+                <p class="p1">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;cac4284d-edf3-4fcc-80a4-fdd31cd2e484&#39;);" id="cac4284d-edf3-4fcc-80a4-fdd31cd2e484">频泰光电 3D牙科云...</a>
+                </p>
+                <p class="p2"><img src="../js/weizhi.png">宁波
+                </p>
+                <p class="p3">全自主研发的全套3D数字化口腔设备</p>
+                <div>
+                    <div class="sc">
+                        <p>
+                            141</p>
+                        
+                        <div class="wjxbg" onclick="clickAttention(this,&#39;cac4284d-edf3-4fcc-80a4-fdd31cd2e484&#39;)"></div>
+                        
+                    </div>
+                    <div class="dz">
+                        <p> 267</p>
+                        
+                        <div class="shoubg" onclick="clickZan(this,&#39;cac4284d-edf3-4fcc-80a4-fdd31cd2e484&#39;)"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        
+    
+            
+            <div class="xm_box">
+                
+                <div style="width:260px; height:160px;background-image:
+                        url(&#39;/mainstyle/images/activity/1.gif&#39;);background-size: 100%;margin:0 auto 5px auto;">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;cd20478a-c1c3-42a4-bddd-78a0dbbe1aeb&#39;);" id="cd20478a-c1c3-42a4-bddd-78a0dbbe1aeb">
+                        <img src="../js/7b92e7a1f36e46a4a05474be61508828.jpg" style="width: 100%; height: 100%;">
+                    </a>
+                </div>
+                <p class="p1">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;cd20478a-c1c3-42a4-bddd-78a0dbbe1aeb&#39;);" id="cd20478a-c1c3-42a4-bddd-78a0dbbe1aeb">超级课程·O2M全网...</a>
+                </p>
+                <p class="p2"><img src="../js/weizhi.png">上海
+                </p>
+                <p class="p3">做全球最大的社交型移动学习平台；智能学习APP+社交型真人在线课程</p>
+                <div>
+                    <div class="sc">
+                        <p>
+                            132</p>
+                        
+                        <div class="wjxbg" onclick="clickAttention(this,&#39;cd20478a-c1c3-42a4-bddd-78a0dbbe1aeb&#39;)"></div>
+                        
+                    </div>
+                    <div class="dz">
+                        <p> 260</p>
+                        
+                        <div class="shoubg" onclick="clickZan(this,&#39;cd20478a-c1c3-42a4-bddd-78a0dbbe1aeb&#39;)"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        
+    
+            
+            <div class="xm_box">
+                
+                <div style="width:260px; height:160px;background-image:
+                        url(&#39;/mainstyle/images/activity/1.gif&#39;);background-size: 100%;margin:0 auto 5px auto;">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;cefeac1d-afab-4027-98a7-5441bb377622&#39;);" id="cefeac1d-afab-4027-98a7-5441bb377622">
+                        <img src="../js/fa5b94e7d423466891d7f3fafdbcf7a7.jpg" style="width: 100%; height: 100%;">
+                    </a>
+                </div>
+                <p class="p1">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;cefeac1d-afab-4027-98a7-5441bb377622&#39;);" id="cefeac1d-afab-4027-98a7-5441bb377622">肢端专科超导型磁共振...</a>
+                </p>
+                <p class="p2"><img src="../js/weizhi.png">北京
+                </p>
+                <p class="p3">世界一流的医学肢端专科磁共振及解决方案提供商</p>
+                <div>
+                    <div class="sc">
+                        <p>
+                            113</p>
+                        
+                        <div class="wjxbg" onclick="clickAttention(this,&#39;cefeac1d-afab-4027-98a7-5441bb377622&#39;)"></div>
+                        
+                    </div>
+                    <div class="dz">
+                        <p> 257</p>
+                        
+                        <div class="shoubg" onclick="clickZan(this,&#39;cefeac1d-afab-4027-98a7-5441bb377622&#39;)"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div style="clear:both"></div>
+        
+        
+    
+    <div class="xm_line">
+        <div class="xm_box ml-0">
+            
+            
+                <div style="width:260px; height:160px;background-image:
+                        url(&#39;/mainstyle/images/activity/1.gif&#39;);background-size: 100%;margin:0 auto 5px auto;">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;d36103d2-0baa-483b-8ad0-39b2a7341022&#39;);" id="d36103d2-0baa-483b-8ad0-39b2a7341022">
+                        <img src="../js/ad6c514664f94417ad8d4d0a5750dd4b.jpg" style="width: 100%; height: 100%;">
+                    </a>
+                </div>
+                <p class="p1">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;d36103d2-0baa-483b-8ad0-39b2a7341022&#39;);" id="d36103d2-0baa-483b-8ad0-39b2a7341022">五步会 人才租凭</a>
+                </p>
+                <p class="p2"><img src="../js/weizhi.png">上海
+                </p>
+                <p class="p3">第一家做互联网人才租赁平台的线上公司</p>
+                <div>
+                    <div class="sc">
+                        <p>
+                            129</p>
+                        
+                        <div class="wjxbg" onclick="clickAttention(this,&#39;d36103d2-0baa-483b-8ad0-39b2a7341022&#39;)"></div>
+                        
+                    </div>
+                    <div class="dz">
+                        <p> 256</p>
+                        
+                        <div class="shoubg" onclick="clickZan(this,&#39;d36103d2-0baa-483b-8ad0-39b2a7341022&#39;)"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        
+    
+            
+            <div class="xm_box">
+                
+                <div style="width:260px; height:160px;background-image:
+                        url(&#39;/mainstyle/images/activity/1.gif&#39;);background-size: 100%;margin:0 auto 5px auto;">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;5b1af0b6-ba3b-49d4-9f6c-84c153c175c7&#39;);" id="5b1af0b6-ba3b-49d4-9f6c-84c153c175c7">
+                        <img src="../js/0baf51493f514aa19d057a93f48fecce.jpg" style="width: 100%; height: 100%;">
+                    </a>
+                </div>
+                <p class="p1">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;5b1af0b6-ba3b-49d4-9f6c-84c153c175c7&#39;);" id="5b1af0b6-ba3b-49d4-9f6c-84c153c175c7">智能工业机器人MES...</a>
+                </p>
+                <p class="p2"><img src="../js/weizhi.png">宁波
+                </p>
+                <p class="p3">1,自主知识产权研发制造工业机器人;2，基于伊泽智能工业机器人平台搭建数字化工厂</p>
+                <div>
+                    <div class="sc">
+                        <p>
+                            191</p>
+                        
+                        <div class="wjxbg" onclick="clickAttention(this,&#39;5b1af0b6-ba3b-49d4-9f6c-84c153c175c7&#39;)"></div>
+                        
+                    </div>
+                    <div class="dz">
+                        <p> 247</p>
+                        
+                        <div class="shoubg" onclick="clickZan(this,&#39;5b1af0b6-ba3b-49d4-9f6c-84c153c175c7&#39;)"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        
+    
+            
+            <div class="xm_box">
+                
+                <div style="width:260px; height:160px;background-image:
+                        url(&#39;/mainstyle/images/activity/1.gif&#39;);background-size: 100%;margin:0 auto 5px auto;">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;0d6b458f-601f-4d3c-90e5-83379327b8ca&#39;);" id="0d6b458f-601f-4d3c-90e5-83379327b8ca">
+                        <img src="../js/75558251d04048a1af6efaf2226ee6e3.jpg" style="width: 100%; height: 100%;">
+                    </a>
+                </div>
+                <p class="p1">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;0d6b458f-601f-4d3c-90e5-83379327b8ca&#39;);" id="0d6b458f-601f-4d3c-90e5-83379327b8ca">泰科天润 半导体碳化...</a>
+                </p>
+                <p class="p2"><img src="../js/weizhi.png">北京
+                </p>
+                <p class="p3">中国碳化硅（SiC）功率器件产业化的倡导者之一</p>
+                <div>
+                    <div class="sc">
+                        <p>
+                            119</p>
+                        
+                        <div class="wjxbg" onclick="clickAttention(this,&#39;0d6b458f-601f-4d3c-90e5-83379327b8ca&#39;)"></div>
+                        
+                    </div>
+                    <div class="dz">
+                        <p> 246</p>
+                        
+                        <div class="shoubg" onclick="clickZan(this,&#39;0d6b458f-601f-4d3c-90e5-83379327b8ca&#39;)"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        
+    
+            
+            <div class="xm_box">
+                
+                <div style="width:260px; height:160px;background-image:
+                        url(&#39;/mainstyle/images/activity/1.gif&#39;);background-size: 100%;margin:0 auto 5px auto;">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;ca946185-a28f-4f9c-b1c2-68edf97cb80c&#39;);" id="ca946185-a28f-4f9c-b1c2-68edf97cb80c">
+                        <img src="../js/f2e7aa60-2de5-4821-b16d-24d5b098f6bc.jpg" style="width: 100%; height: 100%;">
+                    </a>
+                </div>
+                <p class="p1">
+                    <a href="javascript:void(0)" onclick="openProjectDetailPageByActivity(&#39;ca946185-a28f-4f9c-b1c2-68edf97cb80c&#39;);" id="ca946185-a28f-4f9c-b1c2-68edf97cb80c">易康智眠 睡眠专家平...</a>
+                </p>
+                <p class="p2"><img src="../js/weizhi.png">上海
+                </p>
+                <p class="p3">了解睡眠，管理睡眠，监控病情及康复情况</p>
+                <div>
+                    <div class="sc">
+                        <p>
+                            172</p>
+                        
+                        <div class="wjxbg" onclick="clickAttention(this,&#39;ca946185-a28f-4f9c-b1c2-68edf97cb80c&#39;)"></div>
+                        
+                    </div>
+                    <div class="dz">
+                        <p> 244</p>
+                        
+                        <div class="shoubg" onclick="clickZan(this,&#39;ca946185-a28f-4f9c-b1c2-68edf97cb80c&#39;)"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div style="clear:both"></div>
+        
+        
+        
+        
+        </div>
+        <div id="kkpager" style="text-align: center;margin-top:10px;"><div><span class="pageBtnWrap"><span class="disabled">首页</span><span class="disabled">上一页</span><span class="curr">1</span><a href="http://www.shoukechou.com/activity/queryProject#" onclick="return kkpager._clickHandler(2)" title="第2页">2</a><a href="http://www.shoukechou.com/activity/queryProject#" onclick="return kkpager._clickHandler(3)" title="第3页">3</a><a href="http://www.shoukechou.com/activity/queryProject#" onclick="return kkpager._clickHandler(4)" title="第4页">4</a><a href="http://www.shoukechou.com/activity/queryProject#" onclick="return kkpager._clickHandler(5)" title="第5页">5</a><a href="http://www.shoukechou.com/activity/queryProject#" onclick="return kkpager._clickHandler(2)" title="下一页">下一页</a><a href="http://www.shoukechou.com/activity/queryProject#" onclick="return kkpager._clickHandler(5)" title="尾页">尾页</a></span><span class="infoTextAndGoPageBtnWrap"><span class="totalText"></span></span></div><div style="clear:both;"></div></div>
+    </div>
+    <div style="clear:both"></div>
+    <div style="clear:both"></div>
+</div>
+<div id="foot">
+    <div class="footline1">
+        <div class="footline1box">
+            <img src="../mainstyle/images/erweima.png">
+
+            <div style="float:left">
+                <p>联系人：张先生、朱女士</p>
+
+                <p>电　话：4006400695</p>
+
+                <p>邮　箱：contest@shoukechou.com</p>
+            </div>
+        </div>
+    </div>
+    <div class="footline1_1">
+        <div class="footline1_1box">
+            <div style="width:400px; float:left; height:20px; border-bottom:1px solid #fff; opacity:0.7"></div>
+            <p class="jiedai">大赛线下接待点</p>
+
+            <div style="width:400px; float:right; height:20px; border-bottom:1px solid #fff; opacity:0.7"></div>
+            <div class="footline2box" style="margin-right:40px;">
+                <h1>上海</h1>
+
+                <p style="margin-top:15px;"><img src="../mainstyle/images/icon4.png"><span>上海市浦东新区世纪大道210号二十一世纪大楼6楼6068室</span></p>
+
+                <p style="margin-top:5px;"><img src="../mainstyle/images/icon5.png"><span>021-51727246</span></p>
+
+                <p style="margin-top:5px;"><img src="../mainstyle/images/icon6.png"><span>朱女生 范先生</span></p>
+            </div>
+        </div>
+        <div class="footline1_1box">
+            <div class="footline2box" style="margin-right:40px;">
+                <h1>北京</h1>
+
+                <p style="margin-top:15px;"><img src="../mainstyle/images/icon4.png"><span>北京市海淀大街3号鼎好大厦A-1506</span></p>
+
+                <p style="margin-top:5px;"><img src="../mainstyle/images/icon5.png"><span>010-89940281</span></p>
+
+                <p style="margin-top:5px;"><img src="../mainstyle/images/icon6.png"><span>闫先生 巨先生</span></p>
+            </div>
+        </div>
+        <div class="footline1_1box">
+            <div class="footline2box">
+                <h1>宁波</h1>
+
+                <p style="margin-top:15px;"><img src="../mainstyle/images/icon4.png"><span>宁波市高新区聚贤路587弄研发园A2-10楼</span></p>
+
+                <p style="margin-top:5px;"><img src="../mainstyle/images/icon5.png"><span>0574-55834234</span></p>
+
+                <p style="margin-top:5px;"><img src="../mainstyle/images/icon6.png"><span>桑先生 吕女生</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="footline2">Copyright © 2015 首科众筹</div>
+</div>
+
+
+
+
+
+<script id="queryInfoByItem" type="text/html">
+    <div class="middle">
+        <h1><a href="javascript:void(0)"
+               onclick="openProjectDetailPageByActivity('{{project.proId}}');"
+               >{{project.proTitle}}</a> </h1>
+        <p>项目领域：{{project.proDomain}}</p>
+        <p>{{project.proDescription}}</p>
+        <div class="wjx">
+            <p>{{if project.proAttention}} {{project.proAttention}}{{else}} 0 {{/if}}</p>
+            {{if atten}}
+            <div class="wjxbg1"></div>
+            {{else}}
+            <div class="wjxbg" onclick="clickAttention(this,'{{project.proId }}')"></div>
+            {{/if}}
+        </div>
+        <div class="shou">
+            <p>{{if project.proZan}} {{project.proZan}}{{else}} 0 {{/if}}</p>
+            {{if zan}}
+            <div class="shoubg1"></div>
+            {{else}}
+            <div class="shoubg" onclick="clickZan(this,'{{project.proId }}')"></div>
+            {{/if}}
+        </div>
+        <div style="clear:both"></div>
+        <div class="rwjs">
+            {{each members as value i}}
+            <div class="rwbox">
+                <img src="http://img.shoukechou.com{{value.promHeadimg}}">
+
+                <p class="name">{{value.promName}}</p>
+
+                <p class="zw">
+                    {{simpleIf(value.promPosition,0,'创始人',1,'技术负责人',2,'产品负责人',3,'运营负责人',4,'市场负责人',5,'顾问',6,'投资人')}}
+                </p>
+            </div>
+            {{/each}}
+        </div>
+        <div class="pinglun">
+            <div class="pinglunimg"></div>
+            <span style=" margin-left:40px;  display:block;">{{proCommentCount}}</span>
+        </div>
+        <div class="weizhi"><img src="/mainstyle/images/activity/weizhi.png">{{project.proCity}}
+        </div>
+    </div>
+    <div class="ph-rightimg">
+        <a href="javascript:void(0)"
+           onclick="openProjectDetailPageByActivity('{{project.proId}}');"><img src="http://img.shoukechou.com{{project.proIcon}}"></a>
+    </div>
+</script>
+<script id="searchProjectsTemplate" type="text/html">
+    {{if pager&&pager.results}}
+    {{each pager.results as value i }}
+    {{if i%4==0}}
+    <div class="xm_line">
+        <div class="xm_box ml-0">
+            {{/if}}
+            {{if i%4!=0}}
+            <div class="xm_box">
+                {{/if}}
+                <div style="width:260px; height:160px;background-image:
+                        url('/mainstyle/images/activity/1.gif');background-size: 100%;margin:0 auto 5px auto;">
+                    <a href="javascript:void(0)"
+                       onclick="openProjectDetailPageByActivity('{{value.project.proId}}');"
+                       id="{{value.project.proId}}">
+                        <img src="{{value.project.proIcon}}" style="width: 100%; height: 100%;">
+                    </a>
+                </div>
+                <p class="p1">
+                    <a href="javascript:void(0)"
+                       onclick="openProjectDetailPageByActivity('{{value.project.proId}}');"
+                       id="{{value.project.proId}}">{{subString(value.project.proTitle,0,10)}}</a>
+                </p>
+                <p class="p2"><img src="/mainstyle/images/activity/weizhi.png">{{value.project.proCity}}
+                </p>
+                <p class="p3">{{value.project.proDescription}}</p>
+                <div>
+                    <div class="sc">
+                        <p>{{if value.project.proAttention}}
+                            {{value.project.proAttention}}{{else}} 0 {{/if}}</p>
+                        {{if value.myattention}}
+                        <div class="wjxbg1"></div>
+                        {{else}}
+                        <div class="wjxbg" onclick="clickAttention(this,'{{value.project.proId }}')"></div>
+                        {{/if}}
+                    </div>
+                    <div class="dz">
+                        <p>{{if value.project.proZan}} {{value.project.proZan}}{{else}} 0
+                            {{/if}}</p>
+                        {{if value.zan}}
+                        <div class="shoubg1"></div>
+                        {{else}}
+                        <div class="shoubg"
+                             onclick="clickZan(this,'{{value.project.proId }}')"></div>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+            {{if i%4==3||(i+1)==pager.results.length}}
+        </div>
+        <div style="clear:both"></div>
+        {{/if}}
+        {{/each}}
+        {{/if}}
+        
+        {{generPagination(pager.pageNo,pager.totalPage,pager.totalRecord)}}
+
+</script>
+<script type="text/javascript" src="../js/radialIndicator.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script>
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+
+</body></html>
